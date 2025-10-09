@@ -1008,7 +1008,7 @@
   </section>
 
   <!-- instagram -->
-  <section class="commandments section-padding">
+  <section class="gallery-grid section-padding">
     <div class="container-fluid px-5">
       <div class="row">
         <div class="col-sm-12">
@@ -1018,6 +1018,52 @@
             </div>
             <h5>posts</h5>
             <h2>Instagram</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-container">
+        <div class="masonry">
+          <div class="masonry-item"><img src="https://picsum.photos/id/1015/400/300" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1025/400/500" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1035/400/350" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1045/400/600" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1055/400/300" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1065/400/450" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1075/400/350" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1085/400/500" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1095/400/400" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1105/400/550" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1115/400/450" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1125/400/300" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1105/400/550" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1115/400/450" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1125/400/300" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1095/400/400" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1105/400/550" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1115/400/450" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1125/400/300" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1105/400/550" alt=""></div>
+          <div class="masonry-item"><img src="https://picsum.photos/id/1115/400/450" alt=""></div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- instagram -->
+  <section class="gallery-grid section-padding">
+    <div class="container-fluid px-5">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="section-title">
+            <div class="lotus">
+              <img src="./assets/img/lotus.png" alt="">
+            </div>
+            <h5>posts</h5>
+            <h2>Facebook</h2>
           </div>
         </div>
       </div>
@@ -1034,34 +1080,11 @@
   <!-- Template Main JS File -->
   <script src="assets/js/jquery-1.12.0.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/isotope.js"></script>
   <!-- Libraries -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-
-
-  <script src="assets/vendor/bootstrap/js/isotope.js"></script>
-  <!-- header -->
-  <script>
-    // Keep Bootstrap click toggle for mobile, hover for desktop
-    document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-      dropdown.addEventListener('mouseenter', function () {
-        if (window.innerWidth > 992) {
-          const menu = dropdown.querySelector('.dropdown-menu');
-          const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector('[data-bs-toggle="dropdown"]'));
-          bsDropdown.show();
-        }
-      });
-      dropdown.addEventListener('mouseleave', function () {
-        if (window.innerWidth > 992) {
-          const menu = dropdown.querySelector('.dropdown-menu');
-          const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector('[data-bs-toggle="dropdown"]'));
-          bsDropdown.hide();
-        }
-      });
-    });
-  </script>
-
-
 </body>
 
 </html>
