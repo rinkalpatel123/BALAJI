@@ -78,6 +78,11 @@ body {
 //////////////////////////////
 
 .header {
+
+    .nav-link:focus-visible {
+        box-shadow: none;
+    }
+
     .navbar {
         background-color: $white;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -91,6 +96,16 @@ body {
         color: $black !important;
         font-size: 14px;
         font-weight: 500;
+        margin: 0 8px;
+    }
+
+    .dropdown-menu {
+        font-size: 12px;
+
+        .dropdown-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 4px;
+        }
     }
 
     .nav-link:hover {
@@ -843,5 +858,76 @@ body {
 
     .masonry-item:hover img {
         transform: scale(1.05);
+    }
+}
+
+
+footer {
+    background-color: #0a0a0a;
+    color: $white;
+    padding: 60px 0 20px;
+
+    h5 {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin-bottom: 25px;
+    }
+
+    a {
+        color: #ccc;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+        color: $primary-color;
+        transform: translateX(4px);
+    }
+
+    .social-icons a {
+        font-size: 1.3rem;
+        margin-right: 15px;
+        color: #ccc;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: $primary-color;
+    }
+
+    .btn-update {
+        background: linear-gradient(90deg, #f57c00, #ffb74d);
+        color: #000;
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        padding: 10px 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .btn-update:hover {
+        transform: scale(1.05);
+        color: #000;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #333;
+        padding-top: 15px;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #888;
+    }
+
+    .lang-select {
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 15px;
+        font-weight: 600;
+        margin-top: 10px;
     }
 }
