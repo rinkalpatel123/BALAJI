@@ -37,6 +37,14 @@ body {
     font-size: 22px;
   }
 }
+.hindi-body {
+  font-family: "Cambay", sans-serif !important;
+}
+
+.hindi-title {
+  font-family: "Rozha One", serif !important;
+}
+
 .banner .youtube-container {
   overflow: hidden;
   width: 100%;
