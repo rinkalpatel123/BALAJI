@@ -5,6 +5,10 @@ $white: #FFFFFF;
 $black: #000000;
 $border-color: #C3C3C3;
 
+.bg-light-primary {
+    background-color: $light-primary-color !important;
+}
+
 body {
     font-family: 'Poppins', sans-serif !important;
     font-size: 14px !important;
@@ -968,5 +972,33 @@ footer {
         img {
             height: 400px;
         }
+    }
+}
+
+/////////////////////////
+.accordion-custom {
+
+    ul li{
+        margin: 10px 0;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: $primary-color;
+        color: $white;
+        font-weight: 600;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        filter: invert(1);
+    }
+
+    .accordion-button:focus {
+        border-color: $primary-color;
+        box-shadow: none;
+    }
+
+    .accordion-item {
+        border: 1px solid $border-color !important;
+        margin: 15px 0;
     }
 }

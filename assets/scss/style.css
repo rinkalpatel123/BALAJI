@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.bg-light-primary {
+  background-color: #FEF7EC !important;
+}
+
 body {
   font-family: "Poppins", sans-serif !important;
   font-size: 14px !important;
@@ -806,4 +810,24 @@ footer .lang-select {
 }
 .dham-page .card img {
   height: 400px;
+}
+
+.accordion-custom ul li {
+  margin: 10px 0;
+}
+.accordion-custom .accordion-button:not(.collapsed) {
+  background-color: #FD7A01;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.accordion-custom .accordion-button:not(.collapsed)::after {
+  filter: invert(1);
+}
+.accordion-custom .accordion-button:focus {
+  border-color: #FD7A01;
+  box-shadow: none;
+}
+.accordion-custom .accordion-item {
+  border: 1px solid #C3C3C3 !important;
+  margin: 15px 0;
 }/*# sourceMappingURL=style.css.map */
