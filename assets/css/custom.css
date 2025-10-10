@@ -1,0 +1,30 @@
+.bg-image {
+    position: relative;
+    background-image: url('../img/bg-img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.bg-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+
+.bg-image h2 {
+    position: relative;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 1;
+    margin: 0;
+    text-transform: uppercase;
+}
