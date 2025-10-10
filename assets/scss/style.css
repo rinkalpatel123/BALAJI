@@ -1,4 +1,19 @@
 @charset "UTF-8";
+.bg-light-primary {
+  background-color: #FEF7EC !important;
+}
+
+.btn {
+  padding: 8px 18px !important;
+  font-weight: 600 !important;
+}
+
+.btn-primary {
+  background-color: #FD7A01;
+  border-color: #FD7A01;
+  color: #FFFFFF;
+}
+
 body {
   font-family: "Poppins", sans-serif !important;
   font-size: 14px !important;
@@ -37,6 +52,14 @@ body {
     font-size: 22px;
   }
 }
+.hindi-body {
+  font-family: "Cambay", sans-serif !important;
+}
+
+.hindi-title {
+  font-family: "Rozha One", serif !important;
+}
+
 .banner .youtube-container {
   overflow: hidden;
   width: 100%;
@@ -57,6 +80,9 @@ body {
   position: relative;
 }
 
+.header .navbar-expand-lg .navbar-nav .dropdown-menu {
+  top: 30px;
+}
 .header .nav-link:focus-visible {
   box-shadow: none;
 }
@@ -781,4 +807,83 @@ footer .lang-select {
   padding: 8px 15px;
   font-weight: 600;
   margin-top: 10px;
+}
+
+.humanitarian ul li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.humanitarian ul ::marker {
+  color: #FD7A01;
+  font-size: 20px;
+}
+
+.dham-page .card-item {
+  width: 100%;
+}
+.dham-page .card img {
+  height: 400px;
+}
+
+.accordion-custom ul li {
+  margin: 10px 0;
+}
+.accordion-custom .accordion-button:not(.collapsed) {
+  background-color: #FD7A01;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.accordion-custom .accordion-button:not(.collapsed)::after {
+  filter: invert(1);
+}
+.accordion-custom .accordion-button:focus {
+  border-color: #FD7A01;
+  box-shadow: none;
+}
+.accordion-custom .accordion-item {
+  border: 1px solid #C3C3C3 !important;
+  margin: 15px 0;
+}
+
+.preview {
+  background-image: url("/assets/img/bookguruji.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+.preview::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.number-design .num {
+  height: 55px;
+  width: 55px;
+  border: 1px solid #FD7A01;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 100%;
+  font-weight: 700;
+  margin-right: 15px;
+}
+.number-design li {
+  margin-bottom: 18px;
+}
+
+.book-page .card {
+  height: 500px;
+}
+.book-page .card .card-img-top {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
