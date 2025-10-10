@@ -50,11 +50,12 @@ body {
 }
 
 ///////////////
-.hindi-body{
-     font-family: "Cambay", sans-serif !important;
+.hindi-body {
+    font-family: "Cambay", sans-serif !important;
 }
-.hindi-title{
-      font-family: "Rozha One", serif !important;
+
+.hindi-title {
+    font-family: "Rozha One", serif !important;
 }
 
 /// //////////
@@ -937,5 +938,35 @@ footer {
         padding: 8px 15px;
         font-weight: 600;
         margin-top: 10px;
+    }
+}
+
+
+////////////////////
+.humanitarian {
+    ul {
+        li {
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.6;
+            // color: #555;
+        }
+
+        ::marker {
+            color: $primary-color;
+            font-size: 20px;
+        }
+    }
+}
+
+.dham-page {
+    .card-item {
+        width: 100%;
+    }
+
+    .card {
+        img {
+            height: 400px;
+        }
     }
 }

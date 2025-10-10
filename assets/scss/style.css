@@ -789,4 +789,21 @@ footer .lang-select {
   padding: 8px 15px;
   font-weight: 600;
   margin-top: 10px;
+}
+
+.humanitarian ul li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.humanitarian ul ::marker {
+  color: #FD7A01;
+  font-size: 20px;
+}
+
+.dham-page .card-item {
+  width: 100%;
+}
+.dham-page .card img {
+  height: 400px;
 }/*# sourceMappingURL=style.css.map */
