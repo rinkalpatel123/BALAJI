@@ -102,6 +102,9 @@ body {
 //////////////////////////////
 
 .header {
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        top: 30px;
+    }
 
     .nav-link:focus-visible {
         box-shadow: none;
@@ -1050,7 +1053,7 @@ footer {
         margin-right: 15px;
     }
 
-    li{
+    li {
         margin-bottom: 18px;
     }
 }
@@ -1060,7 +1063,7 @@ footer {
     .card {
         height: 500px;
 
-        .card-img-top{
+        .card-img-top {
             height: 100%;
             object-fit: cover;
         }

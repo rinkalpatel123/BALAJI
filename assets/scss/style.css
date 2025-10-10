@@ -80,6 +80,9 @@ body {
   position: relative;
 }
 
+.header .navbar-expand-lg .navbar-nav .dropdown-menu {
+  top: 30px;
+}
 .header .nav-link:focus-visible {
   box-shadow: none;
 }
