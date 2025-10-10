@@ -1,0 +1,47 @@
+
+.contact-info-item {
+    background: #ff5500;
+    padding: 30px 0px;
+    height: 200px;
+}
+
+.contact-page-sec .contact-page-form h2 {
+    color: #ff5500;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.contact-info-text span {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    width: 100%;
+}
+
+.contact-page-map {
+    margin-top: 36px;
+}
+
+.contact-page-form form {
+    padding: 20px 15px 0;
+}
+
+.contact-info-text i {
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: white;
+}
+
+.contact-box h3{
+    color: #ff5500;
+}
+
+.text-gray{
+    color: #767e88;
+}
+
+.indicate{
+    color: #ff7f40;
+}
