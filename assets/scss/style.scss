@@ -9,6 +9,17 @@ $border-color: #C3C3C3;
     background-color: $light-primary-color !important;
 }
 
+.btn {
+    padding: 8px 18px !important;
+    font-weight: 600 !important;
+}
+
+.btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $white;
+}
+
 body {
     font-family: 'Poppins', sans-serif !important;
     font-size: 14px !important;
@@ -978,7 +989,7 @@ footer {
 /////////////////////////
 .accordion-custom {
 
-    ul li{
+    ul li {
         margin: 10px 0;
     }
 
@@ -1000,5 +1011,58 @@ footer {
     .accordion-item {
         border: 1px solid $border-color !important;
         margin: 15px 0;
+    }
+}
+
+
+/////////////////////////
+.preview {
+    background-image: url('/assets/img/bookguruji.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+}
+
+
+/////////////////////////
+.number-design {
+    .num {
+        height: 55px;
+        width: 55px;
+        border: 1px solid $primary-color;
+        line-height: 55px;
+        text-align: center;
+        border-radius: 100%;
+        font-weight: 700;
+        margin-right: 15px;
+    }
+
+    li{
+        margin-bottom: 18px;
+    }
+}
+
+//////////
+.book-page {
+    .card {
+        height: 500px;
+
+        .card-img-top{
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
