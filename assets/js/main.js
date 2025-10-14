@@ -128,19 +128,38 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // //////////////////figma slider logic//////////////////////
-
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 // const slides = document.querySelectorAll('.slide');
 // const visibleSlides = 3;
 // let index = 0;
 
+// const carousel = document.querySelector('#heroCarousel');
+// const btnPrev = document.querySelector('#prev');
+// const btnNext = document.querySelector('#next');
+
 // function showSlide(i) {
 //   const total = slides.length;
-//   index = (i + total) % total;
-//   document.querySelector('#heroCarousel').style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
+//   const maxIndex = total - visibleSlides; // last valid slide index
+
+//   // prevent going out of range
+//   if (i < 0) index = 0;
+//   else if (i > maxIndex) index = maxIndex;
+//   else index = i;
+
+//   carousel.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
+
+//   // disable buttons when limit reached
+//   btnPrev.disabled = index === 0;
+//   btnNext.disabled = index === maxIndex;
 // }
 
-// document.querySelector('#prev').addEventListener('click', () => showSlide(index - 1));
-// document.querySelector('#next').addEventListener('click', () => showSlide(index + 1));
+// // event listeners
+// btnPrev.addEventListener('click', () => showSlide(index - 1));
+// btnNext.addEventListener('click', () => showSlide(index + 1));
+
+// // initialize state
+// showSlide(0);
+
 
 const slides = document.querySelectorAll('.slide');
 const visibleSlides = 3;
@@ -150,25 +169,34 @@ const carousel = document.querySelector('#heroCarousel');
 const btnPrev = document.querySelector('#prev');
 const btnNext = document.querySelector('#next');
 
+function updateActiveSlides() {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active-slide', i >= index && i < index + visibleSlides);
+  });
+}
+
 function showSlide(i) {
   const total = slides.length;
-  const maxIndex = total - visibleSlides; // last valid slide index
+  const maxIndex = total - visibleSlides;
 
-  // prevent going out of range
   if (i < 0) index = 0;
   else if (i > maxIndex) index = maxIndex;
   else index = i;
 
+  // elegant smooth slide
   carousel.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
 
-  // disable buttons when limit reached
+  // active scaling & fade
+  updateActiveSlides();
+
+  // disable buttons at edges
   btnPrev.disabled = index === 0;
   btnNext.disabled = index === maxIndex;
 }
 
-// event listeners
+// click events
 btnPrev.addEventListener('click', () => showSlide(index - 1));
 btnNext.addEventListener('click', () => showSlide(index + 1));
 
-// initialize state
+// initialize
 showSlide(0);

@@ -32,7 +32,7 @@
 <body>
 
     <div class="header">
-        <nav class="navbar navbar-expand-lg py-2">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid px-5">
                 <a class="navbar-brand" href="./index.html">
                     <img src="./assets/img/logo.png" alt="Logo">
@@ -120,27 +120,29 @@
     <main>
 
         <section class="hero-section hero-banner-slider">
-            <div class="hero-slider container">
-                <div class="row justify-content-between align-items-end">
-                    <div class="col-lg-9 scroll-fade-in">
+            <div class="hero-slider container-fluid px-5">
+                <div class="row justify-content-between align-items-start">
+                    <div class="col-lg-7 scroll-fade-in">
                         <p class="text-sm font-weight-bold text-uppercase tracking-widest mb-3">Shri
                             Bageshwar Balaji Dham</p>
                         <h1 class="custom-h1 text-dark-custom h1-line-height">
                             Embrace the <span class="text-orange">Divine Grace</span><br> of Hanuman
                         </h1>
-                        <p class="lead text-secondary mb-4 mt-3 col-lg-8">
-                            Under the guidance of Param Pujya Guru Ji, Dhirendra Krishna Shastri, we embark on a journey
-                            of
-                            faith, service, and devotion to Lord Hanuman.
-                        </p>
-
-                        <div class="d-flex align-items-start">
-                            <span class="text-secondary text-sm">Serving <strong
-                                    class="font-weight-semibold text-dark-custom">Millions of Devotees</strong>
-                                Annually</span>
-                        </div>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-5">
+                        <div class="scroll-fade-in">
+                            <p class="lead text-secondary mb-4 mt-3">
+                                Under the guidance of Param Pujya Guru Ji, Dhirendra Krishna Shastri, we embark on a
+                                journey of
+                                faith, service, and devotion to Lord Hanuman.
+                            </p>
+
+                            <div class="d-flex align-items-start">
+                                <span class="text-secondary text-sm">Serving <strong
+                                        class="font-weight-semibold text-dark-custom">Millions of Devotees</strong>
+                                    Annually</span>
+                            </div>
+                        </div>
                         <div class="d-flex justify-content-end">
                             <div class="slider-arrows d-flex align-items-center">
                                 <button class="btn btn-light me-2" id="prev"><i class="bi bi-arrow-left"></i></button>
@@ -153,12 +155,11 @@
                 <div class="slider-wrapper overflow-hidden mt-4">
                     <div id="heroCarousel" class="d-flex transition">
                         <div class="slide"><img src="./assets/img/baba/01.jpg" alt="img1" /></div>
-                        <div class="slide"><img src="./assets/img/baba/02.jpg" alt="img2" /></div>
-                        <div class="slide"><img src="./assets/img/baba/03.jpg" alt="img3" /></div>
-                        <div class="slide"><img src="./assets/img/baba/04.jpg" alt="img4" /></div>
-                        <div class="slide"><img src="./assets/img/baba/05.jpg" alt="img5" /></div>
-                        <div class="slide"><img src="./assets/img/baba/06.jpg" alt="img6" /></div>
-                        <div class="slide"><img src="./assets/img/baba/07.jpg" alt="img6" /></div>
+                        <div class="slide"><img src="./assets/img/baba/03.jpg" alt="img2" /></div>
+                        <div class="slide"><img src="./assets/img/baba/06.jpg" alt="img3" /></div>
+                        <div class="slide"><img src="./assets/img/baba/02.jpg" alt="img4" /></div>
+                        <div class="slide"><img src="./assets/img/baba/04.jpg" alt="img5" /></div>
+                        <div class="slide"><img src="./assets/img/baba/05.jpg" alt="img6" /></div>
                     </div>
                 </div>
             </div>
@@ -168,25 +169,33 @@
             <div class="container">
                 <div class="row g-5">
                     <div class="col-lg-5 scroll-fade-in" id="services-tabs">
-                        <p class="text-sm font-weight-bold text-uppercase tracking-widest text-orange mb-3">
+                        <!-- <p class="text-sm font-weight-bold text-uppercase tracking-widest text-orange mb-3">
                             Auspicious Sevas</p>
                         <h2 class="h2 font-weight-bold text-dark-custom mb-4">
                             Noteworthy Moments
-                        </h2>
+                        </h2> -->
+
+                        <div class="section-title text-start">
+                        <div class="lotus">
+                            <img src="./assets/img/lotus.png" alt="">
+                        </div>
+                        <h5>Auspicious Sevas</h5>
+                        <h2 class="h2 font-weight-bold 
+                        text-dark-custom">Noteworthy Moments</h2>
+                    </div>
 
                         <div class="accordion" id="servicesAccordion">
-                            <div class="tab-item border active rounded-3 mb-3 cursor-pointer" data-tab="darshan">
+                            <div class="tab-item border rounded-3 mb-3 cursor-pointer open" data-tab="darshan">
                                 <h3 class="d-flex justify-content-between align-items-center h5 font-weight-bold text-dark-custom mb-0 p-3"
                                     data-bs-toggle="collapse" data-bs-target="#collapse-darshan" aria-expanded="true"
                                     aria-controls="collapse-darshan">
-                                    Temple Darshan Timings <span class="text-2xl text-accent">+</span>
+                                    Prime Minister Visit <span class="text-2xl text-accent">+</span>
                                 </h3>
-                                <div id="collapse-darshan" class="accordion-collapse collapse show"
+                                <div id="collapse-darshan" class="accordion-collapse"
                                     data-bs-parent="#servicesAccordion">
                                     <p class="tab-content mt-3 text-secondary p-3 pt-0">
-                                        The Mandir is open daily for devotees. Please check the current morning and
-                                        evening
-                                        slots to ensure a peaceful visit and divine experience.
+                                        On 23rd February 2025, the Hon’ble Prime Minister of India Shri Narender Modiji
+                                        visited Bageshwar Dham to lay the foundation stone for the Cancer Hospital
                                     </p>
                                 </div>
                             </div>
@@ -238,16 +247,24 @@
                     </div>
 
                     <div class="col-lg-7 relative scroll-fade-in delay-200">
-                        <div id="tab-content-display" class="sticky-content p-4 bg-light rounded w-100
+                        <div id="tab-content-display" class="sticky-content p-4 bg-white rounded w-100
                         border">
                             <div id="content-darshan" class="tab-pane active">
-                                <img src="./assets/img/dham-02.png"
+                                <img src="./assets/img/ab-01.jpg"
                                     class="card-img-top w-100 rounded-3 shadow-lg mb-4 h-75" alt="Moment 1">
-                                <h3 class="h4 font-weight-bold text-dark-custom mb-3">Temple Darshan Timings</h3>
+                                <!-- <h3 class="h4 font-weight-bold text-dark-custom mb-3">Temple Darshan Timings</h3> -->
                                 <p class="text-secondary">
-                                    The principal objective is to provide an accessible and spiritual environment for
-                                    every devotee. We prioritize the sacred timings for a seamless Darshan experience.
-                                    The journey is one of immense faith.
+                                    On 23rd February 2025, the Hon’ble Prime Minister of India,
+                                    Shri Narendra Modi, graced Bageshwar Dham with his esteemed
+                                    presence to lay the foundation stone for a new Cancer Hospital.
+                                    This significant event marked a major step forward in the
+                                    region’s healthcare development, aiming to provide advanced
+                                    medical facilities and specialized cancer treatment to
+                                    patients in and around the area. The Prime Minister’s visit
+                                    not only highlighted the government’s commitment to improving
+                                    healthcare infrastructure but also inspired hope among the
+                                    local community for accessible and quality medical care in
+                                    the near future.
                                 </p>
                             </div>
                             <div id="content-samadhi" class="tab-pane d-none">
@@ -285,7 +302,142 @@
             </div>
         </section>
 
-        <section class="dark-stats-section">
+        <!-- contribute -->
+  <section class="contribute section-padding mb-5">
+    <div class="container-fluid px-5">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="section-title">
+            <div class="lotus">
+              <img src="./assets/img/lotus.png" alt="">
+            </div>
+            <h5>Contribute</h5>
+            <h2 class="h2 font-weight-bold mb-4">Donate Now</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Card Item 1 (Uses a placeholder image) -->
+        <div class="col-lg-6 col-12">
+          <div class="card custom-card h-100">
+            <div class="d-flex card-content-flex">
+
+              <!-- Left Image Side -->
+              <div class="card-image-wrapper">
+                <img src="./assets/img/glimpse/02.jpg" class="card-img-custom" alt="Spiritual leader photo">
+              </div>
+
+              <!-- Right Content Side -->
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-side">
+                <div>
+                  <h5 class="card-title fw-bold">Bhoomipujan for Fiji Math</h5>
+                  <p class="card-text text-secondary mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
+                    Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
+                    Fiji to explore their Spirituality.</p>
+                </div>
+                <!-- Button area, aligned to the right -->
+                <div class="text-end">
+                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Item 2 -->
+        <div class="col-lg-6 col-12">
+          <div class="card custom-card h-100">
+            <div class="d-flex card-content-flex">
+
+              <!-- Left Image Side -->
+              <div class="card-image-wrapper">
+                <img src="./assets/img/glimpse/01.jpg" class="card-img-custom" alt="Event photo with people">
+              </div>
+
+              <!-- Right Content Side -->
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1  text-side">
+                <div>
+                  <h5 class="card-title fw-bold">Bhoomipujan for Fiji Math</h5>
+                  <p class="card-text text-secondary mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
+                    Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
+                    Fiji to explore their Spirituality.</p>
+                </div>
+                <!-- Button area, aligned to the right -->
+                <div class="text-end">
+                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Item 3 -->
+        <div class="col-lg-6 col-12">
+          <div class="card custom-card h-100">
+            <div class="d-flex card-content-flex">
+
+              <!-- Left Image Side -->
+              <div class="card-image-wrapper">
+                <img src="./assets/img/glimpse/03.jpg" class="card-img-custom" alt="Crowd photo">
+              </div>
+
+              <!-- Right Content Side -->
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1  text-side">
+                <div>
+                  <h5 class="card-title fw-bold">Bhoomipujan for Fiji Math</h5>
+                  <p class="card-text text-secondary mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
+                    Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
+                    Fiji to explore their Spirituality.</p>
+                </div>
+                <!-- Button area, aligned to the right -->
+                <div class="text-end">
+                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Item 4 -->
+        <div class="col-lg-6 col-12">
+          <div class="card custom-card h-100">
+            <div class="d-flex card-content-flex">
+
+              <!-- Left Image Side -->
+              <div class="card-image-wrapper">
+                <img src="./assets/img/glimpse/04.jpg" class="card-img-custom" alt="People gathering photo">
+              </div>
+
+              <!-- Right Content Side -->
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1  text-side">
+                <div>
+                  <h5 class="card-title fw-bold">Bhoomipujan for Fiji Math</h5>
+                  <p class="card-text text-secondary mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
+                    Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
+                    Fiji to explore their Spirituality.</p>
+                </div>
+                <!-- Button area, aligned to the right -->
+                <div class="text-end">
+                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+        <section class="dark-stats-section ">
             <div class="container">
                 <div class="row text-white g-5">
                     <div class="col-lg-4 scroll-fade-in">
@@ -300,7 +452,7 @@
                         </p>
                         <div class="d-flex gap-3">
                             <button
-                                class="btn px-4 py-2 font-weight-semibold rounded-3 shadow-lg transition duration-300 btn-accent-primary">
+                                class="btn px-4 py-2 fw-bold rounded-3 shadow-lg transition duration-300 btn-accent-primary">
                                 Read More
                             </button>
                         </div>
@@ -318,36 +470,72 @@
                                 <p class="h5 font-weight-semibold text-white mb-1">Community Meals</p>
                                 <p class="stat-description text-sm">Cooked and served daily</p>
                             </div>
-                            <div class="col-6 scroll-fade-in delay-100">
-                                <ul class="resolution-list flex-grow-1">
-                                    <li>Promotion of Ancient Indian Knowledge, Holistic Living and Vedic Way of Life
-                                    </li>
-                                    <li>Preservation and Promotion of Indian Culture and Literature</li>
-                                    <li>Rehabilitation and Support for the Homeless</li>
-                                    <li>Rural Development and Tribal Empowerment</li>
-                                    <li>Empowerment of Underprivileged Sections</li>
-                                    <li>Addiction Recovery and Life Correction</li>
-                                    <li>Natural Healing, Yoga, and Ayurveada</li>
-                                    <li>Environmental Conservation and Green Initiatives</li>
-                                    <li>Promotion of Peace and Harmony For All</li>
-                                </ul>
-                            </div>
-                            <div class="col-6 scroll-fade-in delay-200">
-                                <ul class="resolution-list flex-grow-1">
-                                    <li>Universal Brotherhood and Global Peace</li>
-                                    <li>Establishment of Places Meditation</li>
-                                    <li>Mental Health and Wellbeing</li>
-                                    <li>Women Empowerment and Gender Equality</li>
-                                    <li>Arts, Music, and Traditional Performances</li>
-                                    <li>Disaster Relief and Humanitarian Aid</li>
-                                    <li>Promotion of Ethical Business and Philanthropy</li>
-                                    <li>International Collaboration and Exchange</li>
-                                    <li>Research and Development in Vedic Sciences</li>
-                                </ul>
-                            </div>
-
                         </div>
                     </div>
+                </div>
+
+
+                <div class="row g-4 justify-content-center mt-3">
+
+                    <!-- Column 1 -->
+                    <div class="col-md-4">
+                        <div class="resolution-column">
+                            <div class="orange-dot-container">
+                                <!-- First dot is slightly different in the image, showing the left edge -->
+                                <div class="outside-orange"></div>
+                                <div class="orange-dot"></div>
+                                <div class="dot-line"></div>
+                            </div>
+                            <ul class="resolution-list flex-grow-1">
+                                <li>Promotion of Ancient Indian Knowledge, Holistic Living and Vedic Way of Life</li>
+                                <li>Preservation and Promotion of Indian Culture and Literature</li>
+                                <li>Rehabilitation and Support for the Homeless</li>
+                                <li>Rural Development and Tribal Empowerment</li>
+                                <li>Empowerment of Underprivileged Sections</li>
+                                <li>Promotion of Peace and Harmony For All</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-md-4">
+                        <div class="resolution-column">
+                            <div class="orange-dot-container">
+                                <div class="outside-orange"></div>
+                                <div class="orange-dot"></div>
+                                <div class="dot-line"></div>
+                            </div>
+                            <ul class="resolution-list flex-grow-1">
+                                <li>Universal Brotherhood and Global Peace</li>
+                                <li>Establishment of Places Meditation</li>
+                                <li>Mental Health and Wellbeing</li>
+                                <li>Women Empowerment and Gender Equality</li>
+                                <li>Arts, Music, and Traditional Performances</li>
+                                <li>Research and Development in Vedic Sciences</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="col-md-4">
+                        <div class="resolution-column">
+                            <div class="orange-dot-container">
+                                <div class="outside-orange"></div>
+                                <div class="orange-dot"></div>
+                                <!-- In the image, the last dot is also truncated on the right, but a full dot looks cleaner in a standard layout -->
+                                <div class="dot-line" style="margin-right: -15px;"></div>
+                            </div>
+                            <ul class="resolution-list flex-grow-1">
+                                <li>Addiction Recovery and Life Correction</li>
+                                <li>Natural Healing, Yoga, and Ayurveada</li>
+                                <li>Environmental Conservation and Green Initiatives</li>
+                                <li>Disaster Relief and Humanitarian Aid</li>
+                                <li>Promotion of Ethical Business and Philanthropy</li>
+                                <li>International Collaboration and Exchange</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="quote-section text-center scroll-fade-in">
@@ -366,61 +554,110 @@
             </div>
         </section>
 
-        <section class="py-5 bg-white overflow-hidden dham-work">
+        <section class="pt-5 bg-white overflow-hidden dham-work">
             <div class="container py-4">
-                <div class="text-center scroll-fade-in">
-                    <p class="text-sm font-weight-bold text-uppercase tracking-widest text-orange mb-3">Our
-                        Guiding Light</p>
-                    <h2 class="h2 font-weight-bold text-dark-custom mb-4">
-                        Dham's work
-                    </h2>
-                    <!-- <button
-                        class="btn btn-outline-accent px-4 py-2 font-weight-semibold rounded-3 mb-5 border-accent-custom">
-                        More About Guruji
-                    </button> -->
+                <div class="row">
+                    <div class="section-title">
+                        <div class="lotus">
+                            <img src="./assets/img/lotus.png" alt="">
+                        </div>
+                        <h5>Builds</h5>
+                        <h2 class="h2 font-weight-bold text-dark-custom">Dham's work</h2>
+                    </div>
                 </div>
 
-                <div class="row g-4">
-                    <div class="col-sm-6 col-lg-3 text-center scroll-fade-in delay-100">
-                        <img src="./assets/img/dham-01.png" alt="Param Pujya Guru Ji"
-                            class="img-fluid rounded-3 object-cover mb-3 shadow-lg">
-                        <h3 class="h5 font-weight-bold text-dark-custom">Dhirendra Krishna Shastri</h3>
-                        <p class="text-secondary">Param Pujya Guru Ji</p>
+                <div class="row g-4 justify-content-center">
+
+                    <!-- Card 1 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card card-custom">
+                            <!-- Placeholder for Image 1: Crowd from behind -->
+                            <img src="./assets/img/glimpse/01.jpg" class="card-img-top" alt="Spiritual Gathering">
+                            <div class="card-body card-body-custom p-4">
+                                <h5 class="discourse-title">Discourse and Satsang</h5>
+                                <p class="card-text text-muted small">The preaching of the Katha from the mouth of Param
+                                    Pujya Guruji is
+                                    to propagate the Indian Sanatan tradition throughout the world and unite all people
+                                    globally while bring
+                                    a spiritual revolution in India. He aims to spread the message of love, peace and
+                                    harmony in the world
+                                    and to get people to commit towards promoting unity in the times of diversity.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3 text-center scroll-fade-in delay-200">
-                        <img src="./assets/img/dham-02.png" alt="Acharya Devta"
-                            class="img-fluid rounded-3 object-cover mb-3 shadow-lg">
-                        <h3 class="h5 font-weight-bold text-dark-custom">Acharya Devta</h3>
-                        <p class="text-secondary">Head Priest & Ritual Expert</p>
+
+                    <!-- Card 2 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card card-custom">
+                            <!-- Placeholder for Image 2: Two spiritual figures -->
+                            <img src="./assets/img/glimpse/02.jpg" class="card-img-top" alt="Guruji and Devotee">
+                            <div class="card-body card-body-custom p-4">
+                                <h5 class="discourse-title">Discourse and Satsang</h5>
+                                <p class="card-text text-muted small">The preaching of the Katha from the mouth of Param
+                                    Pujya Guruji is
+                                    to propagate the Indian Sanatan tradition throughout the world and unite all people
+                                    globally while bring
+                                    a spiritual revolution in India. He aims to spread the message of love, peace and
+                                    harmony in the world
+                                    and to get people to commit towards promoting unity in the times of diversity.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3 text-center scroll-fade-in delay-300">
-                        <img src="./assets/img/dham-03.jpg" alt="Seva Pramukh"
-                            class="img-fluid rounded-3 object-cover mb-3 shadow-lg">
-                        <h3 class="h5 font-weight-bold text-dark-custom">Vikas Sharma</h3>
-                        <p class="text-secondary">Head of Community Seva</p>
+
+                    <!-- Card 3 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card card-custom">
+                            <!-- Placeholder for Image 3: Figure with a leader -->
+                            <img src="./assets/img/glimpse/03.jpg" class="card-img-top" alt="Receiving Award">
+                            <div class="card-body card-body-custom p-4">
+                                <h5 class="discourse-title">Discourse and Satsang</h5>
+                                <p class="card-text text-muted small">The preaching of the Katha from the mouth of Param
+                                    Pujya Guruji is
+                                    to propagate the Indian Sanatan tradition throughout the world and unite all people
+                                    globally while bring
+                                    a spiritual revolution in India. He aims to spread the message of love, peace and
+                                    harmony in the world
+                                    and to get people to commit towards promoting unity in the times of diversity.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3 text-center scroll-fade-in delay-400">
-                        <img src="./assets/img/dham-04.jpg" alt="Admin Head"
-                            class="img-fluid rounded-3 object-cover mb-3 shadow-lg">
-                        <h3 class="h5 font-weight-bold text-dark-custom">Anjana Devi</h3>
-                        <p class="text-secondary">Dham Administrator</p>
+
+                    <!-- Card 4 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card card-custom">
+                            <!-- Placeholder for Image 4: Collage/Group Shot -->
+                            <img src="./assets/img/glimpse/04.jpg" class="card-img-top" alt="Community Work">
+                            <div class="card-body card-body-custom p-4">
+                                <h5 class="discourse-title">Discourse and Satsang</h5>
+                                <p class="card-text text-muted small">The preaching of the Katha from the mouth of Param
+                                    Pujya Guruji is
+                                    to propagate the Indian Sanatan tradition throughout the world and unite all people
+                                    globally while bring
+                                    a spiritual revolution in India. He aims to spread the message of love, peace and
+                                    harmony in the world
+                                    and to get people to commit towards promoting unity in the times of diversity.</p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
         <section class="faq-section">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="text-center scroll-fade-in">
-                            <p class="text-sm font-weight-bold text-uppercase tracking-widest text-orange mb-3">
-                                Common Queries</p>
-                            <h2 class="h2 font-weight-bold text-dark-custom mb-5">
-                                FAQs for Devotees and Visitors
-                            </h2>
+                <div class="row">
+                    <div class="section-title">
+                        <div class="lotus">
+                            <img src="./assets/img/lotus.png" alt="">
                         </div>
-
+                        <h5>Common Queries</h5>
+                        <h2 class="h2 font-weight-bold 
+                        text-dark-custom"> FAQs for Devotees and Visitors</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center position-relative">
+                    <div class="col-lg-8">
                         <div id="faq-accordion" class="accordion space-y-4 scroll-fade-in delay-100">
                             <div class="faq-item mb-3">
                                 <button
@@ -476,6 +713,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div><img src="./assets/img/about/bg.png" class="position-set" alt="">
+                    <div class="col-lg-4">
+                        <img src="./assets/img//faq.jpg" alt="Guru" class="guru-img shadow">
                     </div>
                 </div>
             </div>
@@ -484,9 +724,9 @@
         <section class="py-5 bg-white overflow-hidden news-section">
             <div class="container py-4">
                 <div class="d-flex justify-content-between align-items-center mb-5 scroll-fade-in">
-                    <h2 class="h2 font-weight-bold text-dark-custom">Latest Mandir Updates</h2>
+                    <h2 class="h2 font-weight-bold text-dark-custom">Latest Updates</h2>
                     <button
-                        class="btn px-4 py-2 font-weight-semibold rounded-3 shadow-lg transition duration-300 d-none d-sm-block btn-accent-primary">
+                        class="btn px-4 py-2 fw-bold rounded-3 shadow-lg transition duration-300 d-none d-sm-block btn-accent-primary">
                         View All News
                     </button>
                 </div>
@@ -507,7 +747,7 @@
                                     and spiritual leaders.
                                 </p>
                                 <a href="#"
-                                    class="mt-3 d-inline-block small font-weight-semibold text-accent text-decoration-none">Read
+                                    class="mt-3 d-inline-block small fw-bold text-accent text-decoration-none">Read
                                     More →</a>
                             </div>
                         </div>
@@ -528,7 +768,7 @@
                                     dedicated volunteers.
                                 </p>
                                 <a href="#"
-                                    class="mt-3 d-inline-block small font-weight-semibold text-accent text-decoration-none">Read
+                                    class="mt-3 d-inline-block small fw-bold text-accent text-decoration-none">Read
                                     More →</a>
                             </div>
                         </div>
@@ -548,7 +788,7 @@
                                     medical aid to the local community.
                                 </p>
                                 <a href="#"
-                                    class="mt-3 d-inline-block small font-weight-semibold text-accent text-decoration-none">Read
+                                    class="mt-3 d-inline-block small fw-bold text-accent text-decoration-none">Read
                                     More →</a>
                             </div>
                         </div>
@@ -563,7 +803,7 @@
             <div class="row">
                 <div class="col-lg-3 mb-4">
                     <div class="footer-logo">
-                        <h5>Bageshwar Dham</h5>
+                        <h5 class="text-uppercase">Bageshwar Dham</h5>
                     </div>
                     <p style="color: rgba(255,255,255,0.8); line-height: 1.7;">A sacred spiritual center dedicated to
                         serving humanity through devotion, wisdom, and compassionate action.</p>
