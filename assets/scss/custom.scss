@@ -1,0 +1,198 @@
+$white: #ffffff;
+$black: #000000;
+$primary-color: #021a5e;
+
+.header {
+    /* Header Styles */
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    /* Higher than Bootstrap's z-index for sticky */
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    /* Replaces shadow-lg */
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        top: 30px;
+    }
+
+    .nav-link:focus-visible {
+        box-shadow: none;
+    }
+
+    .navbar {
+        background-color: $white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand img {
+        height: 60px;
+    }
+
+    .nav-link {
+        color: $black !important;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0 8px;
+    }
+
+    .dropdown-menu {
+        font-size: 12px;
+
+        .dropdown-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 4px;
+        }
+    }
+
+    .nav-link:hover {
+        color: $primary-color !important;
+    }
+
+    .donate-btn {
+        background-color: $primary-color;
+        color: $white !important;
+        border-radius: 20px;
+        padding: 6px 18px;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #f9f9f9;
+        color: $primary-color !important;
+    }
+}
+
+.footer {
+    background: #0b154e;
+    color: var(--white);
+    padding: 4rem 0 2rem;
+
+    h5 {
+        color: var(--accent-gold);
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin-bottom: 0.8rem;
+    }
+
+    a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 0.95rem;
+    }
+
+    a:hover {
+        color: var(--accent-gold);
+    }
+
+    .footer-contact p {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .footer-contact i {
+        color: var(--accent-gold);
+        margin-right: 0.5rem;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+
+    .social-links a:hover {
+        background: var(--accent-gold);
+        color: var(--primary-blue);
+        transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 3rem;
+        padding-top: 2rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+    }
+}
+
+.hero-banner-slider {
+    .hero-slider {
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        #heroCarousel {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .slide {
+            min-width: calc(100% / 3);
+            padding: 0.5rem;
+
+            img {
+                width: 100%;
+                height: 320px;
+                object-fit: cover;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                transition: transform 0.3s ease;
+            }
+
+            img:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .slider-arrows {
+            button {
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s;
+                background: #1e3a8a;
+                color: #fff;
+
+                &:hover {
+                    background-color: #f8f9fa;
+                    color: #1e3a8a;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
