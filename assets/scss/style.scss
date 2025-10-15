@@ -36,9 +36,11 @@ body {
     /* Very light background */
     color: var(--text-dark);
 }
+
 .section-padding {
     padding: 80px 0;
 }
+
 /* --- Scroll Animation Styles --- */
 .scroll-fade-in {
     opacity: 0;
@@ -211,7 +213,7 @@ body {
 
     /* md:py-32 */
     .hero-section {
-        padding-top: 4.5rem;
+        padding-top: 3rem;
         padding-bottom: 4.5rem;
     }
 }
@@ -531,7 +533,7 @@ body {
         -o-object-fit: cover;
         object-fit: cover;
         z-index: 0;
-        opacity: 0.75;
+        opacity: 0.65;
         animation: spin 20s linear infinite;
     }
 
@@ -563,9 +565,25 @@ body {
         border: 1px solid #cecece;
         border-top: 0;
     }
+    .card-img-top{
+        height: 40vh;
+    }
 }
 
 .dham-work {
+    .card-img-top{
+        height: 40vh;
+    }
+
+    .card-body{
+        h5{
+            font-weight: 800;
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
     .builds {
         .card-custom {
             border: 1px solid #eee;
@@ -604,6 +622,8 @@ body {
         border-radius: 1rem;
         border: 1px solid #ddd;
         overflow: hidden;
+        font-size: 14px;
+        line-height: 24px;
     }
 
     .card-image-wrapper {
