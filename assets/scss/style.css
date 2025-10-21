@@ -80,6 +80,16 @@ body {
   position: relative;
 }
 
+.header.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  width: 100%;
+  z-index: 1050;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
 .header .navbar-expand-lg .navbar-nav .dropdown-menu {
   top: 30px;
 }
