@@ -1294,3 +1294,30 @@ footer {
         font-size: 26px;
     }
 }
+
+/////////////////////////
+.breadcrumb-section {
+    background-image: url("../img/breadcrumb.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h3 {
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+    .breadcrumb-item.active {
+        color: var(--accent-gold);
+    }
+
+    ol {
+        li {
+            color: #fff !important;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+}

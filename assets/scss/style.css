@@ -1079,4 +1079,24 @@ footer .lang-select {
   left: 5px;
   top: -9px;
   font-size: 26px;
+}
+
+.breadcrumb-section {
+  background-image: url("../img/breadcrumb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.breadcrumb-section h3 {
+  color: #fff;
+  text-transform: capitalize;
+}
+.breadcrumb-section .breadcrumb-item.active {
+  color: var(--accent-gold);
+}
+.breadcrumb-section ol li {
+  color: #fff !important;
+}
+.breadcrumb-section ol li a {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
