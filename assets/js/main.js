@@ -26,3 +26,15 @@ window.addEventListener("scroll", () => {
   const header = document.querySelector(".header");
   header.classList.toggle("scrolled", window.scrollY > 30);
 });
+
+///////////////<!-- ✅ Google Translate Script -->
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      includedLanguages: "en,hi,gu,fr,de,es,zh-CN,ja",
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+    },
+    "google_translate_element"
+  );
+}
