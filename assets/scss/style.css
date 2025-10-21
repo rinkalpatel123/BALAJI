@@ -53,11 +53,11 @@ body {
   }
 }
 .hindi-body {
-  font-family: "Cambay", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .hindi-title {
-  font-family: "Rozha One", serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .banner .youtube-container {
@@ -305,7 +305,7 @@ body {
 }
 .contribute .card-img-custom {
   width: 100%;
-  height: 100%;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem 0 0 1rem;
@@ -703,6 +703,15 @@ body {
   max-width: 1400px;
   margin: auto;
   padding: 0 40px;
+}
+.gallery-grid .masonry-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.gallery-grid .masonry-item:hover img {
+  transform: scale(1.05);
 }
 .gallery-grid .masonry {
   -moz-column-count: 5;
@@ -1109,4 +1118,39 @@ footer .lang-select {
 }
 .breadcrumb-section ol li a {
   color: #fff;
+}
+
+#google_translate_element {
+  position: fixed;
+  z-index: 99;
+  right: 0px;
+  bottom: 50px;
+  /* Hide Google branding (optional but allowed styling) */
+}
+#google_translate_element .goog-logo-link,
+#google_translate_element span {
+  display: none !important;
+}
+#google_translate_element .goog-te-gadget {
+  color: transparent !important;
+}
+#google_translate_element .goog-te-gadget .goog-te-combo:focus-visible,
+#google_translate_element .goog-te-gadget .goog-te-combo:focus-within,
+#google_translate_element .goog-te-gadget .goog-te-combo:focus {
+  outline: 0 !important;
+  border-color: #444;
+}
+#google_translate_element .goog-te-gadget .goog-te-combo {
+  color: #333 !important;
+  font-size: 14px;
+  border: 1px solid #ccc !important;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+@media (max-width: 600px) {
+  .banner .youtube-container {
+    aspect-ratio: 10;
+    height: 400px;
+  }
 }/*# sourceMappingURL=style.css.map */
