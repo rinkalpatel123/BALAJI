@@ -97,3 +97,7 @@ img { max-width: 100%; }
     .card-circle1 { left: 5%; top: 12%; }
     .card-circle2 { right: 8%; bottom: 15%; } 
 }
+
+.document .border{
+   border: 1px dotted #f15f16 !important;
+}
