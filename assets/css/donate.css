@@ -1,0 +1,13 @@
+.donate-section .donate-box{
+    background: url('../img/spiritual-img2.jpg');
+   background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+.donate-box p, .donate-box h5{
+    padding: 0 200px;
+}
