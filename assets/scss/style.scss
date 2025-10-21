@@ -176,16 +176,6 @@ body {
         animation: spin 20s linear infinite;
     }
 
-    @keyframes spin {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
     .quote-mark {
         color: $primary-color;
         font-size: 3rem;
@@ -217,6 +207,16 @@ body {
         border-radius: 22px;
         padding: 0;
         display: inline-block;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -1068,4 +1068,149 @@ footer {
             object-fit: cover;
         }
     }
+}
+
+////////////////////////
+.sanatan-sec {
+    .position-set {
+        position: absolute;
+        top: -225px;
+        left: 60px;
+        width: 400px;
+        height: auto;
+        -o-object-fit: cover;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0.75;
+        animation: spin 20s linear infinite;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 1.5rem;
+        /* Space for custom bullet */
+        color: #495057;
+        /* Darker text */
+    }
+
+    li::before {
+        content: "\2022";
+        /* Unicode for a bullet point */
+        color: $primary-color;
+        /* Orange bullet */
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -0.5em;
+        position: absolute;
+        left: 5px;
+        top: -9px;
+        font-size: 26px;
+    }
+}
+
+////////////////////////
+.color-box {
+    background: #ffdbd1;
+    padding: 15px;
+    height: 100%;
+}
+
+.special-text {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 30px;
+}
+
+.gallery-grid.anna-masonry .masonry {
+    -moz-column-count: 5;
+    column-count: 6;
+}
+
+
+////////////////////////// 
+/* FAQ/Accordion Section */
+.faq-section {
+    padding-top: 6rem;
+    /* py-24 */
+    padding-bottom: 6rem;
+    background-color: #fff;
+    /* bg-gray-50 */
+    overflow: hidden;
+
+    .shadow {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .faq-item {
+        background-color: white;
+        // border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        /* shadow-md */
+        overflow: hidden;
+    }
+
+    .faq-toggle {
+        border: 0;
+        transition: color 0.3s;
+        background: #ffdbd1;
+        font-size: 17px;
+        text-transform: capitalize;
+        font-weight: 500
+    }
+
+    .faq-toggle:hover {
+        color: var(--accent-color);
+    }
+
+    .faq-content {
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .faq-content p {
+        color: #4b5563;
+        /* text-gray-700 */
+    }
+
+    .position-set {
+        position: absolute;
+        bottom: -80px;
+        left: -90px;
+        width: 400px;
+        height: auto;
+        -o-object-fit: cover;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0.65;
+        animation: spin 20s linear infinite;
+    }
+
+    .guru-img {
+        border-radius: 32px;
+        width: 100%;
+        position: relative;
+        z-index: 9;
+        height: auto;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+
+
+/////////////
+.gallery-grid.seva-grid .masonry-item img {
+    height: 250px;
+}
+
+.gallery-grid.seva-grid .masonry {
+    -moz-column-count: 5;
+    column-count: 4;
 }
