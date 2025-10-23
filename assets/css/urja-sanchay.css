@@ -1,0 +1,158 @@
+.urja-sanchay-gallery.gallery-grid .masonry {
+    column-count: 6;
+}
+
+.urja-sanchay-gallery.gallery-grid .nav-pills .nav-link.active{
+    background-color: #fd7a01;
+}
+
+.nav-pills .nav-link{
+    color: grey;
+}
+
+/* Section */
+.process-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #c33;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Tabs */
+.steps-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.process-section .tab {
+  background: #000;
+  color: #fff;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.process-section .tab.active {
+  background: #FD7A01;
+}
+
+.process-section tab:hover {
+  background: #FD7A01;
+}
+
+/* Tab content */
+.process-section .tab-content {
+  display: none;
+}
+
+.process-section .tab-content.active {
+  display: block;
+}
+
+/* Content Layout */
+.process-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: left;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.note {
+  color: #444;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.session {
+  font-weight: 600;
+  color: #111;
+  font-size: 20px;
+}
+
+.register-btn {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #FD7A01;
+  color: #FD7A01;
+  padding: 10px 25px;
+  border-radius: 25px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  background: #FD7A01;
+  color: #ffffff;
+}
+
+/* Image */
+.image-content img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .process-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-content img {
+    max-width: 300px;
+  }
+
+  .text-content {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+ .process-section  .tab {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .register-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
