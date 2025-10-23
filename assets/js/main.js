@@ -19,3 +19,38 @@ document.querySelectorAll(".dropdown").forEach(function (dropdown) {
     }
   });
 });
+
+////////////////
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".header");
+  header.classList.toggle("scrolled", window.scrollY > 30);
+});
+
+///////////////<!-- ✅ Google Translate Script -->
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      includedLanguages: "en,hi,gu,fr,de,es,zh-CN,ja",
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+    },
+    "google_translate_element"
+  );
+}
+
+/////////// image open isotope
+
+document.addEventListener("DOMContentLoaded", function () {
+  const galleryItems = document.querySelectorAll(".masonry-item img");
+  const modalImage = document.getElementById("modalImage");
+
+  galleryItems.forEach((img) => {
+    img.style.cursor = "pointer";
+    img.addEventListener("click", function () {
+      modalImage.src = this.src;
+      const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+      modal.show();
+    });
+  });
+});
