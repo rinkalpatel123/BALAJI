@@ -43,5 +43,13 @@
 }
 
 .indicate{
-    color: #ff7f40;
+    color: #000000;
 }
+
+.email img{
+    margin-top: 45px;
+}
+
+/* .contact-box{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} */
