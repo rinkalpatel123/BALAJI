@@ -1298,12 +1298,6 @@ footer .lang-select {
   color: #fff;
 }
 
-@media (max-width: 600px) {
-  .banner .youtube-container {
-    aspect-ratio: 10;
-    height: 400px;
-  }
-}
 @media (max-width: 1299.98px) {
   .header .nav-link {
     font-size: 12px;
@@ -1327,5 +1321,26 @@ footer .lang-select {
   .header .nav-link {
     font-size: 11px;
     margin: 0 1px;
+  }
+}
+@media (max-width: 992px) {
+  .toggle-po-set {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .isotope-section .segmented {
+    padding: 0px;
+    gap: 3;
+  }
+  .isotope-section .segmented button {
+    font-size: 13px;
+    padding: 5px 15px;
+  }
+  .banner .youtube-container {
+    aspect-ratio: 10;
+    height: 400px;
   }
 }/*# sourceMappingURL=style.css.map */
