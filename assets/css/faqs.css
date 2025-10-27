@@ -82,18 +82,18 @@ details[open] summary:after {
 }
 
 .faq-body {
-    width: 100em;
-    margin: 4em auto;
-    box-shadow: 0px 0px 16px #5b5b5b;
+    width: 100%;
+    /* margin: 4em auto; */
+    /* box-shadow: 0px 0px 16px #5b5b5b; */
     border-radius: 0.2em;
     padding: 5em;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .faq-list {
-    width: 80em;
-    margin: 1em auto;
-    padding: 2em 0;
+    /* width: 80em; */
+    /* margin: 1em auto;
+    padding: 2em 0; */
 }
 
 summary::-webkit-details-marker {
@@ -113,3 +113,50 @@ summary:after {
     text-align: center;
     width: 25px;
 }
+
+.faq-list .border{
+    border: 1.5px solid #f50;
+    -webkit-box-shadow: 0 10px 24px rgba(255, 85, 0, .3);
+animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.faq-list .border:hover{
+        border: 1.5px solid #f50 !important;
+        
+}
+
+/* Left side animation (Left ➡ Right) */
+.left {
+  animation-name: slideLeftToRight;
+}
+
+/* Right side animation (Right ➡ Left) */
+.right {
+  animation-name: slideRightToLeft;
+}
+
+/* Keyframes */
+@keyframes slideLeftToRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightToLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
