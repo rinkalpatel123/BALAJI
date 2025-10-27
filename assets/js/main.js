@@ -89,3 +89,64 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//////////////////////////CHATBOT
+
+const chatbot = document.querySelector(".chatbot");
+const floatBtn = document.getElementById("chatbot-float");
+const sendBtn = document.getElementById("send-btn");
+const userInput = document.getElementById("user-input");
+const messages = document.getElementById("chatbot-messages");
+const toggleBtn = document.getElementById("chatbot-toggle");
+
+floatBtn.addEventListener("click", () => {
+  chatbot.style.display = "flex";
+  floatBtn.style.display = "none";
+});
+
+toggleBtn.addEventListener("click", () => {
+  chatbot.style.display = "none";
+  floatBtn.style.display = "block";
+});
+
+sendBtn.addEventListener("click", sendMessage);
+userInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") sendMessage();
+});
+
+async function sendMessage() {
+  const text = userInput.value.trim();
+  if (!text) return;
+
+  addMessage(text, "user");
+  userInput.value = "";
+  addMessage("Typing...", "bot");
+
+  const botReply = await getBotResponse(text);
+  document.querySelector(".message.bot:last-child").textContent = botReply;
+}
+
+function addMessage(text, type) {
+  const msg = document.createElement("div");
+  msg.classList.add("message", type);
+  msg.textContent = text;
+  messages.appendChild(msg);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+// 🧠 Get Response from API
+async function getBotResponse(userText) {
+  try {
+    const response = await fetch("https://api.monkedev.com/fun/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ msg: userText }),
+    });
+
+    const data = await response.json();
+    return data.response || "I'm not sure, could you clarify?";
+  } catch (error) {
+    console.error(error);
+    return "Sorry 😔 I’m having trouble connecting right now.";
+  }
+}
