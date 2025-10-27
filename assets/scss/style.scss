@@ -113,6 +113,14 @@ body {
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
+    ul.dropdown-menu {
+        li:last-child {
+            .dropdown-item {
+                border-bottom: 0;
+            }
+        }
+    }
+
     .navbar-expand-lg .navbar-nav .dropdown-menu {
         top: 30px;
     }
@@ -165,6 +173,112 @@ body {
         color: $primary-color !important;
     }
 }
+
+////////////////CHATBOT
+.chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+    font-family: "Poppins", sans-serif;
+
+    &-header {
+        background: #ffb6c1;
+        color: #333;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+    }
+
+    &-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .message {
+            max-width: 80%;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 14px;
+
+            &.bot {
+                background: #f1f1f1;
+                align-self: flex-start;
+            }
+
+            &.user {
+                background: #ffb6c1;
+                color: #fff;
+                align-self: flex-end;
+            }
+        }
+    }
+
+    &-input {
+        display: flex;
+        border-top: 1px solid #eee;
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            background: #ffb6c1;
+            color: #fff;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+    }
+}
+
+.chatbot-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffb6c1;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 /////////
 .about {
