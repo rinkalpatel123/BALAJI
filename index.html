@@ -68,7 +68,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="./upcoming-event.html">Upcoming Events</a>
+              <a class="nav-link" href="./upcoming-event.html">Events</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -113,6 +113,13 @@
           </ul>
         </div>
 
+        <!-- 🌍 Language Selector -->
+        <div class="language-selector d-flex align-items-center gap-2 me-3">
+          <!-- <i class="bi bi-globe2 fs-5 text-dark"></i> -->
+          <label class="fw-semibold text-dark mb-0">Language</label>
+          <div id="google_translate_element"></div>
+        </div>
+
         <div class="d-none d-lg-block">
           <a href="./donate.html" class="btn donate-btn">Donate</a>
         </div>
@@ -120,11 +127,7 @@
     </nav>
   </div>
   <!-- End Header -->
-
-  <!-- google translator -->
-  <div id="google_translate_element"></div>
-  <!-- end -->
-
+   
   <!-- banner -->
   <section class="banner">
     <div class="container-fluid px-5">
@@ -325,7 +328,7 @@
       <div class="row g-4">
 
         <!-- Card Item 1 (Uses a placeholder image) -->
-        <div class="col-lg-6 col-12">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="card custom-card h-100">
             <div class="d-flex card-content-flex">
 
@@ -342,7 +345,7 @@
                 </div>
                 <!-- Button area, aligned to the right -->
                 <div class="text-end">
-                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                  <a href="#" class="btn btn-orange-custom">Donate Now</a>
                 </div>
               </div>
 
@@ -351,7 +354,7 @@
         </div>
 
         <!-- Card Item 2 -->
-        <div class="col-lg-6 col-12">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="card custom-card h-100">
             <div class="d-flex card-content-flex">
 
@@ -369,7 +372,7 @@
                 </div>
                 <!-- Button area, aligned to the right -->
                 <div class="text-end">
-                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                  <a href="#" class="btn btn-orange-custom">Donate Now</a>
                 </div>
               </div>
 
@@ -378,7 +381,7 @@
         </div>
 
         <!-- Card Item 3 -->
-        <div class="col-lg-6 col-12">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="card custom-card h-100">
             <div class="d-flex card-content-flex">
 
@@ -395,7 +398,7 @@
                 </div>
                 <!-- Button area, aligned to the right -->
                 <div class="text-end">
-                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                  <a href="#" class="btn btn-orange-custom">Donate Now</a>
                 </div>
               </div>
 
@@ -404,7 +407,7 @@
         </div>
 
         <!-- Card Item 4 -->
-        <div class="col-lg-6 col-12">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="card custom-card h-100">
             <div class="d-flex card-content-flex">
 
@@ -423,7 +426,35 @@
                 </div>
                 <!-- Button area, aligned to the right -->
                 <div class="text-end">
-                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                  <a href="#" class="btn btn-orange-custom">Donate Now</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Item 5 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="card custom-card h-100">
+            <div class="d-flex card-content-flex">
+
+              <!-- Left Image Side -->
+              <div class="card-image-wrapper">
+                <img src="./assets/img/vivah/k02.jpg" class="card-img-custom" alt="People gathering photo">
+              </div>
+
+              <!-- Right Content Side -->
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                  <h5 class="card-title fw-bold">Kanya Vivah</h5>
+                  <p class="card-text text-secondary mb-3">
+                    Help us protect the sacred Cow.
+                  </p>
+                </div>
+                <!-- Button area, aligned to the right -->
+                <div class="text-end">
+                  <a href="#" class="btn btn-orange-custom">Donate Now</a>
                 </div>
               </div>
 
@@ -624,7 +655,7 @@
               <img src="./assets/img/lotus.png" alt="">
             </div>
             <h5>Program</h5>
-            <h2>Upcoming Events</h2>
+            <h2>Events</h2>
           </div>
         </div>
       </div>
@@ -1145,10 +1176,10 @@
         <!-- Useful Links -->
         <div class="col-md-3">
           <h5>USEFUL LINKS</h5>
-          <a href="#">Donate Now</a><br>
-          <a href="#">Upcoming Events</a><br>
-          <a href="#">Books</a><br>
-          <a href="#">Bhajans</a>
+          <a href="./donate.html">Donate Now</a><br>
+          <a href="./upcoming-event.html">Events</a><br>
+          <a href="./books.html">Books</a><br>
+          <a href="./bhajans.html">Bhajans</a>
         </div>
 
         <!-- Stay Updated -->
@@ -1184,7 +1215,7 @@
   <!-- Libraries -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- Google Translate Script -->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
