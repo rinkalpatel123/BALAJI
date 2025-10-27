@@ -117,46 +117,10 @@ summary:after {
 .faq-list .border{
     border: 1.5px solid #f50;
     -webkit-box-shadow: 0 10px 24px rgba(255, 85, 0, .3);
-animation-duration: 2.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
 }
 
 .faq-list .border:hover{
         border: 1.5px solid #f50 !important;
         
-}
-
-/* Left side animation (Left ➡ Right) */
-.left {
-  animation-name: slideLeftToRight;
-}
-
-/* Right side animation (Right ➡ Left) */
-.right {
-  animation-name: slideRightToLeft;
-}
-
-/* Keyframes */
-@keyframes slideLeftToRight {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideRightToLeft {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
