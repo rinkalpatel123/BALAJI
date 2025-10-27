@@ -842,16 +842,18 @@ body {
         margin: auto;
         padding: 0 40px;
     }
-.masonry-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
 
-.masonry-item:hover img {
-  transform: scale(1.05);
-}
+    .masonry-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .masonry-item:hover img {
+        transform: scale(1.05);
+    }
+
     .masonry {
         column-count: 5;
         column-gap: 16px;
@@ -1242,6 +1244,21 @@ footer {
 
 ///////// 
 .vivah-timeline {
+    .img-side {
+        padding: 0 30px;
+
+        img {
+            border-radius: 8px;
+        }
+    }
+
+    .box-side {
+        background: #f8f8f8;
+        border: 1px solid #cbcbcb;
+        padding: 30px;
+        border-radius: 8px;
+    }
+
     .year-set {
         padding: 12px;
         background: #ffa289;
@@ -1344,15 +1361,10 @@ footer {
 
 /////////
 #google_translate_element {
-    // display: inline-block;
-    // border: 1px solid #ccc;
-    // border-radius: 5px;
-    // padding: 5px 10px;
-    // background: #fff;
-    position: fixed;
-    z-index: 99;
-    right: 0px;
-    bottom: 50px;
+    // position: fixed;
+    // z-index: 99;
+    // right: 0px;
+    // bottom: 50px;
 
     /* Hide Google branding (optional but allowed styling) */
     .goog-logo-link,
@@ -1379,6 +1391,7 @@ footer {
         padding: 8px;
         background: #fd7a01 !important;
     }
+
 }
 
 ////////////RESPONSIVE
@@ -1390,3 +1403,5 @@ footer {
         height: 400px;
     }
 }
+
+/////////////////
