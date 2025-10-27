@@ -136,6 +136,75 @@ body {
   color: #FD7A01 !important;
 }
 
+#customLanguageDropdown {
+  margin-right: 15px;
+  /* Smooth Dropdown Look */
+  /* Hide Google default banner */
+  /* Prevent Google Translate from touching these elements */
+}
+#customLanguageDropdown .dropdown-toggle {
+  background-color: #fff !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease;
+  padding: 5px 13px !important;
+  font-size: 13px;
+}
+#customLanguageDropdown .dropdown-toggle:hover {
+  background-color: #f8f9fa !important;
+  transform: translateY(-1px);
+}
+#customLanguageDropdown .dropdown-menu {
+  margin-top: -15px;
+  border: 1px solid #ddd;
+  min-width: 180px;
+  border-radius: 10px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+#customLanguageDropdown .dropdown-item {
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+#customLanguageDropdown .dropdown-item:hover {
+  background-color: #fd7a01;
+  color: #fff;
+  transform: translateX(3px);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#customLanguageDropdown .goog-te-banner-frame.skiptranslate,
+#customLanguageDropdown .VIpgJd-ZVi9od-ORHb-OEVmcd,
+#customLanguageDropdown .goog-te-balloon-frame,
+#customLanguageDropdown iframe.goog-te-menu-frame {
+  display: none !important;
+}
+#customLanguageDropdown body {
+  top: 0px !important;
+}
+#customLanguageDropdown .notranslate,
+#customLanguageDropdown .notranslate * {
+  translate: none !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#customLanguageDropdown .dropdown-menu .dropdown-item {
+  border-radius: 8px;
+  transition: background 0.2s ease-in-out;
+}
+#customLanguageDropdown .dropdown-item:hover {
+  background-color: #fd7a01;
+  color: #fff !important;
+}
+
 .chatbot {
   position: fixed;
   bottom: 80px;
@@ -402,7 +471,7 @@ body {
 }
 .contribute .card-img-custom {
   width: 100%;
-  height: 180px;
+  height: 195px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem 0 0 1rem;
@@ -1229,76 +1298,34 @@ footer .lang-select {
   color: #fff;
 }
 
-#customLanguageDropdown {
-  margin-right: 15px;
-  /* Smooth Dropdown Look */
-  /* Hide Google default banner */
-  /* Prevent Google Translate from touching these elements */
-}
-#customLanguageDropdown .dropdown-toggle {
-  background-color: #fff !important;
-  border: 1px solid #ddd !important;
-  border-radius: 10px !important;
-  transition: all 0.3s ease;
-}
-#customLanguageDropdown .dropdown-toggle:hover {
-  background-color: #f8f9fa !important;
-  transform: translateY(-1px);
-}
-#customLanguageDropdown .dropdown-menu {
-  margin-top: -15px;
-  border: 1px solid #ddd;
-  min-width: 180px;
-  border-radius: 10px;
-  animation: fadeIn 0.2s ease-in-out;
-}
-#customLanguageDropdown .dropdown-item {
-  border-radius: 6px;
-  transition: all 0.2s ease-in-out;
-}
-#customLanguageDropdown .dropdown-item:hover {
-  background-color: #fd7a01;
-  color: #fff;
-  transform: translateX(3px);
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#customLanguageDropdown .goog-te-banner-frame.skiptranslate,
-#customLanguageDropdown .VIpgJd-ZVi9od-ORHb-OEVmcd,
-#customLanguageDropdown .goog-te-balloon-frame,
-#customLanguageDropdown iframe.goog-te-menu-frame {
-  display: none !important;
-}
-#customLanguageDropdown body {
-  top: 0px !important;
-}
-#customLanguageDropdown .notranslate,
-#customLanguageDropdown .notranslate * {
-  translate: none !important;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-#customLanguageDropdown .dropdown-menu .dropdown-item {
-  border-radius: 8px;
-  transition: background 0.2s ease-in-out;
-}
-#customLanguageDropdown .dropdown-item:hover {
-  background-color: #fd7a01;
-  color: #fff !important;
-}
-
 @media (max-width: 600px) {
   .banner .youtube-container {
     aspect-ratio: 10;
     height: 400px;
+  }
+}
+@media (max-width: 1299.98px) {
+  .header .nav-link {
+    font-size: 12px;
+    margin: 0 3px;
+  }
+  .header .donate-btn {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1150.98px) {
+  #customLanguageDropdown .dropdown-toggle {
+    padding: 2px 9px !important;
+    font-size: 12px;
+  }
+  #customLanguageDropdown {
+    margin-right: 8px;
+  }
+  .header .navbar-brand img {
+    height: 45px;
+  }
+  .header .nav-link {
+    font-size: 11px;
+    margin: 0 1px;
   }
 }/*# sourceMappingURL=style.css.map */
