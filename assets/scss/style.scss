@@ -1359,37 +1359,68 @@ footer {
     }
 }
 
-/////////
+//////////* ---------- Google Translate Combo ---------- */
 #google_translate_element {
-    // position: fixed;
-    // z-index: 99;
-    // right: 0px;
-    // bottom: 50px;
+    margin: 0 !important;
+    padding: 0 !important;
 
-    /* Hide Google branding (optional but allowed styling) */
-    .goog-logo-link,
-    span {
-        display: none !important;
+    .goog-te-gadget-simple {
+        border: 0 !important;
     }
 
     .goog-te-gadget {
+        font-size: 0 !important;
         color: transparent !important;
+        border: none !important;
     }
 
-    .goog-te-gadget .goog-te-combo:focus-visible,
-    .goog-te-gadget .goog-te-combo:focus-within,
-    .goog-te-gadget .goog-te-combo:focus {
-        outline: 0 !important;
-        border-color: #444;
-    }
-
-    .goog-te-gadget .goog-te-combo {
-        color: #ffffff !important;
-        font-size: 14px;
-        border: 1px solid #fd7a01 !important;
+    /* ---------- Dropdown Styling ---------- */
+    .goog-te-combo {
+        background: transparent;
+        border: none;
+        color: #fd7a01 !important;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 4px 8px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
         border-radius: 5px;
-        padding: 8px;
-        background: #fd7a01 !important;
+    }
+
+    .language-selector:hover .goog-te-combo {
+        color: #fff !important;
+    }
+
+    .goog-te-combo:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Remove Google Branding ---------- */
+    .goog-logo-link,
+    .goog-te-gadget span,
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+
+    /* ✅ Hide Google Translate top bar & control frames */
+    .goog-te-banner-frame.skiptranslate,
+    .VIpgJd-ZVi9od-ORHb-OEVmcd,
+    iframe.goog-te-menu-frame,
+    .goog-te-balloon-frame {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        border: 0 !important;
+        position: absolute !important;
+    }
+
+
+    /* ✅ Keep the translation working but hidden cleanly */
+    .skiptranslate iframe {
+        display: none !important;
+        visibility: hidden !important;
     }
 
 }

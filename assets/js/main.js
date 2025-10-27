@@ -28,16 +28,51 @@ window.addEventListener("scroll", () => {
 });
 
 ///////////////<!-- ✅ Google Translate Script -->
+// function googleTranslateElementInit() {
+//   new google.translate.TranslateElement(
+//     {
+//       pageLanguage: "en",
+//       includedLanguages: "en,hi,gu,fr,de,es,zh-CN,ja",
+//       layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+//     },
+//     "google_translate_element"
+//   );
+// }
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     {
       pageLanguage: "en",
-      includedLanguages: "en,hi,gu,fr,de,es,zh-CN,ja",
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      includedLanguages: "en,hi,es,ar,fr,de,ta,te,bn,gu,mr,pa,ne",
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
     },
     "google_translate_element"
   );
 }
+
+// 🧩 Remove Google top frame (translation banner)
+function hideGoogleTopBar() {
+  const style = document.createElement("style");
+  style.innerHTML = `
+    body {
+      top: 0px !important;
+    }
+  `;
+  document.head.appendChild(style);
+}
+hideGoogleTopBar();
+
+// Hide the translation iframe every few seconds (for safety)
+setInterval(() => {
+  const frames = document.querySelectorAll(
+    ".VIpgJd-ZVi9od-ORHb-OEVmcd, iframe.goog-te-menu-frame, .goog-te-banner-frame.skiptranslate"
+  );
+  frames.forEach((f) => {
+    f.style.display = "none";
+    f.style.visibility = "hidden";
+    f.style.height = "0";
+    f.style.width = "0";
+  });
+}, 1500);
 
 /////////// image open isotope
 
