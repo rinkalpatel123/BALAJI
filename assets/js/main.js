@@ -20,8 +20,43 @@ document.querySelectorAll(".dropdown").forEach(function (dropdown) {
   });
 });
 
-////////////////
+////////////////HEADER
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const navbarToggler = document.querySelector(".navbar-toggler");
+//   const navbarCollapse = document.querySelector("#mainNav");
+
+//   if (!navbarToggler || !navbarCollapse) return;
+
+// Get or create Bootstrap collapse instance
+// const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, {
+//   toggle: false,
+// });
+
+// Handle click toggle
+// navbarToggler.addEventListener("click", function () {
+//   const isOpen = navbarCollapse.classList.contains("show");
+
+//   if (isOpen) {
+//     bsCollapse.hide();
+//     navbarToggler.classList.remove("open");
+//   } else {
+//     bsCollapse.show();
+//     navbarToggler.classList.add("open");
+//   }
+// });
+
+// Update states based on Bootstrap events
+//   navbarCollapse.addEventListener("shown.bs.collapse", function () {
+//     navbarToggler.classList.add("open");
+//   });
+
+//   navbarCollapse.addEventListener("hidden.bs.collapse", function () {
+//     navbarToggler.classList.remove("open");
+//   });
+// });
+
+////////////////////
 window.addEventListener("scroll", () => {
   const header = document.querySelector(".header");
   header.classList.toggle("scrolled", window.scrollY > 30);
