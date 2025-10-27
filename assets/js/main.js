@@ -38,41 +38,71 @@ window.addEventListener("scroll", () => {
 //     "google_translate_element"
 //   );
 // }
+
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
-    {
-      pageLanguage: "en",
-      includedLanguages: "en,hi,es,ar,fr,de,ta,te,bn,gu,mr,pa,ne",
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    },
+    { pageLanguage: "en" },
     "google_translate_element"
   );
 }
 
-// 🧩 Remove Google top frame (translation banner)
+document.addEventListener("DOMContentLoaded", function () {
+  const langItems = document.querySelectorAll("#langList .dropdown-item");
+  const langText = document.getElementById("languageText");
+
+  langItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const lang = this.getAttribute("data-lang");
+      const select = document.querySelector(".goog-te-combo");
+
+      if (select) {
+        // stop Google from re-translating the select itself
+        select.classList.add("notranslate");
+        select.value = lang;
+        select.dispatchEvent(new Event("change"));
+      }
+
+      langText.textContent = this.textContent;
+      langText.classList.add("notranslate");
+    });
+  });
+});
+
+// ✅ Remove Google Translate top banner + iframes
 function hideGoogleTopBar() {
   const style = document.createElement("style");
   style.innerHTML = `
-    body {
-      top: 0px !important;
+    body { top: 0px !important; }
+    .goog-te-banner-frame.skiptranslate,
+    .VIpgJd-ZVi9od-ORHb-OEVmcd,
+    iframe.goog-te-menu-frame,
+    .goog-te-balloon-frame {
+      display: none !important;
+      visibility: hidden !important;
+      height: 0 !important;
+      width: 0 !important;
+      border: 0 !important;
+      position: absolute !important;
     }
   `;
   document.head.appendChild(style);
 }
 hideGoogleTopBar();
 
-// Hide the translation iframe every few seconds (for safety)
+// ✅ Re-hide stray iframes just in case
 setInterval(() => {
-  const frames = document.querySelectorAll(
-    ".VIpgJd-ZVi9od-ORHb-OEVmcd, iframe.goog-te-menu-frame, .goog-te-banner-frame.skiptranslate"
-  );
-  frames.forEach((f) => {
-    f.style.display = "none";
-    f.style.visibility = "hidden";
-    f.style.height = "0";
-    f.style.width = "0";
-  });
-}, 1500);
+  document
+    .querySelectorAll(
+      ".VIpgJd-ZVi9od-ORHb-OEVmcd, iframe.goog-te-menu-frame, .goog-te-banner-frame.skiptranslate"
+    )
+    .forEach((f) => {
+      f.style.display = "none";
+      f.style.visibility = "hidden";
+      f.style.height = "0";
+      f.style.width = "0";
+    });
+}, 2000);
 
 /////////// image open isotope
 
