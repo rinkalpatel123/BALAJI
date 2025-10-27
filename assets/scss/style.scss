@@ -190,7 +190,7 @@ body {
     font-family: "Poppins", sans-serif;
 
     &-header {
-        background: #ffb6c1;
+        background: #ffc794;
         color: #333;
         padding: 10px 15px;
         display: flex;
@@ -236,7 +236,7 @@ body {
             }
 
             &.user {
-                background: #ffb6c1;
+                background: #ffc794;
                 color: #fff;
                 align-self: flex-end;
             }
@@ -255,7 +255,7 @@ body {
         }
 
         button {
-            background: #ffb6c1;
+            background: #ffc794;
             color: #fff;
             border: none;
             padding: 0 15px;
@@ -266,9 +266,10 @@ body {
 
 .chatbot-float {
     position: fixed;
+    z-index: 99;
     bottom: 20px;
     right: 20px;
-    background: #ffb6c1;
+    background: #fd7a01;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -1536,7 +1537,6 @@ footer {
         display: none !important;
         visibility: hidden !important;
     }
-
 }
 
 ////////////RESPONSIVE
