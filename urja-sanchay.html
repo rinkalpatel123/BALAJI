@@ -40,13 +40,17 @@
 
 <body>
 
-   <!-- ======= Header ======= -->
+ <!-- ======= Header ======= -->
   <div class="header sticky-top">
     <nav class="navbar navbar-expand-lg py-1">
-      <div class="container-fluid px-lg-5 px-md-3">
+      <div class="container-fluid px-5">
         <a class="navbar-brand" href="./index.html">
           <img src="./assets/img/logo.png" alt="Logo">
         </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse justify-content-center" id="mainNav">
           <ul class="navbar-nav mb-2 mb-lg-0">
@@ -121,40 +125,35 @@
           </ul>
         </div>
 
-        <div class="d-flex toggle-po-set">
-          <!-- 🌍 Language Selector -->
-          <div class="dropdown notranslate" id="customLanguageDropdown">
-            <button class="btn btn-light dropdown-toggle d-flex align-items-center gap-2 shadow-sm" type="button"
-              id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-globe2 text-dark fs-5"></i>
-              <span class="fw-semibold text-dark" id="languageText">Language</span>
-            </button>
-
-            <ul class="dropdown-menu dropdown-menu-end shadow-sm rounded-3 p-2" aria-labelledby="languageDropdown"
-              id="langList">
-              <li><a class="dropdown-item py-2" href="#" data-lang="hi">Hindi</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="en">English</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="es">Spanish</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="ar">Arabic</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="fr">French</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="de">German</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="ta">Tamil</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="te">Telugu</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="bn">Bengali</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="gu">Gujarati</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="mr">Marathi</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="pa">Punjabi</a></li>
-              <li><a class="dropdown-item py-2" href="#" data-lang="ne">Nepalese</a></li>
-            </ul>
-          </div>
-
-          <!-- Hidden Google Translate -->
-          <div id="google_translate_element" style="display:none;"></div>
-
-          <button class="navbar-toggler" type="button" aria-expanded="false" aria-controls="mainNav">
-            <span class="navbar-toggler-icon"></span>
+        <!-- 🌍 Language Selector -->
+        <div class="dropdown notranslate" id="customLanguageDropdown">
+          <button class="btn btn-light dropdown-toggle d-flex align-items-center gap-2 shadow-sm" type="button"
+            id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe2 text-dark fs-5"></i>
+            <span class="fw-semibold text-dark" id="languageText">Language</span>
           </button>
+
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm rounded-3 p-2" aria-labelledby="languageDropdown"
+            id="langList">
+            <li><a class="dropdown-item py-2" href="#" data-lang="hi">Hindi</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="en">English</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="es">Spanish</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="ar">Arabic</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="fr">French</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="de">German</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="ta">Tamil</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="te">Telugu</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="bn">Bengali</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="gu">Gujarati</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="mr">Marathi</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="pa">Punjabi</a></li>
+            <li><a class="dropdown-item py-2" href="#" data-lang="ne">Nepalese</a></li>
+          </ul>
         </div>
+
+        <!-- Hidden Google Translate -->
+        <div id="google_translate_element" style="display:none;"></div>
+
 
         <div class="d-none d-lg-block">
           <a href="./donate.html" class="btn donate-btn">Donate</a>

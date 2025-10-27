@@ -1,62 +1,60 @@
 // Keep Bootstrap click toggle for mobile, hover for desktop
-// document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-//   dropdown.addEventListener("mouseenter", function () {
-//     if (window.innerWidth > 992) {
-//       const menu = dropdown.querySelector(".dropdown-menu");
-//       const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(
-//         dropdown.querySelector('[data-bs-toggle="dropdown"]')
-//       );
-//       bsDropdown.show();
-//     }
-//   });
-//   dropdown.addEventListener("mouseleave", function () {
-//     if (window.innerWidth > 992) {
-//       const menu = dropdown.querySelector(".dropdown-menu");
-//       const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(
-//         dropdown.querySelector('[data-bs-toggle="dropdown"]')
-//       );
-//       bsDropdown.hide();
-//     }
-//   });
-// });
-
-////////////////HEADER
-
-document.addEventListener("DOMContentLoaded", function () {
-  const navbarToggler = document.querySelector(".navbar-toggler");
-  const navbarCollapse = document.querySelector("#mainNav");
-
-  if (!navbarToggler || !navbarCollapse) return;
-
-  // Get or create Bootstrap collapse instance
-  const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, {
-    toggle: false,
-  });
-
-  // Handle click toggle
-  navbarToggler.addEventListener("click", function () {
-    const isOpen = navbarCollapse.classList.contains("show");
-
-    if (isOpen) {
-      bsCollapse.hide();
-      navbarToggler.classList.remove("open");
-    } else {
-      bsCollapse.show();
-      navbarToggler.classList.add("open");
+document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+  dropdown.addEventListener("mouseenter", function () {
+    if (window.innerWidth > 992) {
+      const menu = dropdown.querySelector(".dropdown-menu");
+      const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(
+        dropdown.querySelector('[data-bs-toggle="dropdown"]')
+      );
+      bsDropdown.show();
     }
   });
-
-  // Update states based on Bootstrap events
-  navbarCollapse.addEventListener("shown.bs.collapse", function () {
-    navbarToggler.classList.add("open");
-  });
-
-  navbarCollapse.addEventListener("hidden.bs.collapse", function () {
-    navbarToggler.classList.remove("open");
+  dropdown.addEventListener("mouseleave", function () {
+    if (window.innerWidth > 992) {
+      const menu = dropdown.querySelector(".dropdown-menu");
+      const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(
+        dropdown.querySelector('[data-bs-toggle="dropdown"]')
+      );
+      bsDropdown.hide();
+    }
   });
 });
 
+////////////////HEADER
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const navbarToggler = document.querySelector(".navbar-toggler");
+//   const navbarCollapse = document.querySelector("#mainNav");
+
+//   if (!navbarToggler || !navbarCollapse) return;
+
+// Get or create Bootstrap collapse instance
+// const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, {
+//   toggle: false,
+// });
+
+// Handle click toggle
+// navbarToggler.addEventListener("click", function () {
+//   const isOpen = navbarCollapse.classList.contains("show");
+
+//   if (isOpen) {
+//     bsCollapse.hide();
+//     navbarToggler.classList.remove("open");
+//   } else {
+//     bsCollapse.show();
+//     navbarToggler.classList.add("open");
+//   }
+// });
+
+// Update states based on Bootstrap events
+//   navbarCollapse.addEventListener("shown.bs.collapse", function () {
+//     navbarToggler.classList.add("open");
+//   });
+
+//   navbarCollapse.addEventListener("hidden.bs.collapse", function () {
+//     navbarToggler.classList.remove("open");
+//   });
+// });
 
 ////////////////////
 window.addEventListener("scroll", () => {
