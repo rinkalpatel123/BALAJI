@@ -71,7 +71,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./upcoming-event.html">Upcoming Events</a>
+                            <a class="nav-link" href="./upcoming-event.html">Events</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -119,6 +119,13 @@
                     </ul>
                 </div>
 
+                <!-- 🌍 Language Selector -->
+                <div class="language-selector d-flex align-items-center gap-2 me-3">
+                    <!-- <i class="bi bi-globe2 fs-5 text-dark"></i> -->
+                    <label class="fw-semibold text-dark mb-0">Language</label>
+                    <div id="google_translate_element"></div>
+                </div>
+
                 <div class="d-none d-lg-block">
                     <a href="./donate.html" class="btn donate-btn">Donate</a>
                 </div>
@@ -126,8 +133,30 @@
         </nav>
     </div>
     <!-- End Header -->
+<!-- ======= chat bot ======= -->
+   <!-- chat bot start -->
+  <div class="chatbot">
+    <div class="chatbot-header">
+      <h4>Chat with SkyBot 🤖</h4>
+      <button id="chatbot-toggle">–</button>
+    </div>
 
-      <!-- banner -->
+    <div class="chatbot-body" id="chatbot-body">
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="message bot">Hello 👋 How can I help you today?</div>
+      </div>
+
+      <div class="chatbot-input">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="chatbot-float" id="chatbot-float">💬</button>
+  <!-- chat bot end -->
+
+        <!-- banner -->
   <section class="banner">
     <div class="container-fluid px-5">
       <div class="row">
@@ -137,12 +166,29 @@
               <img class="w-100" src="./assets/img/bhajanheader.jpg" alt="">
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- bannner end -->
+           </div>
+            </div>
+             </div>
+             </section>
 
+    <!-- breadcrumb -->
+    <section class="breadcrumb-section section-padding d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 d-flex justify-content-center">
+                    <nav aria-label="breadcrumb">
+                        <h3 class="breadcrumb-font">Bhajans</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Bhajans</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- breadcrumb end -->
 
     <!-- bhajans -->
     <section class="video-gallery mt-4">
@@ -520,54 +566,58 @@
     </section>
 
     <!-- ======= Footer ======= -->
-    <footer>
-        <div class="container">
-            <div class="row gy-4">
+  <footer>
+    <div class="container">
+      <div class="row gy-4">
 
-                <!-- contact -->
-                <div class="col-md-2">
-                    <img src="assets/img/logo.png" width="100" alt="Bageshwar Dham Logo" class="footer-logo mb-3">
-                </div>
-
-                <!-- Contact Section -->
-                <div class="col-md-4">
-                    <h5>CONTACT US</h5>
-                    <p><i class="bi bi-geo-alt-fill me-2 text-warning"></i>Village – Gadha, Post – Ganj, District –
-                        Chhatarpur
-                        Madhya Pradesh, Pin – 471105</p>
-                    <p><i class="bi bi-telephone-fill me-2 text-warning"></i>+91 7055005553</p>
-                    <p><i class="bi bi-telephone me-2 text-warning"></i>+91 7055005554</p>
-                    <p><i class="bi bi-envelope-fill me-2 text-warning"></i>admin@bageshwarbalaji.in</p>
-                </div>
-
-                <!-- Useful Links -->
-                <div class="col-md-3">
-                    <h5>USEFUL LINKS</h5>
-                    <a href="#">Donate Now</a><br>
-                    <a href="#">Upcoming Events</a><br>
-                    <a href="#">Books</a><br>
-                    <a href="#">Bhajans</a>
-                </div>
-
-                <!-- Stay Updated -->
-                <div class="col-md-3">
-                    <h5>STAY UP TO DATE</h5>
-                    <button class="btn-update mb-3">SIGN UP FOR UPDATES</button><br>
-                    <div class="social-icons">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-youtube"></i></a>
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom mt-5">
-                <p>Copyright © 2024. All rights reserved | Event Website By: <strong>MY WORLD OF EXPO</strong></p>
-            </div>
+        <!-- contact -->
+        <div class="col-md-2">
+          <a href="./index.html">
+            <img src="assets/img/logo.png" width="100" alt="Bageshwar Dham Logo" class="footer-logo mb-3">
+          </a>
         </div>
-    </footer>
-    <!-- End Footer -->
+
+        <!-- Contact Section -->
+        <div class="col-md-4">
+          <h5>CONTACT US</h5>
+          <p><i class="bi bi-geo-alt-fill me-2 text-warning"></i>Village – Gadha, Post – Ganj, District – Chhatarpur
+            Madhya Pradesh, Pin – 471105</p>
+          <p><i class="bi bi-telephone-fill me-2 text-warning"></i>+91 7055005553</p>
+          <p><i class="bi bi-telephone me-2 text-warning"></i>+91 7055005554</p>
+          <p><i class="bi bi-envelope-fill me-2 text-warning"></i>admin@bageshwarbalaji.in</p>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-md-3">
+          <h5>USEFUL LINKS</h5>
+          <a href="./donate.html">Donate Now</a><br>
+          <a href="./upcoming-event.html">Events</a><br>
+          <a href="./books.html">Books</a><br>
+          <a href="./bhajans.html">Bhajans</a>
+        </div>
+
+        <!-- Stay Updated -->
+        <div class="col-md-3">
+          <h5>STAY UP TO DATE</h5>
+          <button class="btn-update mb-3">SIGN UP FOR UPDATES</button><br>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/bageshwardhamsarkarofficial" target="_blank"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/iambageshwardhamsarkar/?fbclid=IwAR3Oz-Go86SStCYq_Ep_tFh2HOlNTv7xzMjPToQTDndTp-pT92D5NJA-NHg"
+              target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/c/BageshwarDhamSarkar" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://x.com/bageshwardham" target="_blank"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+      </div>
+
+     <div class="footer-bottom mt-5">
+        <p>Copyright © 2024. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

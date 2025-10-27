@@ -113,6 +113,14 @@ body {
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
+    ul.dropdown-menu {
+        li:last-child {
+            .dropdown-item {
+                border-bottom: 0;
+            }
+        }
+    }
+
     .navbar-expand-lg .navbar-nav .dropdown-menu {
         top: 30px;
     }
@@ -165,6 +173,113 @@ body {
         color: $primary-color !important;
     }
 }
+
+////////////////CHATBOT
+.chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+    font-family: "Poppins", sans-serif;
+
+    &-header {
+        background: #ffc794;
+        color: #333;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+    }
+
+    &-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .message {
+            max-width: 80%;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 14px;
+
+            &.bot {
+                background: #f1f1f1;
+                align-self: flex-start;
+            }
+
+            &.user {
+                background: #ffc794;
+                color: #fff;
+                align-self: flex-end;
+            }
+        }
+    }
+
+    &-input {
+        display: flex;
+        border-top: 1px solid #eee;
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            background: #ffc794;
+            color: #fff;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+    }
+}
+
+.chatbot-float {
+    position: fixed;
+    z-index: 99;
+    bottom: 20px;
+    right: 20px;
+    background: #fd7a01;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 /////////
 .about {
@@ -842,16 +957,18 @@ body {
         margin: auto;
         padding: 0 40px;
     }
-.masonry-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
 
-.masonry-item:hover img {
-  transform: scale(1.05);
-}
+    .masonry-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .masonry-item:hover img {
+        transform: scale(1.05);
+    }
+
     .masonry {
         column-count: 5;
         column-gap: 16px;
@@ -1242,6 +1359,21 @@ footer {
 
 ///////// 
 .vivah-timeline {
+    .img-side {
+        padding: 0 30px;
+
+        img {
+            border-radius: 8px;
+        }
+    }
+
+    .box-side {
+        background: #f8f8f8;
+        border: 1px solid #cbcbcb;
+        padding: 30px;
+        border-radius: 8px;
+    }
+
     .year-set {
         padding: 12px;
         background: #ffa289;
@@ -1342,42 +1474,68 @@ footer {
     }
 }
 
-/////////
+//////////* ---------- Google Translate Combo ---------- */
 #google_translate_element {
-    // display: inline-block;
-    // border: 1px solid #ccc;
-    // border-radius: 5px;
-    // padding: 5px 10px;
-    // background: #fff;
-    position: fixed;
-    z-index: 99;
-    right: 0px;
-    bottom: 50px;
+    margin: 0 !important;
+    padding: 0 !important;
 
-    /* Hide Google branding (optional but allowed styling) */
-    .goog-logo-link,
-    span {
-        display: none !important;
+    .goog-te-gadget-simple {
+        border: 0 !important;
     }
 
     .goog-te-gadget {
+        font-size: 0 !important;
         color: transparent !important;
+        border: none !important;
     }
 
-    .goog-te-gadget .goog-te-combo:focus-visible,
-    .goog-te-gadget .goog-te-combo:focus-within,
-    .goog-te-gadget .goog-te-combo:focus {
-        outline: 0 !important;
-        border-color: #444;
-    }
-
-    .goog-te-gadget .goog-te-combo {
-        color: #ffffff !important;
-        font-size: 14px;
-        border: 1px solid #fd7a01 !important;
+    /* ---------- Dropdown Styling ---------- */
+    .goog-te-combo {
+        background: transparent;
+        border: none;
+        color: #fd7a01 !important;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 4px 8px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
         border-radius: 5px;
-        padding: 8px;
-        background: #fd7a01 !important;
+    }
+
+    .language-selector:hover .goog-te-combo {
+        color: #fff !important;
+    }
+
+    .goog-te-combo:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ---------- Remove Google Branding ---------- */
+    .goog-logo-link,
+    .goog-te-gadget span,
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+
+    /* ✅ Hide Google Translate top bar & control frames */
+    .goog-te-banner-frame.skiptranslate,
+    .VIpgJd-ZVi9od-ORHb-OEVmcd,
+    iframe.goog-te-menu-frame,
+    .goog-te-balloon-frame {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        border: 0 !important;
+        position: absolute !important;
+    }
+
+
+    /* ✅ Keep the translation working but hidden cleanly */
+    .skiptranslate iframe {
+        display: none !important;
+        visibility: hidden !important;
     }
 }
 
@@ -1390,3 +1548,5 @@ footer {
         height: 400px;
     }
 }
+
+/////////////////
