@@ -1229,59 +1229,71 @@ footer .lang-select {
   color: #fff;
 }
 
-#google_translate_element {
-  margin: 0 !important;
-  padding: 0 !important;
-  /* ---------- Dropdown Styling ---------- */
-  /* ---------- Remove Google Branding ---------- */
-  /* ✅ Hide Google Translate top bar & control frames */
-  /* ✅ Keep the translation working but hidden cleanly */
+#customLanguageDropdown {
+  margin-right: 15px;
+  /* Smooth Dropdown Look */
+  /* Hide Google default banner */
+  /* Prevent Google Translate from touching these elements */
 }
-#google_translate_element .goog-te-gadget-simple {
-  border: 0 !important;
+#customLanguageDropdown .dropdown-toggle {
+  background-color: #fff !important;
+  border: 1px solid #ddd !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
 }
-#google_translate_element .goog-te-gadget {
-  font-size: 0 !important;
-  color: transparent !important;
-  border: none !important;
+#customLanguageDropdown .dropdown-toggle:hover {
+  background-color: #f8f9fa !important;
+  transform: translateY(-1px);
 }
-#google_translate_element .goog-te-combo {
-  background: transparent;
-  border: none;
-  color: #fd7a01 !important;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 4px 8px;
-  cursor: pointer;
+#customLanguageDropdown .dropdown-menu {
+  margin-top: -15px;
+  border: 1px solid #ddd;
+  min-width: 180px;
+  border-radius: 10px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+#customLanguageDropdown .dropdown-item {
+  border-radius: 6px;
   transition: all 0.2s ease-in-out;
-  border-radius: 5px;
 }
-#google_translate_element .language-selector:hover .goog-te-combo {
+#customLanguageDropdown .dropdown-item:hover {
+  background-color: #fd7a01;
+  color: #fff;
+  transform: translateX(3px);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#customLanguageDropdown .goog-te-banner-frame.skiptranslate,
+#customLanguageDropdown .VIpgJd-ZVi9od-ORHb-OEVmcd,
+#customLanguageDropdown .goog-te-balloon-frame,
+#customLanguageDropdown iframe.goog-te-menu-frame {
+  display: none !important;
+}
+#customLanguageDropdown body {
+  top: 0px !important;
+}
+#customLanguageDropdown .notranslate,
+#customLanguageDropdown .notranslate * {
+  translate: none !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#customLanguageDropdown .dropdown-menu .dropdown-item {
+  border-radius: 8px;
+  transition: background 0.2s ease-in-out;
+}
+#customLanguageDropdown .dropdown-item:hover {
+  background-color: #fd7a01;
   color: #fff !important;
-}
-#google_translate_element .goog-te-combo:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-#google_translate_element .goog-logo-link,
-#google_translate_element .goog-te-gadget span,
-#google_translate_element .goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-#google_translate_element .goog-te-banner-frame.skiptranslate,
-#google_translate_element .VIpgJd-ZVi9od-ORHb-OEVmcd,
-#google_translate_element iframe.goog-te-menu-frame,
-#google_translate_element .goog-te-balloon-frame {
-  display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  width: 0 !important;
-  border: 0 !important;
-  position: absolute !important;
-}
-#google_translate_element .skiptranslate iframe {
-  display: none !important;
-  visibility: hidden !important;
 }
 
 @media (max-width: 600px) {
