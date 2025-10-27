@@ -125,3 +125,14 @@ summary:after {
         
 }
 
+@media (max-width: 600px) {
+    .banner .youtube-container {
+        aspect-ratio: 0 !important;
+        height: 100% !important;
+    }
+
+    .faq-body {
+        padding: 25px;
+    }
+}
+
