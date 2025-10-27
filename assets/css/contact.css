@@ -56,3 +56,14 @@
  .banner .youtube-container {
     aspect-ratio: 0 / 10 !important;
 }
+
+@media (max-width: 600px) {
+    .banner .youtube-container {
+        aspect-ratio: 0 !important;
+        height: 100% !important;
+    }
+
+    .left-content{
+        padding: 15px !important;
+    }
+}

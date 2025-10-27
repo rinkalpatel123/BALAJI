@@ -119,6 +119,10 @@
     border-radius: 5px;
 }
 
+.banner .youtube-container{
+        aspect-ratio: 0;
+}
+
 /* ---------------------------------------------------------------------- */
 /* RESPONSIVENESS */
 /* ---------------------------------------------------------------------- */
@@ -168,3 +172,9 @@
     }
 }
 
+@media (max-width: 600px) {
+    .banner .youtube-container {
+        height: 100% !important;
+    }
+
+}
