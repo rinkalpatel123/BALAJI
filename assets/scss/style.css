@@ -90,6 +90,10 @@ body {
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+.header .navbar-toggler-icon {
+  width: 20px;
+  height: 20px;
+}
 .header ul.dropdown-menu li:last-child .dropdown-item {
   border-bottom: 0;
 }
@@ -342,7 +346,7 @@ body {
 .about .carousel {
   width: -moz-fit-content;
   width: fit-content;
-  border: 5px solid #6169FF;
+  border: 5px solid #000000;
   border-radius: 22px;
   padding: 0;
   display: inline-block;
@@ -1327,7 +1331,7 @@ footer .lang-select {
   .toggle-po-set {
     position: absolute;
     top: 15px;
-    right: 20px;
+    right: 65px;
   }
   .about .title {
     font-size: 25px;

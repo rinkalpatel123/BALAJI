@@ -1,60 +1,71 @@
-// Keep Bootstrap click toggle for mobile, hover for desktop
-document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-  dropdown.addEventListener("mouseenter", function () {
-    if (window.innerWidth > 992) {
-      const menu = dropdown.querySelector(".dropdown-menu");
-      const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(
-        dropdown.querySelector('[data-bs-toggle="dropdown"]')
-      );
-      bsDropdown.show();
+///////////////////28-10 2222222222222222222
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const mainNav = document.getElementById("mainNav");
+
+  // Force manual control over collapse
+  let bsCollapse = new bootstrap.Collapse(mainNav, { toggle: false });
+
+  // Handle toggler open/close manually
+  navbarToggler.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (mainNav.classList.contains("show")) {
+      bsCollapse.hide();
+    } else {
+      bsCollapse.show();
     }
   });
-  dropdown.addEventListener("mouseleave", function () {
-    if (window.innerWidth > 992) {
-      const menu = dropdown.querySelector(".dropdown-menu");
-      const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(
-        dropdown.querySelector('[data-bs-toggle="dropdown"]')
-      );
-      bsDropdown.hide();
+
+  // Prevent dropdown clicks from retriggering collapse toggle
+  mainNav.addEventListener("click", function (e) {
+    if (
+      e.target.classList.contains("dropdown-toggle") ||
+      e.target.closest(".dropdown-menu")
+    ) {
+      e.stopPropagation();
     }
+  });
+
+  // Dropdown hover for desktop
+  document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+    dropdown.addEventListener("mouseenter", function () {
+      if (window.innerWidth > 992) {
+        const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+        bootstrap.Dropdown.getOrCreateInstance(toggle).show();
+      }
+    });
+    dropdown.addEventListener("mouseleave", function () {
+      if (window.innerWidth > 992) {
+        const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+        bootstrap.Dropdown.getOrCreateInstance(toggle).hide();
+      }
+    });
+  });
+
+  // Dropdown click for mobile
+  document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        e.stopPropagation(); // stop bubbling to nav collapse
+        const menu = this.nextElementSibling;
+        const isOpen = menu.classList.contains("show");
+
+        // close others
+        document.querySelectorAll(".dropdown-menu.show").forEach(m => m.classList.remove("show"));
+        if (!isOpen) menu.classList.add("show");
+      }
+    });
+  });
+
+  // Close dropdowns when navbar hides
+  mainNav.addEventListener("hidden.bs.collapse", function () {
+    document.querySelectorAll(".dropdown-menu.show").forEach(m => m.classList.remove("show"));
   });
 });
 
-////////////////HEADER
+///////////////////28-10 2222222222222222222 endsssssssssss
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const navbarToggler = document.querySelector(".navbar-toggler");
-//   const navbarCollapse = document.querySelector("#mainNav");
-
-//   if (!navbarToggler || !navbarCollapse) return;
-
-// Get or create Bootstrap collapse instance
-// const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, {
-//   toggle: false,
-// });
-
-// Handle click toggle
-// navbarToggler.addEventListener("click", function () {
-//   const isOpen = navbarCollapse.classList.contains("show");
-
-//   if (isOpen) {
-//     bsCollapse.hide();
-//     navbarToggler.classList.remove("open");
-//   } else {
-//     bsCollapse.show();
-//     navbarToggler.classList.add("open");
-//   }
-// });
-
-// Update states based on Bootstrap events
-//   navbarCollapse.addEventListener("shown.bs.collapse", function () {
-//     navbarToggler.classList.add("open");
-//   });
-
-//   navbarCollapse.addEventListener("hidden.bs.collapse", function () {
-//     navbarToggler.classList.remove("open");
-//   });
-// });
 
 ////////////////////
 window.addEventListener("scroll", () => {
@@ -63,17 +74,6 @@ window.addEventListener("scroll", () => {
 });
 
 ///////////////<!-- ✅ Google Translate Script -->
-// function googleTranslateElementInit() {
-//   new google.translate.TranslateElement(
-//     {
-//       pageLanguage: "en",
-//       includedLanguages: "en,hi,gu,fr,de,es,zh-CN,ja",
-//       layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
-//     },
-//     "google_translate_element"
-//   );
-// }
-
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     { pageLanguage: "en" },

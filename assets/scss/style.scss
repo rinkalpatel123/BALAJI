@@ -113,6 +113,11 @@ body {
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
+
     ul.dropdown-menu {
         li:last-child {
             .dropdown-item {
@@ -411,7 +416,7 @@ body {
 
     .carousel {
         width: fit-content;
-        border: 5px solid $secondary-color;
+        border: 5px solid #000000;
         border-radius: 22px;
         padding: 0;
         display: inline-block;
@@ -1592,14 +1597,16 @@ footer {
     .toggle-po-set {
         position: absolute;
         top: 15px;
-        right: 20px;
+        right: 65px;
     }
+
     .about .title {
-    font-size: 25px;
+        font-size: 25px;
     }
+
     .gallery-grid .gallery-container {
-    padding: 0 20px;
-}
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 600px) {
