@@ -1225,6 +1225,15 @@ footer {
 
 /////////////////////////
 .accordion-custom {
+    .accordion-button {
+        background-color: #fafafa;
+        font-size: 15px !important;
+        line-height: 25px;
+    }
+
+    .accordion-body {
+        font-size: 13px;
+    }
 
     ul li {
         margin: 10px 0;
@@ -1246,7 +1255,8 @@ footer {
     }
 
     .accordion-item {
-        border: 1px solid $border-color !important;
+            border: 1px solid #e1e1e1 !important;
+    border-radius: 2px;
         margin: 15px 0;
     }
 }
@@ -1609,6 +1619,18 @@ footer {
 }
 
 @media (max-width: 992px) {
+    .header .dropdown-menu .dropdown-item {
+        padding: 5px 8px !important;
+    }
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    #customLanguageDropdown .dropdown-menu {
+        padding: 0 !important;
+    }
+
     .toggle-po-set {
         position: absolute;
         top: 15px;
