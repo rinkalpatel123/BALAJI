@@ -49,6 +49,7 @@ body {
         /* orange */
         font-weight: 700;
         font-size: 40px;
+        line-height: 52px;
         text-transform: capitalize;
         margin: 0;
     }
@@ -75,6 +76,15 @@ body {
 
 /// //////////
 .banner {
+    .youtube-container .dham-frame {
+        height: 130%;
+    }
+
+    &.main-index {
+        .youtube-container iframe {
+            top: 0;
+        }
+    }
 
     .youtube-container {
         overflow: hidden;
@@ -668,8 +678,6 @@ body {
     }
 
     .resolution-list li {
-        font-size: 1rem;
-        line-height: 1.8;
         margin-bottom: 10px;
         position: relative;
         padding-left: 1.5rem;
@@ -1577,6 +1585,11 @@ footer {
     #customLanguageDropdown .dropdown-toggle {
         padding: 2px 9px !important;
         font-size: 12px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+        line-height: 38px;
     }
 
     #customLanguageDropdown {
