@@ -520,10 +520,11 @@ body {
 }
 
 .commandments .resolution-column {
-  background-color: #FFFFFF;
+  background-color: #f8f8f8;
   padding: 30px;
   border-radius: 12px;
-  min-height: 450px;
+  height: 100%;
+  border: 1px solid #ddd;
   display: flex;
   flex-direction: column;
 }
@@ -563,6 +564,7 @@ body {
   /* Slight transparency for dashed look */
 }
 .commandments .resolution-list {
+  margin: 0;
   list-style: none;
   padding-left: 0;
 }
