@@ -1329,6 +1329,12 @@ footer .lang-select {
     top: 15px;
     right: 20px;
   }
+  .about .title {
+    font-size: 25px;
+  }
+  .gallery-grid .gallery-container {
+    padding: 0 20px;
+  }
 }
 @media (max-width: 600px) {
   .isotope-section .segmented {
