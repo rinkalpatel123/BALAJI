@@ -52,7 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const isOpen = menu.classList.contains("show");
 
         // close others
-        document.querySelectorAll(".dropdown-menu.show").forEach(m => m.classList.remove("show"));
+        document
+          .querySelectorAll(".dropdown-menu.show")
+          .forEach((m) => m.classList.remove("show"));
         if (!isOpen) menu.classList.add("show");
       }
     });
@@ -60,12 +62,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Close dropdowns when navbar hides
   mainNav.addEventListener("hidden.bs.collapse", function () {
-    document.querySelectorAll(".dropdown-menu.show").forEach(m => m.classList.remove("show"));
+    document
+      .querySelectorAll(".dropdown-menu.show")
+      .forEach((m) => m.classList.remove("show"));
   });
 });
 
 ///////////////////28-10 2222222222222222222 endsssssssssss
-
 
 ////////////////////
 window.addEventListener("scroll", () => {
@@ -215,3 +218,36 @@ async function getBotResponse(userText) {
     return "Sorry 😔 I’m having trouble connecting right now.";
   }
 }
+///////////////////////////
+/////////////////
+///////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".scroll-fade-in");
+
+  // Apply base styles via JS
+  elements.forEach((el) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+  });
+
+  // IntersectionObserver for scroll detection
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const delay = el.getAttribute("data-delay") || 0;
+          setTimeout(() => {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+          }, delay);
+          observer.unobserve(el); // animate once
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+});
