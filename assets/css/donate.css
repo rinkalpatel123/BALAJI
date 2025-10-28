@@ -14,7 +14,7 @@
 
 .document .card{
     background-color: #ffffff;
-    box-shadow: 0 0 4.222rem #ffb390;
+    /* box-shadow: 0 0 4.222rem #ffb390; */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Turret+Road:wght@200;300;400;500;700;800&display=swap');

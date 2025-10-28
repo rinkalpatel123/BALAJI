@@ -1,4 +1,5 @@
-.urja-sanchay-gallery.gallery-grid .masonry {
+
+.urja-sanchay-gallery.gallery-grid .masonry.katni-tab  {
     column-count: 6;
 }
 
@@ -90,13 +91,17 @@
 .note {
   color: #444;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .session {
   font-weight: 600;
   color: #111;
   font-size: 20px;
+}
+
+.session strong{
+  font-weight: 500;
 }
 
 .register-btn {
@@ -123,6 +128,10 @@
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.gallery-grid .masonry-item, .gallery-grid .masonry-item img {
+  border-radius: 5px !important;
 }
 
 /* Responsive */
