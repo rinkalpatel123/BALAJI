@@ -40,6 +40,7 @@ body {
   /* orange */
   font-weight: 700;
   font-size: 40px;
+  line-height: 52px;
   text-transform: capitalize;
   margin: 0;
 }
@@ -60,6 +61,12 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+.banner .youtube-container .dham-frame {
+  height: 130%;
+}
+.banner.main-index .youtube-container iframe {
+  top: 0;
+}
 .banner .youtube-container {
   overflow: hidden;
   width: 100%;
@@ -89,6 +96,10 @@ body {
   z-index: 1050;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.header .navbar-toggler-icon {
+  width: 20px;
+  height: 20px;
 }
 .header ul.dropdown-menu li:last-child .dropdown-item {
   border-bottom: 0;
@@ -342,7 +353,7 @@ body {
 .about .carousel {
   width: -moz-fit-content;
   width: fit-content;
-  border: 5px solid #6169FF;
+  border: 5px solid #000000;
   border-radius: 22px;
   padding: 0;
   display: inline-block;
@@ -509,10 +520,11 @@ body {
 }
 
 .commandments .resolution-column {
-  background-color: #FFFFFF;
+  background-color: #f8f8f8;
   padding: 30px;
   border-radius: 12px;
-  min-height: 450px;
+  height: 100%;
+  border: 1px solid #ddd;
   display: flex;
   flex-direction: column;
 }
@@ -552,12 +564,11 @@ body {
   /* Slight transparency for dashed look */
 }
 .commandments .resolution-list {
+  margin: 0;
   list-style: none;
   padding-left: 0;
 }
 .commandments .resolution-list li {
-  font-size: 1rem;
-  line-height: 1.8;
   margin-bottom: 10px;
   position: relative;
   padding-left: 1.5rem;
@@ -1312,6 +1323,10 @@ footer .lang-select {
     padding: 2px 9px !important;
     font-size: 12px;
   }
+  .section-title h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
   #customLanguageDropdown {
     margin-right: 8px;
   }
@@ -1327,7 +1342,13 @@ footer .lang-select {
   .toggle-po-set {
     position: absolute;
     top: 15px;
-    right: 20px;
+    right: 65px;
+  }
+  .about .title {
+    font-size: 25px;
+  }
+  .gallery-grid .gallery-container {
+    padding: 0 20px;
   }
 }
 @media (max-width: 600px) {

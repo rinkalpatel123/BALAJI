@@ -49,6 +49,7 @@ body {
         /* orange */
         font-weight: 700;
         font-size: 40px;
+        line-height: 52px;
         text-transform: capitalize;
         margin: 0;
     }
@@ -75,6 +76,15 @@ body {
 
 /// //////////
 .banner {
+    .youtube-container .dham-frame {
+        height: 130%;
+    }
+
+    &.main-index {
+        .youtube-container iframe {
+            top: 0;
+        }
+    }
 
     .youtube-container {
         overflow: hidden;
@@ -112,6 +122,11 @@ body {
     z-index: 1050;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
 
     ul.dropdown-menu {
         li:last-child {
@@ -411,7 +426,7 @@ body {
 
     .carousel {
         width: fit-content;
-        border: 5px solid $secondary-color;
+        border: 5px solid #000000;
         border-radius: 22px;
         padding: 0;
         display: inline-block;
@@ -610,10 +625,11 @@ body {
 
 .commandments {
     .resolution-column {
-        background-color: $white;
+        background-color: #f8f8f8;
         padding: 30px;
         border-radius: 12px;
-        min-height: 450px;
+        height: 100%;
+        border: 1px solid #ddd;
         display: flex;
         flex-direction: column;
     }
@@ -658,13 +674,12 @@ body {
     }
 
     .resolution-list {
+        margin: 0;
         list-style: none;
         padding-left: 0;
     }
 
     .resolution-list li {
-        font-size: 1rem;
-        line-height: 1.8;
         margin-bottom: 10px;
         position: relative;
         padding-left: 1.5rem;
@@ -1574,6 +1589,11 @@ footer {
         font-size: 12px;
     }
 
+    .section-title h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
     #customLanguageDropdown {
         margin-right: 8px;
     }
@@ -1592,7 +1612,15 @@ footer {
     .toggle-po-set {
         position: absolute;
         top: 15px;
-        right: 20px;
+        right: 65px;
+    }
+
+    .about .title {
+        font-size: 25px;
+    }
+
+    .gallery-grid .gallery-container {
+        padding: 0 20px;
     }
 }
 
