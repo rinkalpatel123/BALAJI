@@ -36,6 +36,7 @@ body {
     text-align: center;
 
     h5 {
+        display: none;
         font-size: 14px;
         color: $primary-color;
         margin-top: -4px;
@@ -106,6 +107,21 @@ body {
         margin-left: -100%;
         top: -112px;
         position: relative;
+    }
+}
+
+////////////
+.banner-slider.mt-minus {
+    margin-top: -80px;
+
+    .carousel-inner {
+        border-radius: 10px;
+
+        .carousel-item {
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -599,7 +615,7 @@ body {
     }
 
     /* Responsive stacking for mobile */
-    @media (max-width: 991.98px) {
+    @media (max-width: 1024px) {
 
         /* Breakpoint for large screens and smaller */
         .card-content-flex {
@@ -619,7 +635,6 @@ body {
         }
     }
 }
-
 
 ////////////////////
 
@@ -723,7 +738,6 @@ body {
 
 
 //////////////////////
-
 .explorations {
     background-color: $light-primary-color;
 
@@ -760,10 +774,18 @@ body {
         padding-left: 5px;
     }
 
+    .card {
+        border: 1px solid #ddd;
+        position: relative;
+        overflow: hidden;
+    }
 
     .card-footer-black {
-        background-color: $black;
-        color: $white;
+        // background-color: $black;
+        // color: $white;
+        background-color: #ff9a3d;
+        color: #000000;
+        margin-top: -10px;
         padding: 0.75rem 1rem;
         font-weight: 600;
         text-decoration: none;
@@ -775,20 +797,27 @@ body {
     }
 
     .card-title-meta {
+        position: absolute;
+        background: #ffffff;
+        border-bottom: 2.2px dotted #9c9c9c;
+        width: 100%;
+        top: 0;
+        padding: 10px 20px;
         color: $primary-color;
-        font-size: 0.9rem;
-        font-weight: 500;
-        padding: 0.5rem 1rem;
+        font-size: 14px;
+        font-weight: 600;
         display: flex;
         align-items: center;
     }
 
     .card-title-meta .icon {
         display: inline-block;
-        width: 15px;
-        height: 15px;
-        background-color: $primary-color;
+        // width: 15px;
+        // height: 15px;
+        // background-color: $primary-color;
         margin-right: 8px;
+        color: #000;
+        font-size: 20px;
     }
 
 }
@@ -796,6 +825,16 @@ body {
 //////////////////////
 
 .program {
+    background-image: url('../img/world-map.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-top: 100px;
+
+    :root {
+        --pin-color: #0d6efd;
+        /* Bootstrap primary blue */
+    }
 
     /* Segmented Control (Tab Buttons) */
     .segmented-control {
@@ -807,11 +846,12 @@ body {
     }
 
     .tab-button {
-        border: none;
-        background: $light-primary-color;
-        padding: 8px 25px;
-        font-weight: 600;
-        color: #555;
+            border: none;
+    background: #000000;
+    margin: 0 5px;
+    padding: 8px 25px;
+    font-weight: 600;
+    color: #ffffff;
         border-radius: 50px;
         transition: all 0.3s ease;
     }
@@ -829,12 +869,13 @@ body {
 
     /* Event Card Styling */
     .event-card {
-        background: $white;
+        background: #f8f8f8;
         border-radius: 16px;
         padding: 20px;
-        border: 1px solid $border-color;
+        border: 1.2px solid #fd7a01;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
+        height: 100%;
     }
 
     .event-card:hover {
@@ -1024,6 +1065,7 @@ body {
     .meta .date {
         color: var(--muted);
         font-size: 13px;
+        display: none;
     }
 
     .badge {
@@ -1582,6 +1624,12 @@ footer {
 }
 
 ////////////RESPONSIVE
+@media (max-width: 1399.98px) {
+    .contribute .card-img-custom {
+        height: 220px;
+    }
+}
+
 @media (max-width: 1299.98px) {
     .header .nav-link {
         font-size: 12px;
