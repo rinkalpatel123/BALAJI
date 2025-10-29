@@ -1225,6 +1225,15 @@ footer {
 
 /////////////////////////
 .accordion-custom {
+    .accordion-button {
+        background-color: #fafafa;
+        font-size: 15px !important;
+        line-height: 25px;
+    }
+
+    .accordion-body {
+        font-size: 13px;
+    }
 
     ul li {
         margin: 10px 0;
@@ -1246,7 +1255,8 @@ footer {
     }
 
     .accordion-item {
-        border: 1px solid $border-color !important;
+        border: 1px solid #e1e1e1 !important;
+        border-radius: 2px;
         margin: 15px 0;
     }
 }
@@ -1609,6 +1619,18 @@ footer {
 }
 
 @media (max-width: 992px) {
+    .header .dropdown-menu .dropdown-item {
+        padding: 5px 8px !important;
+    }
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    #customLanguageDropdown .dropdown-menu {
+        padding: 0 !important;
+    }
+
     .toggle-po-set {
         position: absolute;
         top: 15px;
@@ -1619,12 +1641,42 @@ footer {
         font-size: 25px;
     }
 
+    .gallery-grid.seva-grid .masonry-item img {
+        height: 160px;
+    }
+
     .gallery-grid .gallery-container {
         padding: 0 20px;
+    }
+
+    .vivah-timeline .box-side {
+        padding: 15px;
+        margin-top: 15px;
     }
 }
 
 @media (max-width: 600px) {
+    .gallery-grid.seva-grid .masonry-item img {
+        height: 100%;
+    }
+
+    .position-set {
+        display: none;
+    }
+
+    .section-padding {
+        padding: 37px 0;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .vivah-timeline .year-set {
+        font-size: 16px;
+    }
+
     .isotope-section .segmented {
         padding: 0px;
         gap: 3;

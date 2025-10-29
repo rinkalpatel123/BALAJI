@@ -231,22 +231,26 @@ document.addEventListener("DOMContentLoaded", function () {
     el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
   });
 
-  // IntersectionObserver for scroll detection
+  // Observer for scroll detection (continuous)
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        const el = entry.target;
+        const delay = el.getAttribute("data-delay") || 0;
+
         if (entry.isIntersecting) {
-          const el = entry.target;
-          const delay = el.getAttribute("data-delay") || 0;
           setTimeout(() => {
             el.style.opacity = "1";
             el.style.transform = "translateY(0)";
           }, delay);
-          observer.unobserve(el); // animate once
+        } else {
+          // When out of view, reset to hidden
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.1 }
   );
 
   elements.forEach((el) => observer.observe(el));
