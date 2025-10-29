@@ -116,8 +116,7 @@ summary:after {
 
 .faq-list .border{
     border: 1.5px solid #f50;
-    -webkit-box-shadow: 0 8px 10px rgba(255, 85, 0, .15);
-    /* -webkit-box-shadow: 0 10px 24px rgba(255, 85, 0, .3); */
+    -webkit-box-shadow: 0 8px 10px rgb(255 85 0 / 12%);
 }
 
 .faq-list .border:hover{
