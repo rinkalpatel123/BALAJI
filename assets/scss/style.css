@@ -28,6 +28,7 @@ body {
   text-align: center;
 }
 .section-title h5 {
+  display: none;
   font-size: 14px;
   color: #FD7A01;
   margin-top: -4px;
@@ -85,6 +86,16 @@ body {
   margin-left: -100%;
   top: -112px;
   position: relative;
+}
+
+.banner-slider.mt-minus {
+  margin-top: -80px;
+}
+.banner-slider.mt-minus .carousel-inner {
+  border-radius: 10px;
+}
+.banner-slider.mt-minus .carousel-inner .carousel-item img {
+  width: 100%;
 }
 
 .header.scrolled {
@@ -500,7 +511,7 @@ body {
   background-color: #FD7A01;
   border-color: #FD7A01;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) {
   .contribute {
     /* Breakpoint for large screens and smaller */
   }
@@ -638,9 +649,15 @@ body {
   content: "";
   padding-left: 5px;
 }
+.explorations .card {
+  border: 1px solid #ddd;
+  position: relative;
+  overflow: hidden;
+}
 .explorations .card-footer-black {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #ff9a3d;
+  color: #000000;
+  margin-top: -10px;
   padding: 0.75rem 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -650,24 +667,37 @@ body {
   color: #ccc;
 }
 .explorations .card-title-meta {
+  position: absolute;
+  background: #ffffff;
+  border-bottom: 2.2px dotted #9c9c9c;
+  width: 100%;
+  top: 0;
+  padding: 10px 20px;
   color: #FD7A01;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
+  font-size: 14px;
+  font-weight: 600;
   display: flex;
   align-items: center;
 }
 .explorations .card-title-meta .icon {
   display: inline-block;
-  width: 15px;
-  height: 15px;
-  background-color: #FD7A01;
   margin-right: 8px;
+  color: #000;
+  font-size: 20px;
 }
 
 .program {
+  background-image: url("../img/world-map.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin-top: 100px;
   /* Segmented Control (Tab Buttons) */
   /* Event Card Styling */
+}
+.program :root {
+  --pin-color: #0d6efd;
+  /* Bootstrap primary blue */
 }
 .program .segmented-control {
   display: inline-flex;
@@ -678,10 +708,11 @@ body {
 }
 .program .tab-button {
   border: none;
-  background: #FEF7EC;
+  background: #000000;
+  margin: 0 5px;
   padding: 8px 25px;
   font-weight: 600;
-  color: #555;
+  color: #ffffff;
   border-radius: 50px;
   transition: all 0.3s ease;
 }
@@ -695,12 +726,13 @@ body {
   color: #FFFFFF;
 }
 .program .event-card {
-  background: #FFFFFF;
+  background: #f8f8f8;
   border-radius: 16px;
   padding: 20px;
-  border: 1px solid #C3C3C3;
+  border: 1.2px solid #fd7a01;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
 }
 .program .event-card:hover {
   transform: translateY(-4px);
@@ -858,6 +890,7 @@ body {
 .isotope-section .meta .date {
   color: var(--muted);
   font-size: 13px;
+  display: none;
 }
 .isotope-section .badge {
   font-size: 12px;
@@ -1318,6 +1351,11 @@ footer .lang-select {
   color: #fff;
 }
 
+@media (max-width: 1399.98px) {
+  .contribute .card-img-custom {
+    height: 220px;
+  }
+}
 @media (max-width: 1299.98px) {
   .header .nav-link {
     font-size: 12px;
