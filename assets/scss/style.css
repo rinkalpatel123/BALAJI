@@ -3,6 +3,10 @@
   background-color: #FEF7EC !important;
 }
 
+.text-primary {
+  color: #FD7A01 !important;
+}
+
 .btn {
   padding: 8px 18px !important;
   font-weight: 600 !important;
@@ -62,6 +66,12 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+.banner.guruji-banner .youtube-container {
+  aspect-ratio: 15/10;
+}
+.banner.guruji-banner .youtube-container iframe {
+  top: 0;
+}
 .banner .youtube-container .dham-frame {
   height: 130%;
 }
@@ -672,7 +682,7 @@ body {
   border-bottom: 2.2px dotted #9c9c9c;
   width: 100%;
   top: 0;
-  padding: 10px 20px;
+  padding: 15px 20px;
   color: #FD7A01;
   font-size: 14px;
   font-weight: 600;
@@ -885,6 +895,7 @@ body {
 }
 .isotope-section .meta .loc {
   font-weight: 600;
+  text-transform: capitalize;
   font-size: 14px;
 }
 .isotope-section .meta .date {
