@@ -137,6 +137,7 @@
 }
 
 /* Responsive layout */
+
 @media (max-width: 992px) {
   .map-container {
     position: relative;

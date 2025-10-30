@@ -1,0 +1,52 @@
+/* Section styling */
+.doc-section {
+  text-align: center;
+}
+
+/* Each button card */
+.doc-card {
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.doc-card i {
+  font-size: 20px;
+  color: #fd7a01;
+}
+
+.doc-card:hover {
+  background: #fd7a01;
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.doc-card:hover i {
+  color: #fff;
+}
+
+.btn-primary:hover,
+.doc-card:hover .btn-primary {
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    color: #fd7a01  !important;
+}
+/* Responsive behavior */
+@media (max-width: 767px) {
+  .doc-card {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+  .doc-card i {
+    font-size: 18px;
+  }
+}
