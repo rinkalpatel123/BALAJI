@@ -1784,6 +1784,9 @@ footer {
 }
 
 @media (max-width: 600px) {
+    #customLanguageDropdown .dropdown-menu {
+        margin-top: 0px;
+    }
 
     .gallery-grid .masonry,
     .isotope-section .grid {
