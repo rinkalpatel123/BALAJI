@@ -1189,8 +1189,8 @@ footer .lang-select {
 .book-page .card .card-img-top {
   border-radius: 12px;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: inherit;
+     object-fit: inherit;
 }
 
 .sanatan-sec .position-set {
@@ -1485,6 +1485,15 @@ footer .lang-select {
   }
 }
 @media (max-width: 600px) {
+  #customLanguageDropdown .dropdown-menu {
+    margin-top: 0px;
+  }
+  .gallery-grid .masonry,
+  .isotope-section .grid {
+    height: 100vh !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
   .gallery-grid.seva-grid .masonry-item img {
     height: 100%;
   }
