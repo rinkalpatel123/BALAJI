@@ -148,6 +148,11 @@
   .text-content {
     order: 2;
   }
+
+   .urja-sanchay-gallery.gallery-grid .masonry.katni-tab  {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
 }
 
 @media (max-width: 600px) {
@@ -163,5 +168,12 @@
   .register-btn {
     padding: 8px 20px;
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+ .urja-sanchay-gallery.gallery-grid .masonry.katni-tab  {
+    -moz-column-count: 1;
+         column-count: 1;
   }
 }

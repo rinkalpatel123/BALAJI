@@ -18,6 +18,11 @@
   color: #FFFFFF;
 }
 
+.btn-primary:hover {
+  background-color: #000;
+  border-color: #000;
+}
+
 body {
   font-family: "Poppins", sans-serif !important;
   font-size: 14px !important;
@@ -395,6 +400,18 @@ body {
 .glimpses .card-body {
   padding: 25px 15px;
 }
+.glimpses .position-set {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 400px;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.75;
+  animation: spin 20s linear infinite;
+}
 .glimpses .card {
   border: none;
   border-radius: 12px;
@@ -531,8 +548,12 @@ body {
   }
   .contribute .card-image-wrapper {
     width: 100%;
-    height: 200px;
+    height: 100%;
+    flex-shrink: 1;
     /* Fixed height for image on mobile */
+  }
+  .contribute .custom-card .card-img-custom {
+    height: 100%;
   }
   .contribute .card-img-custom {
     border-radius: 1rem 1rem 0 0;
@@ -540,6 +561,39 @@ body {
   }
 }
 
+.bageshwar-bageecha {
+  position: relative;
+  overflow: hidden;
+}
+.bageshwar-bageecha .position-set {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 380px;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.75;
+  animation: spin 20s linear infinite;
+}
+
+.commandments {
+  position: relative;
+  overflow: hidden;
+}
+.commandments .position-set {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 380px;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.75;
+  animation: spin 20s linear infinite;
+}
 .commandments .resolution-column {
   background-color: #f8f8f8;
   padding: 30px;
@@ -904,6 +958,7 @@ body {
   display: none;
 }
 .isotope-section .badge {
+  display: none;
   font-size: 12px;
   padding: 6px 8px;
   border-radius: 999px;
@@ -1132,6 +1187,7 @@ footer .lang-select {
   height: 500px;
 }
 .book-page .card .card-img-top {
+  border-radius: 12px;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1399,6 +1455,9 @@ footer .lang-select {
 @media (max-width: 992px) {
   .header .dropdown-menu .dropdown-item {
     padding: 5px 8px !important;
+  }
+  .program {
+    margin-top: 40px;
   }
   .section-padding {
     padding: 55px 0;

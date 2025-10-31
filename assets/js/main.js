@@ -66,8 +66,120 @@ document.addEventListener("DOMContentLoaded", function () {
       .querySelectorAll(".dropdown-menu.show")
       .forEach((m) => m.classList.remove("show"));
   });
+
+  // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/////////when re-loads
+  const langKey = "selectedLanguage";
+
+  // Function to apply saved language
+  function applySavedLanguage() {
+    const savedLang = localStorage.getItem(langKey);
+    if (savedLang) {
+      const iframe = document.querySelector("iframe.goog-te-menu-frame");
+      if (iframe) {
+        const iframeDoc =
+          iframe.contentDocument || iframe.contentWindow.document;
+        const langElements = iframeDoc.querySelectorAll(
+          ".goog-te-menu2-item span.text"
+        );
+        langElements.forEach(function (el) {
+          if (el.innerHTML.trim() === savedLang) {
+            el.click();
+          }
+        });
+      }
+    }
+  }
+
+  // Watch for language changes
+  document.addEventListener("click", function (e) {
+    if (
+      e.target.classList.contains("goog-te-menu2-item") ||
+      e.target.closest(".goog-te-menu2-item")
+    ) {
+      const selectedText = e.target.innerText || e.target.textContent;
+      if (selectedText) {
+        localStorage.setItem(langKey, selectedText.trim());
+      }
+    }
+  });
+
+  // Reapply saved language after short delay (wait for Google Translate to load)
+  setTimeout(applySavedLanguage, 1000);
+  // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+});
+// yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy////when dropdown option loads
+document.addEventListener("DOMContentLoaded", function () {
+  const langItems = document.querySelectorAll("#langList .dropdown-item");
+  const langText = document.getElementById("languageText");
+  const langKey = "selectedLanguageText"; // storage key for selected language name
+  const langCodeKey = "selectedLanguageCode"; // key for Google Translate language code
+
+  // Restore saved language
+  const savedLangText = localStorage.getItem(langKey);
+  const savedLangCode = localStorage.getItem(langCodeKey);
+
+  if (savedLangText) {
+    langText.textContent = savedLangText;
+  }
+
+  // If Google Translate language is saved, apply it again
+  if (savedLangCode) {
+    setTimeout(() => {
+      const iframe = document.querySelector("iframe.goog-te-menu-frame");
+      if (iframe) {
+        const iframeDoc =
+          iframe.contentDocument || iframe.contentWindow.document;
+        const langElements = iframeDoc.querySelectorAll(
+          ".goog-te-menu2-item span.text"
+        );
+        langElements.forEach(function (el) {
+          if (
+            el.getAttribute("lang") === savedLangCode ||
+            el.innerText.trim() === savedLangText
+          ) {
+            el.click();
+          }
+        });
+      }
+    }, 1000);
+  }
+
+  // When user selects a language
+  langItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const langName = this.textContent.trim();
+      const langCode = this.getAttribute("data-lang");
+
+      // Update dropdown label
+      langText.textContent = langName;
+
+      // Save in localStorage
+      localStorage.setItem(langKey, langName);
+      localStorage.setItem(langCodeKey, langCode);
+
+      // Trigger Google Translate
+      const iframe = document.querySelector("iframe.goog-te-menu-frame");
+      if (iframe) {
+        const iframeDoc =
+          iframe.contentDocument || iframe.contentWindow.document;
+        const langElements = iframeDoc.querySelectorAll(
+          ".goog-te-menu2-item span.text"
+        );
+        langElements.forEach(function (el) {
+          if (
+            el.getAttribute("lang") === langCode ||
+            el.innerText.trim() === langName
+          ) {
+            el.click();
+          }
+        });
+      }
+    });
+  });
 });
 
+// yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 ///////////////////28-10 2222222222222222222 endsssssssssss
 
 ////////////////////
@@ -257,4 +369,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /////////////mappppppppppp
-
