@@ -1,71 +1,67 @@
-
 .contact-info-item {
-    background: #ff5500;
-    padding: 30px 0px;
-    height: 200px;
+  background: #ff5500;
+  padding: 30px 0px;
+  height: 200px;
 }
 
 .contact-page-sec .contact-page-form h2 {
-    color: #ff5500;
-    text-transform: capitalize;
-    font-size: 22px;
-    font-weight: 700;
+  color: #ff5500;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .contact-info-text span {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    display: inline-block;
-    width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
 }
 
 .contact-page-map {
-    margin-top: 36px;
+  margin-top: 36px;
 }
 
 .contact-page-form form {
-    padding: 20px 15px 0;
+  padding: 20px 15px 0;
 }
 
 .contact-info-text i {
-    padding: 15px 25px;
-    border-radius: 10px;
-    background: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background: white;
 }
 
-.contact-box h4{
-    color: #ff5500;
+.contact-box h4 {
+  color: #ff5500;
 }
 
-.text-gray{
-    color: #767e88;
+.text-gray {
+  color: #767e88;
 }
 
-.indicate{
-    color: #000000;
+.indicate {
+  color: #000000;
 }
 
-.email img{
-    margin-top: 45px;
+.email img {
+  margin-top: 45px;
 }
 
-/* .contact-box{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-} */
- .banner .youtube-container {
-    aspect-ratio: 0 / 10 !important;
+.banner .youtube-container {
+  aspect-ratio: 0 / 10 !important;
 }
 
 @media (max-width: 600px) {
-    .banner .youtube-container {
-        aspect-ratio: 0 !important;
-        height: 100% !important;
-    }
+  .banner .youtube-container {
+    aspect-ratio: 0 !important;
+    height: 100% !important;
+  }
 
-    .left-content{
-        padding: 15px !important;
-    }
+  .left-content {
+    padding: 15px !important;
+  }
 }
 
 
@@ -87,7 +83,7 @@
   color: #fff;
   position: relative;
   overflow: visible;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .location-text {
@@ -127,13 +123,13 @@
   height: 300px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   background: #fff;
 }
 
-.info-box{
-    border: 1px solid #eeeeee;
-    border-radius: 0 0 50px 0;
+.info-box {
+  border: 1px solid #eeeeee;
+  border-radius: 0 0 50px 0;
 }
 
 /* Responsive layout */
@@ -155,5 +151,24 @@
 
   .location-text {
     max-width: 100%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .location-container h4 {
+    font-size: 20px;
+  }
+
+  .location-container span {
+    font-size: 12px;
+  }
+
+  .location-container img {
+    width: 35px !important;
+  }
+
+  .info-box {
+    border-radius: 0 0 35px 0;
   }
 }

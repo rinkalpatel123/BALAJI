@@ -5,21 +5,19 @@
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     color: var(--main-text-color);
-    overflow: hidden; /* Ensures the inner content respects the card's border-radius */
+    overflow: hidden;
 }
 
-/* Flexbox for the Two Columns */
 .content-wrapper {
     display: flex;
-    flex-wrap: nowrap; /* Prevent stacking by default */
+    flex-wrap: nowrap;/
 }
 
 /* Left Column Styling */
 .text-column {
-    flex: 1; /* Takes up 50% of space on large screens */
+    flex: 1;
     padding: 40px;
     position: relative;
-    /* Simulate the subtle orange swirl graphic using a pseudo-element */
 }
 
 .intro-text::before {
@@ -32,7 +30,7 @@
     background-color: var(--orange-swirl-color);
     opacity: 0.15;
     border-radius: 50%;
-    transform: rotate(45deg); /* Simple swirl approximation */
+    transform: rotate(45deg);
     z-index: 1;
 }
 
@@ -44,10 +42,9 @@
     margin-bottom: 30px;
 }
 
-
 /* Right Column Styling */
 .image-column {
-    flex: 1; /* Takes up 50% of space on large screens */
+    flex: 1;
     background-color: var(--image-bg-color);
     padding: 20px;
     display: flex;
@@ -60,7 +57,6 @@
 .bottling-machine-img {
     width: 100%;
     height: auto;
-    /* Match the rounded corners of the card on the right side */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
@@ -74,35 +70,32 @@
     font-weight: bold;
     font-size: 1.2rem;
     letter-spacing: 1px;
-    background-color: rgba(0, 0, 0, 0.4); /* Optional: dark text background for contrast */
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.banner .youtube-container{
-        aspect-ratio: 0;
+.banner .youtube-container {
+    aspect-ratio: 0;
 }
 
-/* ---------------------------------------------------------------------- */
 /* RESPONSIVENESS */
-/* ---------------------------------------------------------------------- */
 
 @media (max-width: 900px) {
     .content-wrapper {
-        flex-direction: column; /* Stack columns vertically on smaller screens */
+        flex-direction: column;
     }
 
-    .text-column, .image-column {
-        flex: 1 1 100%; /* Each takes full width */
+    .text-column,
+    .image-column {
+        flex: 1 1 100%;
         padding: 30px;
     }
 
-    /* Adjust border radius for the stacked image */
     .bottling-machine-img {
-        border-radius: 10px; /* Uniform roundness when stacked */
+        border-radius: 10px;
     }
 
-    /* Move the orange swirl graphic down a bit when stacked */
     .intro-text::before {
         top: 20px;
         left: 50%;
@@ -112,11 +105,12 @@
 
 @media (max-width: 500px) {
     .card-container {
-        border-radius: 0; /* Full width card on very small screens */
+        border-radius: 0;
         box-shadow: none;
     }
-    
-    .text-column, .image-column {
+
+    .text-column,
+    .image-column {
         padding: 20px;
     }
 
