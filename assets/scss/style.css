@@ -443,6 +443,8 @@ body {
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: 600;
+  font-size: 13px;
+  padding: 5px 20px !important;
 }
 .glimpses .btn-read-more:hover {
   background-color: #FD7A01;
@@ -781,13 +783,32 @@ body {
   color: #FFFFFF;
 }
 .program .event-card {
-  background: #f8f8f8;
+  background-image: url(../img/bg-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
   border-radius: 16px;
-  padding: 20px;
+  padding: 35px 20px;
   border: 1.2px solid #fd7a01;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.program .event-card::after {
+  content: "";
+  position: absolute;
+  height: 101%;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.program .event-card .wrap-box {
+  position: relative;
+  z-index: 9;
 }
 .program .event-card:hover {
   transform: translateY(-4px);
