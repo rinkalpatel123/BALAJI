@@ -782,17 +782,33 @@ body {
   background-color: #000000;
   color: #FFFFFF;
 }
+.program .event-sub {
+  position: absolute;
+  z-index: 9;
+  top: 10px;
+  left: 0;
+}
+.program .event-sub h5 {
+  font-size: 16px;
+  line-height: 23px;
+  padding: 0 20px;
+}
+.program .event-img {
+  height: 50%;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  border: 2px solid #ddd;
+}
 .program .event-card {
   background-image: url(../img/bg-img.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
-  border-radius: 16px;
-  padding: 35px 20px;
+  border-radius: 0 0 12px 12px;
+  padding: 20px;
   border: 1.2px solid #fd7a01;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -817,7 +833,7 @@ body {
 .program .flag-icon {
   width: 40px;
   height: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   border-radius: 4px;
   overflow: hidden;
 }
