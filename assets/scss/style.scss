@@ -581,24 +581,24 @@ body {
 
     /* Adjusting the grid for the specific 3x2 layout visual (using CSS Grid) */
     .moments-grid {
-        display: grid;
-        gap: 24px;
-        grid-template-columns: repeat(1, 1fr);
+        // display: grid;
+        // gap: 24px;
+        // grid-template-columns: repeat(1, 1fr);
         /* Default for mobile */
     }
 
     @media (min-width: 768px) {
 
         /* Tablet view */
-        .moments-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
+        // .moments-grid {
+        //     grid-template-columns: repeat(2, 1fr);
+        // }
     }
 
     @media (min-width: 992px) {
 
         .moments-grid {
-            grid-template-columns: repeat(3, 1fr);
+            // grid-template-columns: repeat(3, 1fr);
         }
 
         .card-2 {
@@ -1715,6 +1715,10 @@ footer {
     .header .donate-btn {
         font-size: 12px;
     }
+    .glimpses .card-title {
+    font-size: 15px;
+    line-height: 23px;
+}
 }
 
 @media (max-width: 1150.98px) {
