@@ -1,22 +1,19 @@
 ///////////////////28-10 2222222222222222222
 document.addEventListener("DOMContentLoaded", function () {
+  /* -------------------------------------------------------------------------- */
+  /* 🧭 NAVBAR TOGGLER & DROPDOWN CONTROL                                       */
+  /* -------------------------------------------------------------------------- */
   const navbarToggler = document.querySelector(".navbar-toggler");
   const mainNav = document.getElementById("mainNav");
-
-  // Force manual control over collapse
   let bsCollapse = new bootstrap.Collapse(mainNav, { toggle: false });
 
-  // Handle toggler open/close manually
+  // Toggle navbar manually
   navbarToggler.addEventListener("click", function (e) {
     e.preventDefault();
-    if (mainNav.classList.contains("show")) {
-      bsCollapse.hide();
-    } else {
-      bsCollapse.show();
-    }
+    mainNav.classList.contains("show") ? bsCollapse.hide() : bsCollapse.show();
   });
 
-  // Prevent dropdown clicks from retriggering collapse toggle
+  // Prevent dropdown click from collapsing nav
   mainNav.addEventListener("click", function (e) {
     if (
       e.target.classList.contains("dropdown-toggle") ||
@@ -26,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Dropdown hover for desktop
+  // Hover dropdowns (desktop only)
   document.querySelectorAll(".dropdown").forEach(function (dropdown) {
     dropdown.addEventListener("mouseenter", function () {
       if (window.innerWidth > 992) {
@@ -42,130 +39,86 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Dropdown click for mobile
+  // Dropdown click toggle (mobile only)
   document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
     toggle.addEventListener("click", function (e) {
       if (window.innerWidth <= 992) {
         e.preventDefault();
-        e.stopPropagation(); // stop bubbling to nav collapse
+        e.stopPropagation();
         const menu = this.nextElementSibling;
         const isOpen = menu.classList.contains("show");
 
-        // close others
+        // Close all open dropdowns first
         document
           .querySelectorAll(".dropdown-menu.show")
           .forEach((m) => m.classList.remove("show"));
+
         if (!isOpen) menu.classList.add("show");
       }
     });
   });
 
-  // Close dropdowns when navbar hides
+  // Close dropdowns when navbar collapses
   mainNav.addEventListener("hidden.bs.collapse", function () {
     document
       .querySelectorAll(".dropdown-menu.show")
       .forEach((m) => m.classList.remove("show"));
   });
 
-  // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/////////when re-loads
-  const langKey = "selectedLanguage";
-
-  // Function to apply saved language
-  function applySavedLanguage() {
-    const savedLang = localStorage.getItem(langKey);
-    if (savedLang) {
-      const iframe = document.querySelector("iframe.goog-te-menu-frame");
-      if (iframe) {
-        const iframeDoc =
-          iframe.contentDocument || iframe.contentWindow.document;
-        const langElements = iframeDoc.querySelectorAll(
-          ".goog-te-menu2-item span.text"
-        );
-        langElements.forEach(function (el) {
-          if (el.innerHTML.trim() === savedLang) {
-            el.click();
-          }
-        });
-      }
-    }
-  }
-
-  // Watch for language changes
-  document.addEventListener("click", function (e) {
-    if (
-      e.target.classList.contains("goog-te-menu2-item") ||
-      e.target.closest(".goog-te-menu2-item")
-    ) {
-      const selectedText = e.target.innerText || e.target.textContent;
-      if (selectedText) {
-        localStorage.setItem(langKey, selectedText.trim());
-      }
-    }
-  });
-
-  // Reapply saved language after short delay (wait for Google Translate to load)
-  setTimeout(applySavedLanguage, 1000);
-  // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-});
-// yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy////when dropdown option loads
-document.addEventListener("DOMContentLoaded", function () {
+  /* -------------------------------------------------------------------------- */
+  /* 🌍 LANGUAGE SELECTOR + GOOGLE TRANSLATE PERSISTENCE                        */
+  /* -------------------------------------------------------------------------- */
   const langItems = document.querySelectorAll("#langList .dropdown-item");
   const langText = document.getElementById("languageText");
-  const langKey = "selectedLanguageText"; // storage key for selected language name
-  const langCodeKey = "selectedLanguageCode"; // key for Google Translate language code
 
-  // Restore saved language
+  const langKey = "selectedLanguageText"; // Language name (e.g., English)
+  const langCodeKey = "selectedLanguageCode"; // Language code (e.g., en)
+
+  // Restore saved language text
   const savedLangText = localStorage.getItem(langKey);
   const savedLangCode = localStorage.getItem(langCodeKey);
 
-  if (savedLangText) {
-    langText.textContent = savedLangText;
-  }
+  if (savedLangText) langText.textContent = savedLangText;
 
-  // If Google Translate language is saved, apply it again
-  if (savedLangCode) {
-    setTimeout(() => {
-      const iframe = document.querySelector("iframe.goog-te-menu-frame");
-      if (iframe) {
-        const iframeDoc =
-          iframe.contentDocument || iframe.contentWindow.document;
-        const langElements = iframeDoc.querySelectorAll(
-          ".goog-te-menu2-item span.text"
-        );
-        langElements.forEach(function (el) {
-          if (
-            el.getAttribute("lang") === savedLangCode ||
-            el.innerText.trim() === savedLangText
-          ) {
-            el.click();
-          }
-        });
+  // Apply saved Google Translate language
+  function applySavedLanguage() {
+    if (!savedLangCode && !savedLangText) return;
+    const iframe = document.querySelector("iframe.goog-te-menu-frame");
+    if (!iframe) return;
+
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    const langElements = iframeDoc.querySelectorAll(".goog-te-menu2-item span.text");
+
+    langElements.forEach(function (el) {
+      if (
+        el.getAttribute("lang") === savedLangCode ||
+        el.innerText.trim() === savedLangText
+      ) {
+        el.click();
       }
-    }, 1000);
+    });
   }
 
-  // When user selects a language
+  // Delay to ensure Google Translate iframe loads
+  setTimeout(applySavedLanguage, 1000);
+
+  // When user selects a language manually
   langItems.forEach((item) => {
     item.addEventListener("click", function (e) {
       e.preventDefault();
       const langName = this.textContent.trim();
       const langCode = this.getAttribute("data-lang");
 
-      // Update dropdown label
+      // Update text + store selection
       langText.textContent = langName;
-
-      // Save in localStorage
       localStorage.setItem(langKey, langName);
       localStorage.setItem(langCodeKey, langCode);
 
-      // Trigger Google Translate
+      // Apply selection to Google Translate
       const iframe = document.querySelector("iframe.goog-te-menu-frame");
       if (iframe) {
-        const iframeDoc =
-          iframe.contentDocument || iframe.contentWindow.document;
-        const langElements = iframeDoc.querySelectorAll(
-          ".goog-te-menu2-item span.text"
-        );
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const langElements = iframeDoc.querySelectorAll(".goog-te-menu2-item span.text");
         langElements.forEach(function (el) {
           if (
             el.getAttribute("lang") === langCode ||
@@ -176,6 +129,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
     });
+  });
+
+  // Watch for Google Translate internal selection (if user clicks inside iframe)
+  document.addEventListener("click", function (e) {
+    if (
+      e.target.classList.contains("goog-te-menu2-item") ||
+      e.target.closest(".goog-te-menu2-item")
+    ) {
+      const selectedText = e.target.innerText || e.target.textContent;
+      if (selectedText) {
+        localStorage.setItem(langKey, selectedText.trim());
+      }
+    }
   });
 });
 
