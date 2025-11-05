@@ -1,4 +1,4 @@
-///////////////////28-10 2222222222222222222
+///////////////////5-11 starts
 document.addEventListener("DOMContentLoaded", function () {
   /* -------------------------------------------------------------------------- */
   /* 🧭 NAVBAR TOGGLER & DROPDOWN CONTROL                                       */
@@ -145,8 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-///////////////////28-10 2222222222222222222 endsssssssssss
+///////////////////5-11 endsssssssssss
 
 ////////////////////
 window.addEventListener("scroll", () => {
