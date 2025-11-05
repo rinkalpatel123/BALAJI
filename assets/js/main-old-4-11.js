@@ -254,6 +254,22 @@ setInterval(() => {
     });
 }, 2000);
 
+/////////// image open isotope
+
+document.addEventListener("DOMContentLoaded", function () {
+  const galleryItems = document.querySelectorAll(".masonry-item img");
+  const modalImage = document.getElementById("modalImage");
+
+  galleryItems.forEach((img) => {
+    img.style.cursor = "pointer";
+    img.addEventListener("click", function () {
+      modalImage.src = this.src;
+      const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+      modal.show();
+    });
+  });
+});
+
 //////////////////////////CHATBOT
 
 const chatbot = document.querySelector(".chatbot");
@@ -353,92 +369,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /////////////mappppppppppp
-
-
-
-///////////////facebook post
-
-document.addEventListener("DOMContentLoaded", function () {
-  const postCards = document.querySelectorAll(".fb-post-card");
-  const modal = new bootstrap.Modal(document.getElementById("fbModal"));
-  const postContainer = document.getElementById("fb-post-container");
-
-  postCards.forEach(card => {
-    card.addEventListener("click", function () {
-      const fbLink = this.getAttribute("data-fb-link");
-      postContainer.innerHTML = `
-        <div class="fb-post" data-href="${fbLink}" data-width="500"></div>
-      `;
-      if (window.FB) {
-        FB.XFBML.parse(postContainer);
-      }
-      modal.show();
-    });
-  });
-});
-
-////////facebook post end
-
-
-///////////////gallery open
-
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  const caption = document.getElementById("caption");
-  const closeBtn = document.querySelector(".image-modal .close");
-  const nextBtn = document.querySelector(".image-modal .next");
-  const prevBtn = document.querySelector(".image-modal .prev");
-
-  // Collect images from gallery, instagram, and facebook
-  const images = Array.from(
-    document.querySelectorAll("#gallery .thumb img, #instagram .masonry-item img, #facebook .masonry-item img")
-  );
-
-  let currentIndex = 0;
-
-  // Open modal when image clicked
-  images.forEach((img, index) => {
-    img.addEventListener("click", () => {
-      modal.style.display = "block";
-      modalImg.src = img.src;
-      caption.textContent = img.alt || "";
-      currentIndex = index;
-    });
-  });
-
-  // Close modal
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  // Next image
-  nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    modalImg.src = images[currentIndex].src;
-    caption.textContent = images[currentIndex].alt || "";
-  });
-
-  // Previous image
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    modalImg.src = images[currentIndex].src;
-    caption.textContent = images[currentIndex].alt || "";
-  });
-
-  // Close when clicking outside
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.style.display = "none";
-  });
-
-  // Keyboard navigation
-  document.addEventListener("keydown", (e) => {
-    if (modal.style.display === "block") {
-      if (e.key === "ArrowRight") nextBtn.click();
-      else if (e.key === "ArrowLeft") prevBtn.click();
-      else if (e.key === "Escape") modal.style.display = "none";
-    }
-  });
-});
-
-///////////////gallery open ends

@@ -571,6 +571,62 @@ body {
   animation: spin 20s linear infinite;
 }
 
+.gallery-img-open .image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+.gallery-img-open .image-modal img {
+  margin: auto;
+  max-width: 60%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+.gallery-img-open .image-modal .caption {
+  color: #ccc;
+  padding: 10px 0;
+}
+.gallery-img-open .image-modal .close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.gallery-img-open .image-modal .prev,
+.gallery-img-open .image-modal .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-size: 30px;
+  transition: 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.gallery-img-open .image-modal .prev {
+  left: 10%;
+}
+.gallery-img-open .image-modal .next {
+  right: 10%;
+}
+.gallery-img-open .image-modal .prev:hover,
+.gallery-img-open .image-modal .next:hover {
+  color: #f1f1f1;
+}
+
 .commandments {
   position: relative;
   overflow: hidden;
@@ -952,6 +1008,7 @@ body {
   overflow: hidden;
 }
 .isotope-section .thumb img {
+  cursor: pointer;
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1446,6 +1503,35 @@ footer .lang-select {
   color: #fff;
 }
 
+#facebook {
+  background-color: #fff;
+}
+#facebook .fb-post-card {
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+#facebook .fb-post-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  #facebook .fb-post-card img {
+    width: 100%;
+  }
+}
+
+.instagram-media {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.EmbedBrokenMedia {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
 @media (max-width: 1399.98px) {
   .contribute .card-img-custom {
     height: 220px;
@@ -1498,6 +1584,12 @@ footer .lang-select {
     padding: 0 !important;
   }
   .toggle-po-set {
+    position: absolute;
+    top: 15px;
+    right: 65px;
+    right: 145px;
+  }
+  .donate-btn-res {
     position: absolute;
     top: 15px;
     right: 65px;

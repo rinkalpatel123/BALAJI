@@ -158,7 +158,7 @@
           <div id="google_translate_element" style="display:none;"></div>
         </div>
 
-        <div class="d-none d-lg-block">
+        <div class="donate-btn-res d-lg-block">
           <a href="./donate.html" class="btn donate-btn">Donate</a>
         </div>
       </div>
@@ -2362,7 +2362,19 @@
       </div>
     </div>
   </section>
+  <!-- 🖼️ Image Modal -->
+  <section class="gallery-img-open">
+    <div id="imageModal" class="image-modal">
+      <span class="close">&times;</span>
 
+      <img class="modal-content" id="modalImage" alt="">
+      <div class="caption" id="caption"></div>
+
+      <!-- Navigation buttons -->
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </div>
+  </section>
   <!-- instagram -->
   <section class="gallery-grid section-padding pt-0">
     <div class="container-fluid px-lg-5 px-md-3">
@@ -2378,9 +2390,16 @@
         </div>
       </div>
 
-      <div class="gallery-container">
+      <div id="instagram" class="gallery-container">
         <div class="masonry">
-          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/glimpse/01.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500">
+            <!-- <img src="assets/img/glimpse/01.jpg" alt=""> -->
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/iambageshwardhamsarkar" data-instgrm-version="14"
+              style="background:#FFF; border:0; margin:1px auto; max-width:540px; width:100%;">
+            </blockquote>
+
+          </div>
           <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/glimpse/02.jpg" alt=""></div>
           <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/about/cor-1.png" alt=""></div>
           <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/glimpse/04.jpg" alt=""></div>
@@ -2396,7 +2415,7 @@
     </div>
   </section>
   <!-- ✅ Modal -->
-  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal fadex" id="imageModaldelete" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content bg-transparent border-0 shadow-none">
         <div class="modal-body p-0 position-relative text-center">
@@ -2407,7 +2426,7 @@
       </div>
     </div>
   </div>
-
+  <!-- <div id="fb-root"></div> -->
   <!-- facebook -->
   <section class="gallery-grid section-padding">
     <div class="container-fluid px-lg-5 px-md-3">
@@ -2423,10 +2442,18 @@
         </div>
       </div>
 
-      <div class="gallery-container">
+      <div  id="facebook" class="gallery-container">
         <div class="masonry">
-          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/baba/01.jpg" alt=""></div>
-          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/process/1.png" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-1000">
+            <div class="fb-post-card" data-fb-link="https://www.facebook.com/1170350158461730/posts/1307024698127608">
+              <img src="assets/img/facebook/1.jfif" class="img-fluid rounded shadow-sm" alt="Facebook post 1">
+            </div>
+          </div>
+          <div class="masonry-item scroll-fade-in delay-1000">
+            <div class="fb-post-card" data-fb-link="https://www.facebook.com/reel/1564069911257497">
+              <img src="assets/img/facebook/2.jpg" class="img-fluid rounded shadow-sm" alt="Facebook post 2">
+            </div>
+          </div>
           <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/baba/02.jpg" alt=""></div>
           <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/process/2.png" alt=""></div>
           <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/baba/03.jpg" alt=""></div>
@@ -2440,7 +2467,19 @@
       </div>
     </div>
   </section>
-
+  <!-- Facebook Modal -->
+  <div class="modal fade" id="fbModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <div id="fb-post-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ======= Footer ======= -->
   <footer>
@@ -2504,6 +2543,9 @@
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/isotope.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"
+    nonce="abc"></script>
 
   <!-- Libraries -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
