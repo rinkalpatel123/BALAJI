@@ -513,7 +513,7 @@ body {
 }
 .contribute .card-img-custom {
   width: 100%;
-  height: 195px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem 0 0 1rem;
@@ -909,7 +909,6 @@ body {
 }
 .builds .card-img-top {
   width: 100%;
-  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1533,8 +1532,8 @@ footer .lang-select {
 }
 
 @media (max-width: 1399.98px) {
-  .contribute .card-img-custom {
-    height: 220px;
+  .contribute .card-image-wrapper {
+    width: 50%;
   }
 }
 @media (max-width: 1299.98px) {
@@ -1568,6 +1567,11 @@ footer .lang-select {
   .header .nav-link {
     font-size: 11px;
     margin: 0 1px;
+  }
+}
+@media (max-width: 1024px) {
+  .contribute .card-image-wrapper {
+    width: 100%;
   }
 }
 @media (max-width: 992px) {
