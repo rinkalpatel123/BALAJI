@@ -1,8 +1,9 @@
-///////////////////5-11 starts
+///////////////////6-11 starts
 document.addEventListener("DOMContentLoaded", function () {
   /* -------------------------------------------------------------------------- */
   /* 🧭 NAVBAR TOGGLER & DROPDOWN CONTROL                                       */
   /* -------------------------------------------------------------------------- */
+
   const navbarToggler = document.querySelector(".navbar-toggler");
   const mainNav = document.getElementById("mainNav");
   let bsCollapse = new bootstrap.Collapse(mainNav, { toggle: false });
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bootstrap.Dropdown.getOrCreateInstance(toggle).show();
       }
     });
+
     dropdown.addEventListener("mouseleave", function () {
       if (window.innerWidth > 992) {
         const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
@@ -45,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.innerWidth <= 992) {
         e.preventDefault();
         e.stopPropagation();
+
         const menu = this.nextElementSibling;
         const isOpen = menu.classList.contains("show");
 
@@ -68,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* -------------------------------------------------------------------------- */
   /* 🌍 LANGUAGE SELECTOR + GOOGLE TRANSLATE PERSISTENCE                        */
   /* -------------------------------------------------------------------------- */
+
   const langItems = document.querySelectorAll("#langList .dropdown-item");
   const langText = document.getElementById("languageText");
 
@@ -83,12 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Apply saved Google Translate language
   function applySavedLanguage() {
     if (!savedLangCode && !savedLangText) return;
-
-    // If English, skip applying and ensure reset
-    if (savedLangCode === "en" || savedLangText.toLowerCase() === "english") {
-      localStorage.removeItem("googtrans");
-      return;
-    }
 
     const iframe = document.querySelector("iframe.goog-te-menu-frame");
     if (!iframe) return;
@@ -113,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
   langItems.forEach((item) => {
     item.addEventListener("click", function (e) {
       e.preventDefault();
+
       const langName = this.textContent.trim();
       const langCode = this.getAttribute("data-lang");
 
@@ -121,18 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem(langKey, langName);
       localStorage.setItem(langCodeKey, langCode);
 
-      // If English selected, reset Google Translate
-      if (langCode === "en" || langName.toLowerCase() === "english") {
-        localStorage.removeItem("googtrans");
-        setTimeout(() => location.reload(), 300);
-        return;
-      }
-
       // Apply selection to Google Translate
       const iframe = document.querySelector("iframe.goog-te-menu-frame");
       if (iframe) {
         const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
         const langElements = iframeDoc.querySelectorAll(".goog-te-menu2-item span.text");
+
         langElements.forEach(function (el) {
           if (
             el.getAttribute("lang") === langCode ||
@@ -159,7 +152,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-///////////////////5-11 endsssssssssss
+
+///////////////////6-11 endsssssssssss
 
 ////////////////////
 window.addEventListener("scroll", () => {
@@ -369,9 +363,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.querySelector(".image-modal .next");
   const prevBtn = document.querySelector(".image-modal .prev");
 
-  // Collect images from gallery and instagram
+  // Collect images from gallery, instagram, and facebook
   const images = Array.from(
-    document.querySelectorAll("#gallery .thumb img, #instagram .masonry-item img")
+    document.querySelectorAll("#gallery .thumb img, #instagram .masonry-item img, #facebook .masonry-item img")
   );
 
   let currentIndex = 0;
