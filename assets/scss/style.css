@@ -3,6 +3,11 @@
   background-color: #FEF7EC !important;
 }
 
+.ytp-cued-thumbnail-overlay-image {
+  background-position: top center;
+  margin-top: 20px;
+}
+
 .text-primary {
   color: #FD7A01 !important;
 }
@@ -122,6 +127,12 @@ body {
   z-index: 1050;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.header .donate-btn-res .donate-btn-icon {
+  display: none;
+}
+.header .donate-btn-res .donate-btn-icon img {
+  width: 35px;
 }
 .header .navbar-toggler-icon {
   width: 20px;
@@ -808,6 +819,9 @@ body {
   /* Segmented Control (Tab Buttons) */
   /* Event Card Styling */
 }
+.program .event-box .wrap-box .text-white {
+  font-size: 13px;
+}
 .program :root {
   --pin-color: #0d6efd;
   /* Bootstrap primary blue */
@@ -1162,6 +1176,7 @@ footer .btn-update {
   color: #000;
   border: none;
   border-radius: 30px;
+  font-size: 13px;
   font-weight: 600;
   padding: 10px 30px;
   transition: transform 0.3s ease;
@@ -1575,6 +1590,12 @@ footer .lang-select {
   }
 }
 @media (max-width: 992px) {
+  .header .donate-btn-res .donate-btn-icon {
+    display: block;
+  }
+  .header .donate-btn-res .donate-btn {
+    display: none;
+  }
   .header .dropdown-menu .dropdown-item {
     padding: 5px 8px !important;
   }
@@ -1591,11 +1612,11 @@ footer .lang-select {
     position: absolute;
     top: 15px;
     right: 65px;
-    right: 145px;
+    right: 105px;
   }
   .donate-btn-res {
     position: absolute;
-    top: 15px;
+    top: 14px;
     right: 65px;
   }
   .about .title {
@@ -1615,6 +1636,9 @@ footer .lang-select {
 @media (max-width: 600px) {
   #customLanguageDropdown .dropdown-menu {
     margin-top: 0px;
+  }
+  .banner .youtube-container iframe {
+    top: 0;
   }
   .gallery-grid .masonry,
   .isotope-section .grid {
@@ -1650,4 +1674,15 @@ footer .lang-select {
     aspect-ratio: 10;
     height: 400px;
   }
+}
+#ig-post-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.instagram-media {
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=style.css.map */

@@ -359,6 +359,41 @@ document.addEventListener("DOMContentLoaded", function () {
 ////////facebook post end
 
 
+///////////////instagram post
+
+  // Instagram Post Logic
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const igCards = document.querySelectorAll(".ig-post-card");
+  //   const igModal = new bootstrap.Modal(document.getElementById("igModal"));
+  //   const igContainer = document.getElementById("ig-post-container");
+
+  //   igCards.forEach(card => {
+  //     card.addEventListener("click", function () {
+  //       const igLink = this.getAttribute("data-ig-link");
+
+  //       // Inject embed blockquote dynamically
+  //       igContainer.innerHTML = `
+  //         <blockquote class="instagram-media"
+  //           data-instgrm-permalink="${igLink}"
+  //           data-instgrm-version="14"
+  //           style="background:#FFF; border:0; margin:0 auto; width:100%; max-width:540px;">
+  //         </blockquote>
+  //       `;
+
+  //       // Parse newly added embed
+  //       if (window.instgrm) {
+  //         window.instgrm.Embeds.process();
+  //       }
+
+  //       igModal.show();
+  //     });
+  //   });
+  // });
+
+
+////////instagram post end
+
+
 ///////////////gallery open
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -369,9 +404,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.querySelector(".image-modal .next");
   const prevBtn = document.querySelector(".image-modal .prev");
 
-  // Collect images from gallery and instagram
+  // Collect images from gallery 
   const images = Array.from(
-    document.querySelectorAll("#gallery .thumb img, #instagram .masonry-item img")
+    document.querySelectorAll("#gallery .thumb img")
   );
 
   let currentIndex = 0;

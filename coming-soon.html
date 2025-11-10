@@ -192,40 +192,6 @@
   <button class="chatbot-float" id="chatbot-float">💬</button>
   <!-- chat bot end -->
 
-
-  <section class="duniya-written section-padding pb-0">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-sm-8 border rounded p-3 bg-light">
-          <p class="fw-bold text-center"> Inspired by Sanyasi Baba, Guruji has launched a brand called “Sanyasi Duniya”.
-          </p>
-
-          <p>
-            This platform is an extension of Gurujis mission to spread spiritual and Sanatan tradition throughout the
-            world, guided by the divine energy of Shri Bageshwar Balaji.
-          </p>
-
-          <p>
-            Sanyasi Duniya offers a serene space for all seekers to avail some of the blessed things that defines
-            Bageshwar Dham, wherever you are.
-          </p>
-          <p>
-            You can explore the profound spiritual activities and teachings delivered by Guruji, and stay connected with
-            the energy of the Dham.
-          </p>
-
-          <p>
-            Immerse yourself and let Sanyasi Duniya be a source of strength, clarity, and deep connection with your
-            faith.
-          </p>
-
-          <!-- Visit the website: -->
-          <p class="fw-bold text-center">LINK soon to be launched</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="coming-soon-page py-4">
     <div class="container">
       <div class="row">
@@ -308,7 +274,23 @@
   <!-- Libraries -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
- 
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const target = tab.dataset.tab;
+        contents.forEach(c => {
+          c.classList.remove("active");
+          if (c.id === target) c.classList.add("active");
+        });
+      });
+    });
+  </script>
   <!-- Google Translate Script -->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
