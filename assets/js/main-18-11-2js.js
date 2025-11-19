@@ -1,4 +1,4 @@
-///////////////////8-11 starts
+///////////////////5-11 starts
 document.addEventListener("DOMContentLoaded", function () {
   /* -------------------------------------------------------------------------- */
   /* 🧭 NAVBAR TOGGLER & DROPDOWN CONTROL                                       */
@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainNav = document.getElementById("mainNav");
   let bsCollapse = new bootstrap.Collapse(mainNav, { toggle: false });
 
-  // Manual navbar toggle
+  // Toggle navbar manually
   navbarToggler.addEventListener("click", function (e) {
     e.preventDefault();
     mainNav.classList.contains("show") ? bsCollapse.hide() : bsCollapse.show();
   });
 
-  // Prevent dropdown click from closing nav
+  // Prevent dropdown click from collapsing nav
   mainNav.addEventListener("click", function (e) {
     if (
       e.target.classList.contains("dropdown-toggle") ||
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Desktop hover dropdowns
+  // Hover dropdowns (desktop only)
   document.querySelectorAll(".dropdown").forEach(function (dropdown) {
     dropdown.addEventListener("mouseenter", function () {
       if (window.innerWidth > 992) {
@@ -31,11 +31,29 @@ document.addEventListener("DOMContentLoaded", function () {
         bootstrap.Dropdown.getOrCreateInstance(toggle).show();
       }
     });
-
     dropdown.addEventListener("mouseleave", function () {
       if (window.innerWidth > 992) {
         const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
         bootstrap.Dropdown.getOrCreateInstance(toggle).hide();
+      }
+    });
+  });
+
+  // Dropdown click toggle (mobile only)
+  document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        e.stopPropagation();
+        const menu = this.nextElementSibling;
+        const isOpen = menu.classList.contains("show");
+
+        // Close all open dropdowns first
+        document
+          .querySelectorAll(".dropdown-menu.show")
+          .forEach((m) => m.classList.remove("show"));
+
+        if (!isOpen) menu.classList.add("show");
       }
     });
   });
@@ -50,13 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
   /* -------------------------------------------------------------------------- */
   /* 🌍 LANGUAGE SELECTOR + GOOGLE TRANSLATE PERSISTENCE                        */
   /* -------------------------------------------------------------------------- */
-
   const langItems = document.querySelectorAll("#langList .dropdown-item");
   const langText = document.getElementById("languageText");
 
-  const langKey = "selectedLanguageText"; // e.g. English
-  const langCodeKey = "selectedLanguageCode"; // e.g. en
+  const langKey = "selectedLanguageText"; // Language name (e.g., English)
+  const langCodeKey = "selectedLanguageCode"; // Language code (e.g., en)
 
+  // Restore saved language text
   const savedLangText = localStorage.getItem(langKey);
   const savedLangCode = localStorage.getItem(langCodeKey);
 
@@ -66,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function applySavedLanguage() {
     if (!savedLangCode && !savedLangText) return;
 
+    // If English, skip applying and ensure reset
     if (savedLangCode === "en" || savedLangText.toLowerCase() === "english") {
       localStorage.removeItem("googtrans");
       return;
@@ -89,27 +108,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Delay to ensure Google Translate iframe loads
   setTimeout(applySavedLanguage, 1000);
 
-  // When user selects language manually
+  // When user selects a language manually
   langItems.forEach((item) => {
     item.addEventListener("click", function (e) {
       e.preventDefault();
-
       const langName = this.textContent.trim();
       const langCode = this.getAttribute("data-lang");
 
+      // Update text + store selection
       langText.textContent = langName;
       localStorage.setItem(langKey, langName);
       localStorage.setItem(langCodeKey, langCode);
 
-      // Reset on English
+      // If English selected, reset Google Translate
       if (langCode === "en" || langName.toLowerCase() === "english") {
         localStorage.removeItem("googtrans");
         setTimeout(() => location.reload(), 300);
         return;
       }
 
+      // Apply selection to Google Translate
       const iframe = document.querySelector("iframe.goog-te-menu-frame");
       if (iframe) {
         const iframeDoc =
@@ -117,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const langElements = iframeDoc.querySelectorAll(
           ".goog-te-menu2-item span.text"
         );
-
         langElements.forEach(function (el) {
           if (
             el.getAttribute("lang") === langCode ||
@@ -130,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Watch Google Translate iframe clicks
+  // Watch for Google Translate internal selection (if user clicks inside iframe)
   document.addEventListener("click", function (e) {
     if (
       e.target.classList.contains("goog-te-menu2-item") ||
@@ -144,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-///////////////////8-11 endsssssssssss
+///////////////////5-11 endsssssssssss
 
 ////////////////////
 window.addEventListener("scroll", () => {

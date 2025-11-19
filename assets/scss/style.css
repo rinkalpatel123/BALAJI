@@ -512,6 +512,18 @@ body {
 .contribute {
   /* Responsive stacking for mobile */
 }
+.contribute .card-title {
+  cursor: pointer;
+}
+.contribute .card-title a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #FD7A01;
+}
+.contribute .card-title a:hover {
+  color: #FD7A01;
+  border-bottom: 1px solid #000000;
+}
 .contribute .custom-card {
   border-radius: 1rem;
   border: 1px solid #C3C3C3;
@@ -1141,6 +1153,36 @@ body {
   transform: scale(1.05);
 }
 
+.instagram-modal .modal-dialog {
+  width: 530px;
+}
+
+#ig-post-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  overflow: hidden;
+  min-width: 500px;
+}
+#ig-post-container img {
+  width: 100%;
+  min-height: 300px;
+}
+#ig-post-container .instagram-preview {
+  min-height: 200px;
+  opacity: 1 !important;
+  visibility: visible !important;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+#ig-post-container iframe {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  display: block;
+}
+
 footer {
   background-color: #0a0a0a;
   color: #FFFFFF;
@@ -1201,6 +1243,39 @@ footer .lang-select {
   padding: 8px 15px;
   font-weight: 600;
   margin-top: 10px;
+}
+
+.join-update-form form {
+  background: #ffecda;
+}
+.join-update-form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.join-update-form .form-control {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+.join-update-form .form-control:focus {
+  border-color: #FD7A01;
+  box-shadow: none;
+}
+.join-update-form .btn-submit {
+  background-color: #FD7A01;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.join-update-form .btn-submit:hover {
+  background-color: #000;
 }
 
 .humanitarian ul li {
@@ -1674,15 +1749,4 @@ footer .lang-select {
     aspect-ratio: 10;
     height: 400px;
   }
-}
-#ig-post-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px;
-}
-
-.instagram-media {
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=style.css.map */

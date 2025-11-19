@@ -15,7 +15,7 @@
 
 .video-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .video-card img {
@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -44,11 +44,18 @@
 }
 
 .play-btn {
-  color: white;
-  font-size: 45px;
   background: rgba(255, 0, 0, 0.8);
   border-radius: 50%;
-  padding: 10px 25px;
+  padding: 0;
+  height: 70px;
+  width: 70px;
+  line-height: 73px;
+  text-align: center;
+}
+
+.play-btn i {
+  color: white;
+  font-size: 45px;
 }
 
 .video-card h3 {
@@ -66,8 +73,8 @@
 }
 
 @media (max-width: 600px) {
-    .banner .youtube-container {
-        aspect-ratio: 0 !important;
-        height: 100% !important;
-    }
+  .banner .youtube-container {
+    aspect-ratio: 0 !important;
+    height: 100% !important;
+  }
 }
