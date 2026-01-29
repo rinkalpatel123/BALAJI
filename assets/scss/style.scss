@@ -2126,3 +2126,112 @@ footer {
         height: 400px;
     }
 }
+
+.entity-card {
+    background: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 4px solid #ff9933;
+    position: relative;
+    overflow: hidden;
+    // margin-bottom: 50px;
+
+    /* Hover Effects */
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(255, 153, 51, 0.15);
+        border-top: 0px solid transparent;
+        border: 1px solid #ff9933;
+    }
+
+    .flag-icon {
+        width: 35px;
+    }
+
+    /* Country Title */
+    .country-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #2c3e50;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .country-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 2px;
+        background-color: #eee;
+    }
+
+    /* Entity List Styling */
+    .entity-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    ul.entity-list li {
+        padding: 10px 0;
+        border-bottom: 1px dashed #d9d9d9;
+        color: #5f6c7b;
+        font-size: 0.95rem;
+        display: flex;
+        margin-bottom: 5px;
+        align-items: flex-start;
+        line-height: 1.4;
+    }
+
+    .entity-list li:last-child {
+        border-bottom: none;
+    }
+
+    /* Bullet Icon */
+    .entity-list li::before {
+        content: "\F26E";
+        font-family: "bootstrap-icons";
+        font-weight: 900;
+        color: #ff9933;
+        margin-right: 10px;
+        margin-top: 0;
+        font-size: 28px;
+        line-height: 28px;
+        flex-shrink: 0;
+    }
+}
+
+
+/* Card Icon Wrapper */
+// .icon-wrapper {
+//     width: 70px;
+//     height: 70px;
+//     border-radius: 50%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-bottom: 20px;
+//     font-size: 1.8rem;
+//     transition: all 0.3s ease;
+//     background-color: #ff9933;
+//     color: #fff;
+// }
+
+// .entity-card:hover .icon-wrapper {
+//     background-color: #fff8e1;
+//     color: #ff9933;
+// }

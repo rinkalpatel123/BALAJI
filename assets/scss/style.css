@@ -1749,4 +1749,84 @@ footer .lang-select {
     aspect-ratio: 10;
     height: 400px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+.entity-card {
+  background: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-top: 4px solid #ff9933;
+  position: relative;
+  overflow: hidden;
+  /* Hover Effects */
+  /* Country Title */
+  /* Entity List Styling */
+  /* Bullet Icon */
+}
+.entity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 153, 51, 0.15);
+  border-top: 0px solid transparent;
+  border: 1px solid #ff9933;
+}
+.entity-card .flag-icon {
+  width: 35px;
+}
+.entity-card .country-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 10px;
+}
+.entity-card .country-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #eee;
+}
+.entity-card .entity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+.entity-card ul.entity-list li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #d9d9d9;
+  color: #5f6c7b;
+  font-size: 0.95rem;
+  display: flex;
+  margin-bottom: 5px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+.entity-card .entity-list li:last-child {
+  border-bottom: none;
+}
+.entity-card .entity-list li::before {
+  content: "\f26e";
+  font-family: "bootstrap-icons";
+  font-weight: 900;
+  color: #ff9933;
+  margin-right: 10px;
+  margin-top: 0;
+  font-size: 28px;
+  line-height: 28px;
+  flex-shrink: 0;
+}
+
+/* Card Icon Wrapper *//*# sourceMappingURL=style.css.map */
