@@ -16,6 +16,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -29,74 +30,168 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/scss/style.css" rel="stylesheet">
+
 </head>
+
+</style>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <div class="header">
-    <nav class="navbar navbar-expand-lg py-2">
-      <div class="container-fluid px-5">
-        <a class="navbar-brand" href="#">
+  <div class="header sticky-top">
+    <nav class="navbar navbar-expand-lg py-1">
+      <div class="container-fluid px-lg-5 px-md-3">
+        <a class="navbar-brand" href="./index.html">
           <img src="./assets/img/logo.png" alt="Logo">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <button class="navbar-toggler" type="button" aria-controls="mainNav" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <div class="navbar-collapse justify-content-center collapse" id="mainNav">
           <ul class="navbar-nav mb-2 mb-lg-0">
 
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="./index.html">Home</a>
             </li>
 
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button"
-                data-bs-toggle="dropdown">Upcoming Events</a>
+                data-bs-toggle="dropdown">About Us</a>
+
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Event 1</a></li>
-                <li><a class="dropdown-item" href="#">Event 2</a></li>
-                <li><a class="dropdown-item" href="#">Past Events</a></li>
+                <li><a class="dropdown-item" href="./shri-bageshwar-dham.html">Shri Bageshwar Dham</a></li>
+                <li><a class="dropdown-item" href="./guruji.html">Guru Ji</a></li>
+                <li><a class="dropdown-item" href="./vision.html">Vision</a></li>
+                <li><a class="dropdown-item" href="./books.html">Books</a></li>
+                <li><a class="dropdown-item" href="./sanatan-dham.html">Bageshwar Dham Sanatan Math</a></li>
+              </ul>
+
+            </li>
+
+            <li class="nav-item dropdown">
+
+              <a class="nav-link dropdown-toggle" href="#" id="DuniyaDropdown" role="button"
+                data-bs-toggle="dropdown">Events</a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./upcoming-event.html">Upcoming Events</a></li>
+                <li><a class="dropdown-item" href="./urja-sanchay.html">Urja Sanchay</a></li>
+                <li><a class="dropdown-item" href="./padh-yatra.html">Padh Yatra</a></li>
               </ul>
             </li>
 
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
                 data-bs-toggle="dropdown">Charitable Services</a>
+
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Food Donation</a></li>
-                <li><a class="dropdown-item" href="#">Education Help</a></li>
-                <li><a class="dropdown-item" href="#">Medical Aid</a></li>
+                <li><a class="dropdown-item" href="./ma-annapurna-kitchen.html">Ma Annapurna Kitchen</a></li>
+                <li><a class="dropdown-item" href="./hospital.html">Cancer Hospital</a></li>
+                <li><a class="dropdown-item" href="/gow-seva.html">Gow Seva</a></li>
+                <li><a class="dropdown-item" href="./kanya-vivaah.html">Kanya Vivaah</a></li>
+                <li><a class="dropdown-item" href="./bageshwar-bageecha.html">Bageshwar Bageecha</a></li>
+                <li><a class="dropdown-item" href="./vedic-gurukul.html">Vedic Gurukul</a></li>
+                <li><a class="dropdown-item" href="./sports-and-skill-development.html">Sports & Skills Development</a>
+                </li>
               </ul>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sanyasi Duniya</a>
+            <li class="nav-item dropdown d-none">
+
+              <a class="nav-link dropdown-toggle" href="#" id="DuniyaDropdown" role="button"
+                data-bs-toggle="dropdown">Sanyasi Duniya</a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./sanyasi-jal.html">Sanyasi Jal</a></li>
+              </ul>
+            </li>
+
+             <li class="nav-item">
+              <a class="nav-link" href="./sanyasi-jal.html">Sanyasi Duniya</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">FAQs</a>
+              <a class="nav-link" href="./faqs.html">FAQs</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="./bhajans.html">Bhajans</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact Us</a>
             </li>
           </ul>
         </div>
 
+        <div class="toggle-po-set">
+          <!-- 🌍 Language Selector -->
+          <div class="dropdown notranslate" id="customLanguageDropdown">
+            <button class="btn btn-light dropdown-toggle d-flex align-items-center gap-2 shadow-sm" type="button"
+              id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-globe2 text-dark fs-5"></i>
+              <span class="fw-semibold text-dark" id="languageText">Language</span>
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm rounded-3 p-2" aria-labelledby="languageDropdown"
+              id="langList">
+              <li><a class="dropdown-item py-2" href="#" data-lang="hi">Hindi</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="en">English</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="es">Spanish</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="ar">Arabic</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="fr">French</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="de">German</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="ta">Tamil</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="te">Telugu</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="bn">Bengali</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="gu">Gujarati</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="mr">Marathi</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="pa">Punjabi</a></li>
+              <li><a class="dropdown-item py-2" href="#" data-lang="ne">Nepalese</a></li>
+            </ul>
+          </div>
+
+          <!-- Hidden Google Translate -->
+          <div id="google_translate_element" style="display:none;"></div>
+        </div>
+
         <div class="d-none d-lg-block">
-          <a href="#" class="btn donate-btn">Donate</a>
+          <a href="./donate.html" class="btn donate-btn">Donate</a>
         </div>
       </div>
     </nav>
   </div>
   <!-- End Header -->
 
+  <!-- ======= chat bot ======= -->
+  <!-- chat bot start -->
+  <div class="chatbot">
+    <div class="chatbot-header">
+      <h4>Chat with ChatBot 🤖</h4>
+      <button id="chatbot-toggle">–</button>
+    </div>
+
+    <div class="chatbot-body" id="chatbot-body">
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="message bot">Hello 👋 How can I help you today?</div>
+      </div>
+
+      <div class="chatbot-input">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="chatbot-float" id="chatbot-float">💬</button>
+  <!-- chat bot end -->
+
   <!-- banner -->
-  <section class="banner">
-    <div class="container-fluid px-5">
+  <section class="banner main-index">
+    <div class="container-fluid px-lg-5 px-md-3">
       <div class="row">
         <div class="col-sm-12">
           <div class="videobg">
@@ -113,29 +208,72 @@
       </div>
     </div>
   </section>
-  <!-- bannner end -->
+  <!-- banner end -->
+
+
+  <!-- slider -->
+  <section class="banner-slider mt-minus">
+    <div class="container-fluid px-lg-5 px-md-3">
+      <div class="row">
+        <div class="col-md-12 text-end mt-5 pt-5 scroll-fade-in delay-500">
+          <div id="guruCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/img/slider/slidea1.jpg" class="d-block" alt="Slide 1">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/slider/slidea2.jpg" class="d-block" alt="Slide 2">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/slider/slidea3.jpg" class="d-block" alt="Slide 3">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/slider/slidea4.jpg" class="d-block" alt="Slide 4">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/slider/slidea5.jpg" class="d-block" alt="Slide 5">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/slider/slidea6.jpg" class="d-block" alt="Slide 6">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/slider/slidea7.jpg" class="d-block" alt="Slide 7">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#guruCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#guruCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- slider end  -->
 
   <!-- about -->
-  <section class="about section-padding pt-0">
-    <div class="container-fluid px-5">
+  <section class="about section-padding d-none">
+    <div class="container-fluid px-lg-5 px-md-3">
       <div class="row align-items-center justify-content-center">
         <!-- Left Quote -->
         <div class="col-md-5 text-start">
           <span class="quote-mark">
             <i class="bi bi-quote"></i>
           </span>
-          <div class="text-side">
-            <div class="title mb-5">
-              गुरु की कोई व्याख्या नहीं होती, व्याख्यान होता है...
+          <div class="text-side scroll-fade-in delay-300">
+            <div class="title mb-5 hindi-title">
+              There is no explanation of a Guru, there is only a discourse by the Guru....
             </div>
 
-            <p>
-              गुरु का अस्तित्व शब्दों से परे होता है। <br>
-              उनका जीवन ही सबसे बड़ा उपदेश है। <br>
-              गुरु का हर कर्म शिष्य के लिए प्रेरणा बनता है। <br>
-              उनका मौन भी ज्ञान का स्रोत होता है। <br>
-              गुरु केवल पढ़ाते नहीं, बल्कि जीना सिखाते हैं। <br>
-              उनकी उपस्थिति ही अज्ञान के अंधकार में प्रकाश का दीपक है।
+            <p class="hindi-body">
+              The existence of a Guru is beyond words. <br>
+              Their life itself is the greatest teaching. <br>
+              Every action of the Guru becomes an inspiration for the disciple. <br>
+              Even their silence is a source of wisdom. <br>
+              A Guru doesn’t just teach — they show how to live. <br>
+              Their very presence is a lamp of light in the darkness of ignorance.
             </p>
           </div>
         </div>
@@ -144,17 +282,17 @@
         <div class="col-md-7 position-relative">
 
           <div class="row d-flex flex-wrap justify-content-end">
-            <div class="col-md-4">
+            <div class="col-md-4 scroll-fade-in delay-500">
               <img src="./assets/img/about/01.png" alt="Guru" class="guru-img shadow">
             </div>
-            <div class="col-md-7 text-end mt-5 pt-5">
+            <div class="col-md-7 text-end mt-5 pt-5 scroll-fade-in delay-500">
               <div id="guruCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="./assets/img/about/cor-1.png" class="d-block" alt="Slide 1">
+                    <img src="./assets/img/donate/03.jpg" class="d-block" alt="Slide 1">
                   </div>
                   <div class="carousel-item">
-                    <img src="./assets/img/about/cor-1.png" class="d-block" alt="Slide 2">
+                    <img src="./assets/img/donate/02.jpg" class="d-block" alt="Slide 2">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#guruCarousel" data-bs-slide="prev">
@@ -176,7 +314,7 @@
 
   <!-- glimpse -->
   <section class="glimpses section-padding">
-    <div class="container-fluid px-5">
+    <div class="container-fluid px-lg-5 px-md-3">
       <div class="row">
         <div class="col-sm-12">
           <div class="section-title">
@@ -189,87 +327,176 @@
         </div>
 
         <div class="moments-grid">
-
-          <div class="card-item">
+          <div class="card-item scroll-fade-in delay-500">
             <div class="card">
-              <img src="./assets/img/glimpse/01.jpg" class="card-img-top" alt="Moment 1">
+              <img src="./assets/img/glimpse/Guruji-with-President03.jfif" class="card-img-top" alt="Moment 5">
               <div class="card-body text-center">
-                <h5 class="card-title">Bhoomipujan for Fiji Math</h5>
-                <p class="card-text text-muted small mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
-                  Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
-                  Fiji to explore their Spirituality.</p>
-                <a href="#" class="btn btn-read-more">Read More</a>
+                <h5 class="card-title">President Visit</h5>
+                <p class="card-text text-muted small mb-3">On 26th February 2025, the Hon’ble President of India
+                  Shrimati Draupadi Murmurji visited Bageshwar Dham on Mahashivratri for the annual Kanya Vivah event
+                </p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
               </div>
             </div>
           </div>
 
-          <div class="card-item card-2">
+          <div class="card-item scroll-fade-in delay-500">
             <div class="card">
-              <img src="./assets/img/glimpse/02.jpg" class="card-img-top" alt="Main Moment">
+              <img src="./assets/img/glimpse/GuruijiwthPModi2.png" class="card-img-top" alt="Moment 4">
               <div class="card-body text-center">
-                <h5 class="card-title">Bhoomipujan for Fiji Math</h5>
-                <p class="card-text text-muted small mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
-                  Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
-                  Fiji to explore their Spirituality.</p>
-                <p class="card-text text-muted small mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
-                  Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
-                  Fiji to explore their Spirituality.</p>
-                <a href="#" class="btn btn-dark btn-read-more"
-                  style="background-color: #212529; border-color: #212529;">Read More</a>
+                <h5 class="card-title">Prime Minister Visit</h5>
+                <p class="card-text text-muted small mb-3">On 23rd February 2025, the Hon’ble Prime Minister of India
+                  Shri Narender Modiji visited Bageshwar Dham to lay the foundation stone for the Cancer Hospital.
+                </p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-item scroll-fade-in delay-500 carxd-2">
+            <div class="card">
+              <img src="./assets/img/glimpse/gurujiurja.png" class="card-img-top" alt="Main Moment">
+              <div class="card-body text-center">
+                <h5 class="card-title">Urja Sanchay Shivir</h5>
+                <p class="card-text text-muted small mb-3">A 3 day long gathering which leads to body and brain
+                  detoxification as well as energy conservation. The main aim is to connect the conscious and
+                  subconscious mind</p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-dark btn-read-more">Read More</a>
               </div>
 
-              <div class="quote-block">
+              <div class="quote-block d-none">
                 <div class="quote-icon">&ldquo;</div>
                 <p class="quote-text mb-0">
-                  जहाँ आस्था गहरी होती है, वहीं समय भी पवित्र हो जाता है,
+                  Where faith runs deep, even time becomes sacred,
                   <br>
-                  और वह क्षण जीवन का अनमोल अध्याय बन जाता है।
+                  and that very moment turns into a precious chapter of life.
                 </p>
                 <div class="quote-icon" style="transform: rotate(180deg);">&rdquo;</div>
               </div>
 
             </div>
           </div>
+          <div class="card-item scroll-fade-in delay-500">
+            <div class="card">
+              <img src="./assets/img/glimpse/06.jpg" class="card-img-top" alt="Moment 1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Honoured by UK Parliament</h5>
+                <p class="card-text text-muted small mb-3">
+                  On 15 June 2022, Guruji was honored in the UK
+                  Parliament with a certificate from the World Book
+                  of Records for his contributions to spiritual
+                  awareness.
+                </p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
 
-          <div class="card-item">
+
+          <div class="card-item scroll-fade-in delay-500">
+            <div class="card">
+              <img src="./assets/img/glimpse/cancerhospital01.jpg" class="card-img-top" alt="Moment 5">
+              <div class="card-body text-center">
+                <h5 class="card-title">Bhoomipujan for Cancer Hospital</h5>
+                <p class="card-text text-muted small mb-3">
+                  We have often seen Temples in hospitals but now a Hospital will be made in a Temple. Bhoomipujan
+                  for a hospital made for affordable Cancer Treatment was done on 10th May 2025.
+                </p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-item scroll-fade-in delay-500">
+            <div class="card">
+              <img src="./assets/img/glimpse/gurtujipadyatra.jpg" class="card-img-top" alt="Moment 5">
+              <div class="card-body text-center">
+                <h5 class="card-title">Sanatan Padh Yatra</h5>
+                <p class="card-text text-muted small mb-3">
+                  An annual journey on foot spanning more than 150KM during which Bageshwar Dham aims at uniting the
+                  Hindu Community. The Next Sanatan Padh Yatra is planned for November 2025
+                </p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-item scroll-fade-in delay-500">
+            <div class="card">
+              <img src="./assets/img/glimpse/gurujikanyavivah.jpg" class="card-img-top" alt="Moment 5">
+              <div class="card-body text-center">
+                <h5 class="card-title">Kanya Vivah</h5>
+                <p class="card-text text-muted small mb-3">
+                  In the year 2020, Bageshwar Dham started the ritual of getting poor and orphaned girls married on the
+                  day of Mahashivratri. This is an annual event attended by people from all over the world
+                </p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-item scroll-fade-in delay-500">
+            <div class="card">
+              <img src="./assets/img/glimpse/gurujikitchen.jpg" class="card-img-top" alt="Moment 5">
+              <div class="card-body text-center">
+                <h5 class="card-title">Ma Annapurana Kitchen</h5>
+                <p class="card-text text-muted small mb-3">
+                  Started in the year 2020, through the Ma Annapurna kitchen more than 10,000 meals per day are served
+                  to the people visiting the Dham. This service is absolutely free of cost.
+                </p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-item scroll-fade-in delay-500">
+            <div class="card">
+              <img src="./assets/img/glimpse/gurujimath.jpg" class="card-img-top" alt="Moment 5">
+              <div class="card-body text-center">
+                <h5 class="card-title">Shri Bageshwar Dham Sanatan Math</h5>
+                <p class="card-text text-muted small mb-3">
+                  On 14 April 2025, Bageshwar Dham opened Shri Bageshwar Dham Sanatan Math in Mumbai, Maharashtar. The
+                  first Dham outside of Madhya Pradesh.
+                </p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-item scroll-fade-in delay-500">
+            <div class="card">
+              <img src="./assets/img/glimpse/gurijifiji.jpg" class="card-img-top" alt="Moment 5">
+              <div class="card-body text-center">
+                <h5 class="card-title">Felicitation by Vice President of Fiji</h5>
+                <p class="card-text text-muted small mb-3">
+                  On 29 July 2024, the Hon'ble Deputy Prime Minister of Fiji Shri Viliame Gavokaji, attended the
+                  discourse and felicitated Guruji
+                </p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-item scroll-fade-in delay-500">
+            <div class="card">
+              <img src="./assets/img/glimpse/Pooooja_thumb.jpg" class="card-img-top" alt="Moment 5">
+              <div class="card-body text-center">
+                <h5 class="card-title">Kanya Vivah</h5>
+                <p class="card-text text-muted small mb-3">
+                  In the year 2020, Bageshwar Dham started the ritual of getting poor and orphaned girls married on the
+                  day of Mahashivratri. This is an annual event attended by people from all over the world
+                </p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-item scroll-fade-in delay-500">
             <div class="card">
               <img src="./assets/img/glimpse/03.jpg" class="card-img-top" alt="Moment 3">
               <div class="card-body text-center">
-                <h5 class="card-title">Bhoomipujan for Fiji Math</h5>
-                <p class="card-text text-muted small mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
-                  Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
-                  Fiji to explore their Spirituality.</p>
-                <a href="#" class="btn btn-read-more">Read More</a>
+                <h5 class="card-title">Felicitation by President of Mauritius</h5>
+                <p class="card-text text-muted small mb-3">On 27 July 2022, the Hon’ble Prime Minister of Mauritius Shri
+                  Pravind Kumar Jugnauthji welcomed and felicitated Bageshwar Dham.</p>
+                <a href="./shri-bageshwar-dham.html" class="btn btn-read-more">Read More</a>
               </div>
             </div>
           </div>
-
-          <div class="card-item">
-            <div class="card">
-              <img src="./assets/img/glimpse/04.jpg" class="card-img-top" alt="Moment 4">
-              <div class="card-body text-center">
-                <h5 class="card-title">Bhoomipujan for Fiji Math</h5>
-                <p class="card-text text-muted small mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
-                  Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
-                  Fiji to explore their Spirituality.</p>
-                <a href="#" class="btn btn-read-more">Read More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-item">
-            <div class="card">
-              <img src="./assets/img/glimpse/05.jpg" class="card-img-top" alt="Moment 5">
-              <div class="card-body text-center">
-                <h5 class="card-title">Bhoomipujan for Fiji Math</h5>
-                <p class="card-text text-muted small mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
-                  Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
-                  Fiji to explore their Spirituality.</p>
-                <a href="#" class="btn btn-read-more">Read More</a>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -279,7 +506,7 @@
 
   <!-- contribute -->
   <section class="contribute section-padding">
-    <div class="container-fluid px-5">
+    <div class="container-fluid px-lg-5 px-md-3">
       <div class="row">
         <div class="col-sm-12">
           <div class="section-title">
@@ -292,29 +519,27 @@
         </div>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 justify-content-center">
 
         <!-- Card Item 1 (Uses a placeholder image) -->
-        <div class="col-lg-6 col-12">
-          <div class="card custom-card h-100">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="card custom-card h-100 scroll-fade-in delay-1000">
             <div class="d-flex card-content-flex">
 
               <!-- Left Image Side -->
               <div class="card-image-wrapper">
-                <img src="./assets/img/glimpse/02.jpg" class="card-img-custom" alt="Spiritual leader photo">
+                <img src="./assets/img/donate/01.jpg" class="card-img-custom" alt="Spiritual leader photo">
               </div>
 
               <!-- Right Content Side -->
               <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
                 <div>
-                  <h5 class="card-title fw-bold">Bhoomipujan for Fiji Math</h5>
-                  <p class="card-text text-secondary mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
-                    Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
-                    Fiji to explore their Spirituality.</p>
+                  <h5 class="card-title fw-bold">Cancer Hospital</h5>
+                  <p class="card-text text-secondary mb-3">Contribution of 1 Brick can make a world of difference.</p>
                 </div>
                 <!-- Button area, aligned to the right -->
                 <div class="text-end">
-                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                  <a href="./donate.html" class="btn btn-orange-custom">Donate Now</a>
                 </div>
               </div>
 
@@ -323,26 +548,25 @@
         </div>
 
         <!-- Card Item 2 -->
-        <div class="col-lg-6 col-12">
-          <div class="card custom-card h-100">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="card custom-card h-100 scroll-fade-in delay-1000">
             <div class="d-flex card-content-flex">
 
               <!-- Left Image Side -->
               <div class="card-image-wrapper">
-                <img src="./assets/img/glimpse/01.jpg" class="card-img-custom" alt="Event photo with people">
+                <img src="./assets/img/donate/02.jpg" class="card-img-custom" alt="Event photo with people">
               </div>
 
               <!-- Right Content Side -->
               <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
                 <div>
-                  <h5 class="card-title fw-bold">Bhoomipujan for Fiji Math</h5>
-                  <p class="card-text text-secondary mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
-                    Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
-                    Fiji to explore their Spirituality.</p>
+                  <h5 class="card-title fw-bold">Annapurna Rasoi</h5>
+                  <p class="card-text text-secondary mb-3">Free Food for all. No matter your religion, caste, creed,
+                    color or economic back ground.</p>
                 </div>
                 <!-- Button area, aligned to the right -->
                 <div class="text-end">
-                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                  <a href="./donate.html" class="btn btn-orange-custom">Donate Now</a>
                 </div>
               </div>
 
@@ -351,26 +575,24 @@
         </div>
 
         <!-- Card Item 3 -->
-        <div class="col-lg-6 col-12">
-          <div class="card custom-card h-100">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="card custom-card h-100 scroll-fade-in delay-1000">
             <div class="d-flex card-content-flex">
 
               <!-- Left Image Side -->
               <div class="card-image-wrapper">
-                <img src="./assets/img/glimpse/03.jpg" class="card-img-custom" alt="Crowd photo">
+                <img src="./assets/img/donate/03.jpg" class="card-img-custom" alt="Crowd photo">
               </div>
 
               <!-- Right Content Side -->
               <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
                 <div>
-                  <h5 class="card-title fw-bold">Bhoomipujan for Fiji Math</h5>
-                  <p class="card-text text-secondary mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
-                    Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
-                    Fiji to explore their Spirituality.</p>
+                  <h5 class="card-title fw-bold">Vedic Gurukul</h5>
+                  <p class="card-text text-secondary mb-3">Every child has the right to education.</p>
                 </div>
                 <!-- Button area, aligned to the right -->
                 <div class="text-end">
-                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                  <a href="./donate.html" class="btn btn-orange-custom">Donate Now</a>
                 </div>
               </div>
 
@@ -379,26 +601,54 @@
         </div>
 
         <!-- Card Item 4 -->
-        <div class="col-lg-6 col-12">
-          <div class="card custom-card h-100">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="card custom-card h-100 scroll-fade-in delay-1000">
             <div class="d-flex card-content-flex">
 
               <!-- Left Image Side -->
               <div class="card-image-wrapper">
-                <img src="./assets/img/glimpse/04.jpg" class="card-img-custom" alt="People gathering photo">
+                <img src="./assets/img/donate/04.jpg" class="card-img-custom" alt="People gathering photo">
               </div>
 
               <!-- Right Content Side -->
               <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
                 <div>
-                  <h5 class="card-title fw-bold">Bhoomipujan for Fiji Math</h5>
-                  <p class="card-text text-secondary mb-3">On 13 June 2025, the Bhoomipujan for a Math in Fiji was done.
-                    Once completed, Shri Hanuman Balaji will reside at this math and provide a safe haven for people of
-                    Fiji to explore their Spirituality.</p>
+                  <h5 class="card-title fw-bold">Gow Raksha</h5>
+                  <p class="card-text text-secondary mb-3">
+                    Help us protect the sacred Cow.
+                  </p>
                 </div>
                 <!-- Button area, aligned to the right -->
                 <div class="text-end">
-                  <a href="#" class="btn btn-orange-custom">Read More</a>
+                  <a href="./donate.html" class="btn btn-orange-custom">Donate Now</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Item 5 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="card custom-card h-100 scroll-fade-in delay-1000">
+            <div class="d-flex card-content-flex">
+
+              <!-- Left Image Side -->
+              <div class="card-image-wrapper">
+                <img src="./assets/img/vivah/k02.jpg" class="card-img-custom" alt="People gathering photo">
+              </div>
+
+              <!-- Right Content Side -->
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                  <h5 class="card-title fw-bold">Kanya Vivah</h5>
+                  <p class="card-text text-secondary mb-3">
+                    Be a part of this noble cause — celebrate and support Kanya Vivah.
+                  </p>
+                </div>
+                <!-- Button area, aligned to the right -->
+                <div class="text-end">
+                  <a href="./donate.html" class="btn btn-orange-custom">Donate Now</a>
                 </div>
               </div>
 
@@ -411,10 +661,11 @@
 
     </div>
   </section>
+  <!-- ends -->
 
   <!-- Commandments -->
   <section class="commandments section-padding">
-    <div class="container-fluid px-5">
+    <div class="container-fluid px-lg-5 px-md-3">
       <div class="row">
         <div class="col-sm-12">
           <div class="section-title">
@@ -430,7 +681,7 @@
       <div class="row g-4 justify-content-center">
 
         <!-- Column 1 -->
-        <div class="col-md-4">
+        <div class="col-md-4 scroll-fade-in delay-500">
           <div class="resolution-column">
             <div class="orange-dot-container">
               <!-- First dot is slightly different in the image, showing the left edge -->
@@ -450,7 +701,7 @@
         </div>
 
         <!-- Column 2 -->
-        <div class="col-md-4">
+        <div class="col-md-4 scroll-fade-in delay-500">
           <div class="resolution-column">
             <div class="orange-dot-container">
               <div class="outside-orange"></div>
@@ -469,7 +720,7 @@
         </div>
 
         <!-- Column 3 -->
-        <div class="col-md-4">
+        <div class="col-md-4 scroll-fade-in delay-500">
           <div class="resolution-column">
             <div class="orange-dot-container">
               <div class="outside-orange"></div>
@@ -491,8 +742,8 @@
       </div>
 
       <!-- Read More Button -->
-      <div class="text-center mt-3">
-        <button class="btn btn-black-outline" type="button">Read More</button>
+      <div class="text-center mt-4">
+        <a href="./vision.html" class="btn btn-black-outline" type="button">Read More</a>
       </div>
 
     </div>
@@ -500,7 +751,7 @@
 
   <!-- explorations -->
   <section class="explorations section-padding">
-    <div class="container-fluid px-5">
+    <div class="container-fluid px-lg-5 px-md-3">
 
       <div class="row">
         <div class="col-sm-12">
@@ -517,22 +768,22 @@
       <div class="row justify-content-center">
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card border-0 shadow-sm bg-white">
+          <div class="card scroll-fade-in delay-500 shadow-sm bg-white">
             <a href="#" class="video-thumbnail-container">
-              <iframe width="100%" height="300" src="https://www.youtube.com/embed/Y6WFncfxvQM"
-                title="Bageshwar Dham 13" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <!-- <img src="video1-placeholder.jpg" class="card-img-top" alt="Video 1 thumbnail"> -->
-              <div class="play-overlay"></div>
+              <div class="hide-title-video">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/Y6WFncfxvQM" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <!-- <div class="play-overlay"></div> -->
             </a>
 
             <div class="card-body p-0">
               <div class="card-title-meta">
-                <span class="icon"></span>
+                <span class="icon"><i class="bi bi-play-circle"></i></span>
                 Pawan Ahluwalia, KJS Cement
               </div>
-              <a href="#" class="card-footer-black">
+              <a href="https://www.youtube.com/embed/Y6WFncfxvQM" target="_blank" class="card-footer-black">
                 Watch Now <span aria-hidden="true">&rsaquo;</span>
               </a>
             </div>
@@ -540,21 +791,21 @@
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card border-0 shadow-sm bg-white">
+          <div class="card scroll-fade-in delay-500 shadow-sm bg-white">
             <a href="#" class="video-thumbnail-container">
-              <iframe width="100%" height="300" src="https://www.youtube.com/embed/2BrErJ1tcZI"
-                title="Bageshwar Dham 14" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <div class="play-overlay"></div>
+              <div class="hide-title-video">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/2BrErJ1tcZI" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
             </a>
 
             <div class="card-body p-0">
               <div class="card-title-meta">
-                <span class="icon"></span>
-                Pawan Ahluwalia, KJS Cement
+                <span class="icon"><i class="bi bi-play-circle"></i></span>
+                Sikhar Dhawan, Cricketer
               </div>
-              <a href="#" class="card-footer-black">
+              <a href="https://www.youtube.com/embed/2BrErJ1tcZI" target="_blank" class="card-footer-black">
                 Watch Now <span aria-hidden="true">&rsaquo;</span>
               </a>
             </div>
@@ -562,21 +813,21 @@
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card border-0 shadow-sm bg-white">
+          <div class="card scroll-fade-in delay-500 shadow-sm bg-white">
             <a href="#" class="video-thumbnail-container">
-              <iframe width="100%" height="300" src="https://www.youtube.com/embed/eIQf1Ii-kJk"
-                title="Bageshwar Dham 15" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <div class="play-overlay"></div>
+              <div class="hide-title-video">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/eIQf1Ii-kJk" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
             </a>
 
             <div class="card-body p-0">
               <div class="card-title-meta">
-                <span class="icon"></span>
-                Pawan Ahluwalia, KJS Cement
+                <span class="icon"><i class="bi bi-play-circle"></i></span>
+                Sanjay Dutt, Actor
               </div>
-              <a href="#" class="card-footer-black">
+              <a href="https://www.youtube.com/embed/eIQf1Ii-kJk" target="_blank" class="card-footer-black">
                 Watch Now <span aria-hidden="true">&rsaquo;</span>
               </a>
             </div>
@@ -591,7 +842,7 @@
 
   <!-- Program -->
   <section class="program section-padding">
-    <div class="container-fluid px-5">
+    <div class="container-fluid px-lg-5 px-md-3">
       <div class="row">
         <div class="col-sm-12">
           <div class="section-title">
@@ -599,33 +850,39 @@
               <img src="./assets/img/lotus.png" alt="">
             </div>
             <h5>Program</h5>
-            <h2>Upcoming Events</h2>
+            <h2>Events</h2>
           </div>
         </div>
       </div>
-
+    </div>
+    <!-- map start -->
+    <div class="container text-center my-5 map-wrapper">
+      <div id="worldMap"></div>
+    </div>
+    <!-- map ends -->
+    <div class="container-fluid px-lg-5 px-md-3">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10" class="segmented-control">
           <ul class="nav nav-tabs text-center border-0 justify-content-center" id="myTab" role="tablist">
+
             <li class="nav-item" role="presentation">
-              <button class="nav-link active tab-button" id="home-tab" data-bs-toggle="tab"
-                data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-                aria-selected="true">International </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link tab-button" id="profile-tab" data-bs-toggle="tab"
+              <button class="nav-link active tab-button" id="profile-tab" data-bs-toggle="tab"
                 data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
                 aria-selected="false">India</button>
             </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link tab-button" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">International </button>
+            </li>
           </ul>
           <div class="tab-content mt-5" id="myTabContent">
-            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
               tabindex="0">
               <div class="row g-4">
 
                 <!-- Event Card 1 -->
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="event-card">
+                  <div class="event-card scroll-fade-in delay-500">
                     <!-- Flag -->
                     <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
                       <rect width="3" height="2" fill="#FF9933" />
@@ -664,7 +921,7 @@
 
                 <!-- Event Card 2 -->
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="event-card">
+                  <div class="event-card scroll-fade-in delay-500">
                     <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
                       <rect width="3" height="2" fill="#FF9933" />
                       <rect width="3" height="1.333" y=".667" fill="#FFFFFF" />
@@ -682,7 +939,7 @@
                         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                         <circle cx="12" cy="10" r="3" />
                       </svg>
-                      <span class="fs-6 fw-semibold">Guru Diksha, Bageshwar Dham</span>
+                      <span class="fs-6 fw-semibold">Raksha Bandhan Utsav, Bageshwar Dham</span>
                     </div>
 
                     <div class="d-flex align-items-center text-secondary">
@@ -693,7 +950,7 @@
                         <line x1="8" x2="8" y1="2" y2="6" />
                         <line x1="3" x2="21" y1="10" y2="10" />
                       </svg>
-                      <span class="fs-6">7–8 July 2025</span>
+                      <span class="fs-6">6-12 August 2025</span>
                     </div>
                   </div>
                 </div>
@@ -701,7 +958,7 @@
 
                 <!-- Event Card 3 -->
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="event-card">
+                  <div class="event-card scroll-fade-in delay-500">
                     <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
                       <rect width="3" height="2" fill="#FF9933" />
                       <rect width="3" height="1.333" y=".667" fill="#FFFFFF" />
@@ -719,9 +976,58 @@
                         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                         <circle cx="12" cy="10" r="3" />
                       </svg>
-                      <span class="fs-6 fw-semibold">Guru Diksha, Bageshwar Dham</span>
+                      <span class="fs-6 fw-semibold">Paduka Pujan, Bageshwar Dham</span>
                     </div>
 
+                    <div class="d-flex align-items-center text-secondary">
+                      <svg class="icon-calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                        <line x1="16" x2="16" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="2" y2="6" />
+                        <line x1="3" x2="21" y1="10" y2="10" />
+                      </svg>
+                      <span class="fs-6">9-11 July 2025</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+              <div class="row g-4">
+
+                <!-- Event Card 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="event-card scroll-fade-in delay-500">
+                    <!-- Flag -->
+                    <svg class="flag-icon" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                      <clipPath id="clip">
+                        <path d="M0,0 v30 h60 v-30 z" />
+                      </clipPath>
+                      <g clip-path="url(#clip)">
+                        <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+                        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#FFFFFF" stroke-width="6" />
+                        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" />
+                        <path d="M30,0 v30 M0,15 h60" stroke="#FFFFFF" stroke-width="10" />
+                        <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6" />
+                      </g>
+                    </svg>
+
+                    <hr class="text-secondary opacity-25">
+
+                    <!-- Location -->
+                    <div class="d-flex align-items-center mb-2 text-dark">
+                      <svg class="icon-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                      <span class="fs-6 fw-semibold">Tour to UK</span>
+                    </div>
+
+                    <!-- Date -->
                     <div class="d-flex align-items-center text-secondary">
                       <svg class="icon-calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -735,12 +1041,88 @@
                   </div>
                 </div>
 
+                <!-- Event Card 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="event-card scroll-fade-in delay-500">
+                    <svg class="flag-icon" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                      <clipPath id="clip">
+                        <path d="M0,0 v30 h60 v-30 z" />
+                      </clipPath>
+                      <g clip-path="url(#clip)">
+                        <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+                        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#FFFFFF" stroke-width="6" />
+                        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" />
+                        <path d="M30,0 v30 M0,15 h60" stroke="#FFFFFF" stroke-width="10" />
+                        <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6" />
+                      </g>
+                    </svg>
+
+                    <hr class="text-secondary opacity-25">
+
+                    <div class="d-flex align-items-center mb-2 text-dark">
+                      <svg class="icon-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                      <span class="fs-6 fw-semibold">Invitation Only event, London UK</span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-secondary">
+                      <svg class="icon-calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                        <line x1="16" x2="16" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="2" y2="6" />
+                        <line x1="3" x2="21" y1="10" y2="10" />
+                      </svg>
+                      <span class="fs-6">6-12 August 2025</span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Event Card 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="event-card scroll-fade-in delay-500">
+                    <svg class="flag-icon" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Red vertical bar -->
+                      <rect width="15" height="30" fill="#FF0000" />
+                      <!-- Green top stripe -->
+                      <rect x="15" width="45" height="10" fill="#00732F" />
+                      <!-- White middle stripe -->
+                      <rect x="15" y="10" width="45" height="10" fill="#FFFFFF" />
+                      <!-- Black bottom stripe -->
+                      <rect x="15" y="20" width="45" height="10" fill="#000000" />
+                    </svg>
+
+                    <hr class="text-secondary opacity-25">
+
+                    <div class="d-flex align-items-center mb-2 text-dark">
+                      <svg class="icon-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                      <span class="fs-6 fw-semibold">Tour to UAE</span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-secondary">
+                      <svg class="icon-calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                        <line x1="16" x2="16" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="2" y2="6" />
+                        <line x1="3" x2="21" y1="10" y2="10" />
+                      </svg>
+                      <span class="fs-6">9-11 July 2025</span>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-            </div>
-            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
 
-
-              <p class="text-center text-muted p-5 bg-white rounded-xl shadow-sm">
+              <p class="text-center d-none text-muted p-5 bg-white rounded-xl shadow-sm">
                 No upcoming International events currently scheduled.
               </p>
             </div>
@@ -754,7 +1136,7 @@
 
   <!-- Builds -->
   <section class="builds section-padding">
-    <div class="container-fluid px-5">
+    <div class="container-fluid px-lg-5 px-md-3">
 
       <div class="row">
         <div class="col-sm-12">
@@ -771,53 +1153,66 @@
       <div class="row g-4 justify-content-center">
 
         <!-- Card 1 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card card-custom">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-custom scroll-fade-in delay-500">
             <!-- Placeholder for Image 1: Crowd from behind -->
-            <img src="./assets/img/glimpse/01.jpg" class="card-img-top" alt="Spiritual Gathering">
+            <img src="./assets/img/work/01.jfif" class="card-img-top" alt="Spiritual Gathering">
             <div class="card-body card-body-custom p-4">
               <h5 class="discourse-title">Discourse and Satsang</h5>
-              <p class="card-text text-muted small">The preaching of the Katha from the mouth of Param Pujya Guruji is
-                to propagate the Indian Sanatan tradition throughout the world and unite all people globally while bring
-                a spiritual revolution in India. He aims to spread the message of love, peace and harmony in the world
-                and to get people to commit towards promoting unity in the times of diversity.</p>
+              <p class="card-text text-muted small">
+                The preaching of the Katha from the mouth of Param
+                Pujya Guruji is to propagate the Indian Sanatan
+                tradition throughout the world and unite all people
+                globally while bring a spiritual revolution in
+                India. He aims to spread the message of love,
+                peace and harmony in the world and to get people
+                to commit towards promoting unity in the times
+                of diversity.
+              </p>
             </div>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card card-custom">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-custom scroll-fade-in delay-500">
             <!-- Placeholder for Image 2: Two spiritual figures -->
-            <img src="./assets/img/glimpse/02.jpg" class="card-img-top" alt="Guruji and Devotee">
+            <img src="./assets/img/work/02.jpg" class="card-img-top" alt="Guruji and Devotee">
             <div class="card-body card-body-custom p-4">
-              <h5 class="discourse-title">Discourse and Satsang</h5>
-              <p class="card-text text-muted small">The preaching of the Katha from the mouth of Param Pujya Guruji is
-                to propagate the Indian Sanatan tradition throughout the world and unite all people globally while bring
-                a spiritual revolution in India. He aims to spread the message of love, peace and harmony in the world
-                and to get people to commit towards promoting unity in the times of diversity.</p>
+              <h5 class="discourse-title">Divya Darbar</h5>
+              <p class="card-text text-muted small">
+                In our ancient Vedic tradition, according to
+                astrology, our ancient sages showed people guidance
+                about the upcoming problems and pending problems
+                and showed them the way out of darkness through the
+                doors of knowledge. With the blessings of
+                Hanumanji's divine powers, people entangled in the
+                physical and divine problems of life are given
+                solutions through the Divya Darbar of Guruji.
+              </p>
             </div>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card card-custom">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-custom scroll-fade-in delay-500">
             <!-- Placeholder for Image 3: Figure with a leader -->
-            <img src="./assets/img/glimpse/03.jpg" class="card-img-top" alt="Receiving Award">
+            <img src="./assets/img/work/03.png" class="card-img-top" alt="Receiving Award">
             <div class="card-body card-body-custom p-4">
-              <h5 class="discourse-title">Discourse and Satsang</h5>
-              <p class="card-text text-muted small">The preaching of the Katha from the mouth of Param Pujya Guruji is
-                to propagate the Indian Sanatan tradition throughout the world and unite all people globally while bring
-                a spiritual revolution in India. He aims to spread the message of love, peace and harmony in the world
-                and to get people to commit towards promoting unity in the times of diversity.</p>
+              <h5 class="discourse-title">Negative Energy</h5>
+              <p class="card-text text-muted small">
+                It is believed that negative influences can cause various problems in people's lives. Guruji holds a
+                Darbar which is dedicated solely to address and remove negative energy by identifying its nature and
+                then providing remedies and spiritual guidance.
+              </p>
             </div>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card card-custom">
+        <div class="col-12 col-md-6 col-lg-3 d-none">
+          <div class="card card-custom scroll-fade-in delay-500">
             <!-- Placeholder for Image 4: Collage/Group Shot -->
             <img src="./assets/img/glimpse/04.jpg" class="card-img-top" alt="Community Work">
             <div class="card-body card-body-custom p-4">
@@ -839,7 +1234,7 @@
 
   <!-- msg from guruji -->
   <section class="explorations section-padding">
-    <div class="container-fluid px-5">
+    <div class="container-fluid px-lg-5 px-md-3">
 
       <div class="row">
         <div class="col-sm-12">
@@ -855,44 +1250,44 @@
 
       <div class="row justify-content-center">
 
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card border-0 shadow-sm bg-white">
+        <div class="col-lg-4 col-md-6 mb-4 scroll-fade-in delay-1000">
+          <div class="card shadow-sm bg-white">
             <a href="#" class="video-thumbnail-container">
               <iframe width="100%" height="300" src="https://www.youtube.com/embed/mjBw_qbefmM"
                 title="Bageshwar Dham 16" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <div class="play-overlay"></div>
+              <!-- <div class="play-overlay"></div> -->
             </a>
 
             <div class="card-body p-0">
               <div class="card-title-meta">
-                <span class="icon"></span>
-                Pawan Ahluwalia, KJS Cement
+                <span class="icon"><i class="bi bi-play-circle"></i></span>
+                Guruji Shlokas
               </div>
-              <a href="#" class="card-footer-black">
+              <a href="https://www.youtube.com/embed/mjBw_qbefmM" target="_blank" class="card-footer-black">
                 Watch Now <span aria-hidden="true">&rsaquo;</span>
               </a>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card border-0 shadow-sm bg-white">
+        <div class="col-lg-4 col-md-6 mb-4 scroll-fade-in delay-1000">
+          <div class="card shadow-sm bg-white">
             <a href="#" class="video-thumbnail-container">
               <iframe width="100%" height="300" src="https://www.youtube.com/embed/CTg3jgCyRko"
                 title="Bageshwar Dham 18" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <div class="play-overlay"></div>
+              <!-- <div class="play-overlay"></div> -->
             </a>
 
             <div class="card-body p-0">
               <div class="card-title-meta">
-                <span class="icon"></span>
-                Pawan Ahluwalia, KJS Cement
+                <span class="icon"><i class="bi bi-play-circle"></i></span>
+                Maa Annapurna Kitchen
               </div>
-              <a href="#" class="card-footer-black">
+              <a href="https://www.youtube.com/embed/CTg3jgCyRko" target="_blank" class="card-footer-black">
                 Watch Now <span aria-hidden="true">&rsaquo;</span>
               </a>
             </div>
@@ -906,8 +1301,8 @@
 
 
   <!-- gallery -->
-  <section class="commandments section-padding">
-    <div class="container-fluid px-5">
+  <section class="commandments section-padding overflow-hidden">
+    <div class="container-fluid px-lg-5 px-md-3">
       <div class="row">
         <div class="col-sm-12">
           <div class="section-title">
@@ -930,45 +1325,45 @@
 
         <div class="segmented" id="filters">
           <button class="active" data-filter="*">All</button>
-          <button data-filter=".india">India</button>
-          <button data-filter=".international">International</button>
-          <button data-filter=".spiritual">Spiritual</button>
+          <button data-filter=".pmvisit">PM Visit</button>
+          <button data-filter=".president">President Visit</button>
+          <button data-filter=".sant">Sant</button>
+          <button data-filter=".repute">Repute</button>
         </div>
       </div>
 
       <div class="grid" id="gallery">
-        <div class="grid-item india spiritual">
+
+        <div class="grid-item scroll-fade-in delay-1000 pmvisit">
           <div class="card">
-            <div class="thumb"><img src="assets/img//glimpse/01.jpg" alt=""></div>
+            <div class="thumb"><img src="assets/img/gallery/bdpmvisit08.jpg" alt=""></div>
             <div class="card-body">
               <div class="meta">
-                <div class="loc">Bageshwar Dham</div>
-                <div class="date">Jul 2025</div>
+                <div class="loc">PM visit</div>
+                <div class="date">May 2025</div>
               </div>
-              <div class="badge">India</div>
+              <div class="badge">Spiritual</div>
             </div>
           </div>
         </div>
-
-        <div class="grid-item india">
+        <div class="grid-item scroll-fade-in delay-1000 pmvisit">
           <div class="card">
-            <div class="thumb"><img src="assets/img//glimpse/02.jpg" alt=""></div>
+            <div class="thumb"><img src="assets/img/gallery/bdpmvisit02.jpg" alt=""></div>
             <div class="card-body">
               <div class="meta">
-                <div class="loc">Sarad Poonam</div>
+                <div class="loc">PM visit</div>
                 <div class="date">Oct 2025</div>
               </div>
               <div class="badge">India</div>
             </div>
           </div>
         </div>
-
-        <div class="grid-item international">
+        <div class="grid-item scroll-fade-in delay-1000 pmvisit">
           <div class="card">
-            <div class="thumb"><img src="assets/img//glimpse/03.jpg" alt=""></div>
+            <div class="thumb"><img src="assets/img/gallery/bdpmvisit05.jpg" alt=""></div>
             <div class="card-body">
               <div class="meta">
-                <div class="loc">Global Meet</div>
+                <div class="loc">PM visit</div>
                 <div class="date">Dec 2025</div>
               </div>
               <div class="badge">Intl</div>
@@ -976,28 +1371,150 @@
           </div>
         </div>
 
-        <div class="grid-item international spiritual">
+        <div class="grid-item scroll-fade-in delay-1000 president">
           <div class="card">
-            <div class="thumb"><img src="assets/img//glimpse/04.jpg" alt=""></div>
+            <div class="thumb"><img src="assets/img/gallery/bdpresident3.jpg" alt=""></div>
             <div class="card-body">
               <div class="meta">
-                <div class="loc">Meditation Camp</div>
+                <div class="loc">President Visit</div>
+                <div class="date">Apr 2025</div>
+              </div>
+              <div class="badge">India</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item scroll-fade-in delay-1000 president">
+          <div class="card">
+            <div class="thumb"><img src="assets/img/gallery/bdpresident4.jpg" alt=""></div>
+            <div class="card-body">
+              <div class="meta">
+                <div class="loc">President Visit</div>
+                <div class="date">June 2025</div>
+              </div>
+              <div class="badge">India</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item scroll-fade-in delay-1000 president">
+          <div class="card">
+            <div class="thumb"><img src="assets/img/gallery/bdpresident5.jpg" alt=""></div>
+            <div class="card-body">
+              <div class="meta">
+                <div class="loc">President Visit</div>
+                <div class="date">June 2025</div>
+              </div>
+              <div class="badge">India</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item scroll-fade-in delay-1000 president">
+          <div class="card">
+            <div class="thumb"><img src="assets/img/gallery/bdpresident7.jpg" alt=""></div>
+            <div class="card-body">
+              <div class="meta">
+                <div class="loc">President Visit</div>
+                <div class="date">June 2025</div>
+              </div>
+              <div class="badge">India</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item scroll-fade-in delay-1000 sant">
+          <div class="card">
+            <div class="thumb"><img src="assets/img/gallery/01-Ram Bhadracharya.jpg" alt=""></div>
+            <div class="card-body">
+              <div class="meta">
+                <div class="loc">Sant</div>
+                <div class="date">Apr 2025</div>
+              </div>
+              <div class="badge">India</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item scroll-fade-in delay-1000 sant">
+          <div class="card">
+            <div class="thumb"><img src="assets/img/gallery/02-Avdheshanand Ji Maharaj.jpg" alt=""></div>
+            <div class="card-body">
+              <div class="meta">
+                <div class="loc">Sant</div>
+                <div class="date">June 2025</div>
+              </div>
+              <div class="badge">India</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item scroll-fade-in delay-1000 sant">
+          <div class="card">
+            <div class="thumb"><img src="assets/img/gallery/03-Chidanand-Morari Bapuji.png" alt=""></div>
+            <div class="card-body">
+              <div class="meta">
+                <div class="loc">Sant</div>
+                <div class="date">June 2025</div>
+              </div>
+              <div class="badge">India</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item scroll-fade-in delay-1000 sant">
+          <div class="card">
+            <div class="thumb"><img src="assets/img/gallery/04-Gyanand Ji Maharaj.jpg" alt=""></div>
+            <div class="card-body">
+              <div class="meta">
+                <div class="loc">Sant</div>
+                <div class="date">June 2025</div>
+              </div>
+              <div class="badge">India</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="grid-item scroll-fade-in delay-1000 repute">
+          <div class="card">
+            <div class="thumb"><img src="assets/img/gallery/bdcelebrity1.jpg" alt=""></div>
+            <div class="card-body">
+              <div class="meta">
+                <div class="loc">repute</div>
                 <div class="date">May 2025</div>
               </div>
               <div class="badge">Spiritual</div>
             </div>
           </div>
         </div>
-
-        <div class="grid-item india">
+        <div class="grid-item scroll-fade-in delay-1000 repute">
           <div class="card">
-            <div class="thumb"><img src="assets/img//glimpse/02.jpg" alt=""></div>
+            <div class="thumb"><img src="assets/img/gallery/bdcelebrity2.jpg" alt=""></div>
             <div class="card-body">
               <div class="meta">
-                <div class="loc">sanyashi</div>
-                <div class="date">Apr 2025</div>
+                <div class="loc">repute</div>
+                <div class="date">Oct 2025</div>
               </div>
               <div class="badge">India</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item scroll-fade-in delay-1000 repute">
+          <div class="card">
+            <div class="thumb"><img src="assets/img/gallery/bdcelebrity3.jpg" alt=""></div>
+            <div class="card-body">
+              <div class="meta">
+                <div class="loc">repute</div>
+                <div class="date">Dec 2025</div>
+              </div>
+              <div class="badge">Intl</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item scroll-fade-in delay-1000 repute">
+          <div class="card">
+            <div class="thumb"><img src="assets/img/gallery/bdcelebrity4.jpg" alt=""></div>
+            <div class="card-body">
+              <div class="meta">
+                <div class="loc">repute</div>
+                <div class="date">Dec 2025</div>
+              </div>
+              <div class="badge">Intl</div>
             </div>
           </div>
         </div>
@@ -1008,8 +1525,8 @@
   </section>
 
   <!-- instagram -->
-  <section class="commandments section-padding">
-    <div class="container-fluid px-5">
+  <section class="gallery-grid section-padding pt-0">
+    <div class="container-fluid px-lg-5 px-md-3">
       <div class="row">
         <div class="col-sm-12">
           <div class="section-title">
@@ -1021,47 +1538,139 @@
           </div>
         </div>
       </div>
+
+      <div class="gallery-container">
+        <div class="masonry">
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/glimpse/01.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/glimpse/02.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/about/cor-1.png" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/glimpse/04.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/glimpse/05.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/about/01.png" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/dham-01.png" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/dham-02.png" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/dham-03.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/dham-04.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-500"><img src="assets/img/dham-05.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ✅ Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0 shadow-none">
+        <div class="modal-body p-0 position-relative text-center">
+          <img id="modalImage" src="" alt="Full Image" class="img-fluid rounded">
+          <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- facebook -->
+  <section class="gallery-grid section-padding">
+    <div class="container-fluid px-lg-5 px-md-3">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="section-title">
+            <div class="lotus">
+              <img src="./assets/img/lotus.png" alt="">
+            </div>
+            <h5>posts</h5>
+            <h2>Facebook</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-container">
+        <div class="masonry">
+          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/baba/01.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/process/1.png" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/baba/02.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/process/2.png" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/baba/03.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/baba/04.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/baba/05.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/baba/06.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/process/3.jpg" alt=""></div>
+          <div class="masonry-item scroll-fade-in delay-1000"><img src="assets/img/baba/07.jpg" alt=""></div>
+
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ======= Footer ======= -->
 
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- contact -->
+        <div class="col-md-2">
+          <a href="./index.html">
+            <img src="assets/img/logo.png" width="100" alt="Bageshwar Dham Logo" class="footer-logo mb-3">
+          </a>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="col-md-4">
+          <h5>CONTACT US</h5>
+          <p><i class="bi bi-geo-alt-fill me-2 text-warning"></i>Village – Gadha, Post – Ganj, District – Chhatarpur
+            Madhya Pradesh, Pin – 471105</p>
+          <p><i class="bi bi-telephone-fill me-2 text-warning"></i>+91 7055005553</p>
+          <p><i class="bi bi-telephone me-2 text-warning"></i>+91 7055005554</p>
+          <p><i class="bi bi-envelope-fill me-2 text-warning"></i>admin@bageshwarbalaji.in</p>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-md-3">
+          <h5>USEFUL LINKS</h5>
+          <a href="./donate.html">Donate Now</a><br>
+          <a href="./upcoming-event.html">Events</a><br>
+          <a href="./books.html">Books</a><br>
+          <a href="./bhajans.html">Bhajans</a>
+        </div>
+
+        <!-- Stay Updated -->
+        <div class="col-md-3">
+          <h5>STAY UP TO DATE</h5>
+          <button class="btn-update mb-3">SIGN UP FOR UPDATES</button><br>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/bageshwardhamsarkarofficial" target="_blank"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/iambageshwardhamsarkar/?fbclid=IwAR3Oz-Go86SStCYq_Ep_tFh2HOlNTv7xzMjPToQTDndTp-pT92D5NJA-NHg"
+              target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/c/BageshwarDhamSarkar" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://x.com/bageshwardham" target="_blank"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom mt-5">
+        <p>Copyright © 2024. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
   <!-- End Footer -->
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <!-- Template Main JS File -->
   <script src="assets/js/jquery-1.12.0.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/isotope.js"></script>
+
   <!-- Libraries -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-
-
-  <script src="assets/vendor/bootstrap/js/isotope.js"></script>
-  <!-- header -->
-  <script>
-    // Keep Bootstrap click toggle for mobile, hover for desktop
-    document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-      dropdown.addEventListener('mouseenter', function () {
-        if (window.innerWidth > 992) {
-          const menu = dropdown.querySelector('.dropdown-menu');
-          const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector('[data-bs-toggle="dropdown"]'));
-          bsDropdown.show();
-        }
-      });
-      dropdown.addEventListener('mouseleave', function () {
-        if (window.innerWidth > 992) {
-          const menu = dropdown.querySelector('.dropdown-menu');
-          const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector('[data-bs-toggle="dropdown"]'));
-          bsDropdown.hide();
-        }
-      });
-    });
-  </script>
-
-
+  <!-- Google Translate Script -->
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

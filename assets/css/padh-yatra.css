@@ -1,0 +1,326 @@
+
+.urja-sanchay-gallery.gallery-grid .nav-pills .nav-link.active{
+    background-color: #fd7a01;
+}
+
+.nav-pills .nav-link{
+    color: grey;
+}
+
+/* Section */
+.process-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #c33;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Tabs */
+.steps-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.process-section .tab {
+  background: #000;
+  color: #fff;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.process-section .tab.active {
+  background: #FD7A01;
+}
+
+.process-section tab:hover {
+  background: #FD7A01;
+}
+
+/* Tab content */
+.process-section .tab-content {
+  display: none;
+}
+
+.process-section .tab-content.active {
+  display: block;
+}
+
+/* Content Layout */
+.process-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: left;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.note {
+  color: #444;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.session {
+  font-weight: 600;
+  color: #111;
+  font-size: 20px;
+}
+
+.register-btn {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #FD7A01;
+  color: #FD7A01;
+  padding: 10px 25px;
+  border-radius: 25px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  background: #FD7A01;
+  color: #ffffff;
+}
+
+/* Image */
+.image-content img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .process-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-content img {
+    max-width: 300px;
+  }
+
+  .text-content {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+ .process-section  .tab {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .register-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* video */
+/* SECTION BACKGROUND */
+.video-section {
+  position: relative;
+  background: url('../img/padhyatra/bg-img.png') center/cover no-repeat; /* Replace with your image URL */
+  padding: 120px 20px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ORANGE OVERLAY */
+.video-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ff6600b3; /* orange overlay */
+  z-index: 0;
+}
+
+/* TITLE */
+.video-title {
+  position: relative;
+  z-index: 2;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 50px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* VIDEO CONTAINER */
+.video-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.video-frame {
+  position: relative;
+  border: 5px solid #ff8c1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  max-width: 850px;
+  width: 100%;
+  background: #000;
+}
+
+/* RESPONSIVE IFRAME */
+.video-frame iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .video-section {
+    padding: 100px 15px;
+  }
+  .video-frame iframe {
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-title {
+    font-size: 2rem;
+  }
+  .video-frame iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section {
+    padding: 80px 10px;
+  }
+  .video-title {
+    font-size: 1.6rem;
+  }
+  .video-frame iframe {
+    height: 220px;
+  }
+}
+
+
+/* Imitate the Meditative Background Figure (Optional) */
+.meditation-bg {
+    text-align: center;
+    color: #ccc;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: -150px; /* Overlap with the grid for effect */
+    z-index: 0;
+    position: relative;
+    /* You'd replace this with a proper background image/SVG of the meditating figure */
+    /* For this example, it's just a spacer */
+    height: 300px; 
+    display: none; /* Hiding the placeholder text for a cleaner look */
+}
+
+/* Grid Container using Flexbox */
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    max-width: 1200px; /* Max width for the whole grid */
+    padding: 20px;
+    margin-top: 0px; /* Adjusted to fit the layout */
+    z-index: 1; /* Ensure grid is above the background element */
+    position: relative;
+}
+
+/* Individual Video Card Styling */
+.video-card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row (50% width minus the gap) */
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative; /* Essential for positioning the play icon and title */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-card iframe{
+  border: 3px solid #fd7a01;
+  border-radius: 5px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* RESPONSIVENESS */
+/* ---------------------------------------------------------------------- */
+
+/* Media Query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .video-grid {
+        padding: 10px;
+    }
+    
+    .video-card {
+        /* On small screens, cards take up 100% of the width (1 card per row) */
+        flex: 1 1 100%; 
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .banner .youtube-container {
+        aspect-ratio: 0 !important;
+        height: 100% !important;
+    }
+
+}
+
+.padhyatra-box{
+  background-image: url('../img/padhyatra/padhyatran01.png');
+      width: 100%;
+    height: 100%;
+    min-height: 630px;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center;
+}
